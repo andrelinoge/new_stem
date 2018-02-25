@@ -9,8 +9,8 @@ module NewStem
     config.load_defaults 5.1
     config.time_zone                = 'Europe/Minsk'
     
-    config.i18n.default_locale      = :uk
-    config.i18n.available_locales   = %i( uk en )
+    config.i18n.default_locale      = :ua
+    config.i18n.available_locales   = %i( ua en )
     config.i18n.fallbacks           = true
   end
 end

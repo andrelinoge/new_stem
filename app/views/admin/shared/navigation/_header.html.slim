@@ -1,0 +1,163 @@
+header.topbar
+  nav.navbar.top-navbar.navbar-expand-md.navbar-light
+    .navbar-header
+      a.navbar-brand href="index.html" 
+        b
+          = image_tag "logo-icon.png", class: 'dark-logo'
+        span
+          = image_tag "logo-light-text.png", class: 'light-logo'
+    .navbar-collapse
+      ul.navbar-nav.mr-auto.mt-md-0
+        li.nav-item
+          a.nav-link.nav-toggler.hidden-md-up.text-muted.waves-effect.waves-dark href="javascript:void(0)" 
+            i.ti-menu
+        li.nav-item
+          a.nav-link.sidebartoggler.hidden-sm-down.text-muted.waves-effect.waves-dark href="javascript:void(0)" 
+            i.icon-arrow-left-circle
+      ul.navbar-nav.my-lg-0
+        - if I18n.locale == :en
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle.text-muted.waves-effect.waves-dark aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="" 
+              i.flag-icon.flag-icon-us
+            .dropdown-menu.dropdown-menu-right.animated.bounceInDown
+              = link_to url_for(locale: 'ua'), class: 'dropdown-item' do
+                i.flag-icon.flag-icon-ua
+                | Українська
+        - else
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle.text-muted.waves-effect.waves-dark aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="" 
+              i.flag-icon.flag-icon-ua
+            .dropdown-menu.dropdown-menu-right.animated.bounceInDown
+              = link_to url_for(locale: 'en'), class: 'dropdown-item' do
+                i.flag-icon.flag-icon-us
+                | English
+
+aside.left-sidebar
+  /! Sidebar scroll
+  .scroll-sidebar
+    /! Sidebar navigation
+    nav.sidebar-nav
+      ul#sidebarnav
+        li.nav-small-cap PERSONAL
+        li
+          a.has-arrow aria-expanded="false" href="#" 
+            i.mdi.mdi-gauge
+            span.hide-menu Dashboard
+          ul.collapse aria-expanded="false" 
+            li
+              a href="index.html"  Modern Dashboard
+        li
+          a.has-arrow aria-expanded="false" href="#" 
+            i.mdi.mdi-bullseye
+            span.hide-menu Apps
+          ul.collapse aria-expanded="false" 
+            li
+              a href="app-calendar.html"  Calendar
+            li
+              a.has-arrow aria-expanded="false" href="#"  Inbox
+              ul.collapse aria-expanded="false" 
+                li
+                  a href="app-email.html"  Mailbox
+            li
+              a href="app-chat.html"  Chat app
+            
+        li.three-column
+          a.has-arrow aria-expanded="false" href="#" 
+            i.mdi.mdi-chart-bubble
+            span.hide-menu Ui Elements
+          ul.collapse aria-expanded="false" 
+            li
+              a href="ui-tooltip-stylish.html"  Tooltip stylish
+        li.nav-devider
+        li.nav-small-cap FORMS, TABLE &amp; WIDGETS
+        li.two-column
+          a.has-arrow aria-expanded="false" href="#" 
+            i.mdi.mdi-file
+            span.hide-menu Forms
+          ul.collapse aria-expanded="false" 
+            li
+              a href="form-basic.html"  Basic Forms
+        li
+          a.has-arrow aria-expanded="false" href="#" 
+            i.mdi.mdi-table
+            span.hide-menu Tables
+          ul.collapse aria-expanded="false" 
+            li
+              a href="table-basic.html"  Basic Tables
+            
+        li.nav-devider
+        li.nav-small-cap EXTRA COMPONENTS
+        li.two-column
+          a.has-arrow aria-expanded="false" href="#" 
+            i.mdi.mdi-book-open-variant
+            span.hide-menu Pages
+          ul.collapse aria-expanded="false" 
+            li
+              a href="starter-kit.html"  Starter Kit
+            li
+              a.has-arrow href="#"  Error Pages
+              ul.collapse aria-expanded="false" 
+                li
+                  a href="pages-error-400.html"  400
+                
+            li
+              a.has-arrow href="#" 
+                | Authentication
+                span.label.label-rounded.label-success 6
+              ul.collapse aria-expanded="false" 
+                li
+                  a href="pages-login.html"  Login 1
+        li
+          a.has-arrow aria-expanded="false" href="#" 
+            i.mdi.mdi-widgets
+            span.hide-menu Extra
+          ul.collapse aria-expanded="false" 
+            li
+              a.has-arrow aria-expanded="false" href="#"  Widgets
+              ul.collapse aria-expanded="false" 
+                li
+                  a href="widget-apps.html"  Widget Apps
+                li
+                  a href="widget-data.html"  Widget Data
+                li
+                  a href="widget-charts.html"  Widget Charts
+            li
+              a.has-arrow aria-expanded="false" href="#"  Maps
+              ul.collapse aria-expanded="false" 
+                li
+                  a href="map-google.html"  Google Maps
+                li
+                  a href="map-vector.html"  Vector Maps
+            li
+              a.has-arrow aria-expanded="false" href="#"  Icons
+              ul.collapse aria-expanded="false" 
+                li
+                  a href="icon-material.html"  Material Icons
+            li
+              a.has-arrow aria-expanded="false" href="#"  Charts
+              ul.collapse aria-expanded="false" 
+                li
+                  a href="chart-morris.html"  Morris Chart
+                
+        li
+          a.has-arrow aria-expanded="false" href="#" 
+            i.mdi.mdi-arrange-send-backward
+            span.hide-menu Multi level dd
+          ul.collapse aria-expanded="false" 
+            li
+              a href="#"  item 1.1
+            li
+              a href="#"  item 1.2
+            li
+              a.has-arrow aria-expanded="false" href="#"  Menu 1.3
+              ul.collapse aria-expanded="false" 
+                li
+                  a href="#"  item 1.3.1
+                li
+                  a href="#"  item 1.3.2
+                li
+                  a href="#"  item 1.3.3
+                li
+                  a href="#"  item 1.3.4
+            li
+              a href="#"  item 1.4

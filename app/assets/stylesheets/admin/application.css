@@ -1,0 +1,6 @@
+/*
+*= require ./bootstrap.min.css
+*= require ./style.scss
+*= require ./green.css
+*= require_self
+*/

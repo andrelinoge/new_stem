@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport" /
+
+    title = "Стем - Control panel"
+    = csrf_meta_tags
+    = stylesheet_link_tag     'admin/application'
+    = javascript_include_tag  'admin/application'
+
+  body.fix-header.fix-sidebar.card-no-border
+    #main-wrapper
+      = render 'admin/shared/navigation/header'
+      .page-wrapper
+        .container-fluid
+          = render 'admin/shared/navigation/breadcrumbs'
+          = yield
+
+    = render 'admin/shared/navigation/footer'
+    = yield :after_js_load
+
+  = render 'shared/flash_messages'
+    
