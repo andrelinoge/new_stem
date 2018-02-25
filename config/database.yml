@@ -7,19 +7,14 @@ default: &default
 
 development:
   <<: *default
-  database: setool_development
-
-
-staging:
-  <<: *default
-  database: setool_staging
+  database: newstem_development
 
 test:
   <<: *default
-  database: setool_test
+  database: newstem_test
 
 production:
   <<: *default
-  database: setool_production
+  database: newstem_production
   username: andrelinoge
   password: qwe123

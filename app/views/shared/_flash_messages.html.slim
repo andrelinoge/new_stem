@@ -1,0 +1,23 @@
+- if flash[:success]
+  javascript:
+    $.notify({
+      message: "#{flash[:success]}"
+    },{
+      type: 'success'
+    });
+
+- if flash[:notice]
+  javascript:
+    $.notify({
+      message: "#{flash[:notice]}"
+    },{
+      type: 'info'
+    });
+
+- if flash[:error]
+  javascript:
+    $.notify({
+      message: "#{flash[:error]}"
+    },{
+      type: 'danger'
+    });

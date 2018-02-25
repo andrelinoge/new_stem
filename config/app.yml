@@ -1,0 +1,15 @@
+# config/app.yml for rails-settings-cached
+defaults: &defaults
+  phone: ''
+  phones: []
+  address: ''
+  email: ''
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

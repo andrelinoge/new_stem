@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport" /
+
+    title llc Perspective
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application'
+    = javascript_include_tag 'application'
+  body
+    = render 'shared/navigation/header'
+    = yield
+    = render 'shared/navigation/footer'
+      
+    /= javascript_include_tag 'init_theme'
+    = yield :after_js_load
+
+  = render 'shared/flash_messages'
