@@ -1,2 +1,8 @@
-footer.footer
-  = "© #{Time.current.year} СТЕМ - Control Panel"
+footer.footer.footer-static.footer-light.navbar-shadow
+  p.clearfix.blue-grey.lighten-2.text-sm-center.mb-0.px-2.container.center-layout
+    span.float-md-left.d-block.d-md-inline-block
+      | Copyright  &copy; 
+      => "#{Time.current.year}"
+      =<> link_to "СТЕМ - Control Panel", root_path, class: "text-bold-800 grey darken-2"
+      | All rights reserved.
+    

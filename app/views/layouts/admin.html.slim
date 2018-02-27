@@ -1,24 +1,31 @@
 doctype html
 html
   head
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta content=('text/html; charset=UTF-8') http-equiv='Content-Type'
     meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport" /
-
-    title = "Стем - Control panel"
+    = display_meta_tags site: 'CTEM', reverse: true
     = csrf_meta_tags
-    = stylesheet_link_tag     'admin/application'
-    = javascript_include_tag  'admin/application'
+    = stylesheet_link_tag 'admin/application'
+    = javascript_include_tag 'admin/application'
+    link href='https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i' rel='stylesheet'
 
-  body.fix-header.fix-sidebar.card-no-border
-    #main-wrapper
-      = render 'admin/shared/navigation/header'
-      .page-wrapper
-        .container-fluid
-          = render 'admin/shared/navigation/breadcrumbs'
+  body.horizontal-layout.horizontal-menu.menu-expanded class='2-columns' data-col='2-columns' data-menu='horizontal-menu' data-open='click'
+    = render 'admin/shared/navigation/header'
+
+    .app-content.container-fluid.center-layout.mt-2
+      .content-wrapper
+        - if content_for?(:breadcrumbs)
+          = yield(:breadcrumbs)
+          
+        .content-body
           = yield
+          br
+          br
+          br
+          br
 
-    = render 'admin/shared/navigation/footer'
+    /= render 'admin/shared/navigation/footer'
+
     = yield :after_js_load
 
   = render 'shared/flash_messages'
-    

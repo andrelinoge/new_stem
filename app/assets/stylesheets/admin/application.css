@@ -1,6 +1,10 @@
 /*
-*= require ./bootstrap.min.css
-*= require ./style.scss
-*= require ./green.css
-*= require_self
+  *= require './theme/vendors.css'
+  *= require './theme/app.css'
+  *= require './theme/core/menu/menu-types/horizontal-menu.css'
+  *= require './theme/core/colors/palette-gradient.css'
+  *= require './theme/fonts/simple-line-icons/style.css'
+  *= require './theme/pages/timeline.css'
+  *= require './theme/fonts/flag-icon-css/css/flag-icon.min.css'
+  *= require animate
 */
