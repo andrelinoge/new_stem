@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta content=('text/html; charset=UTF-8') http-equiv='Content-Type'
+    meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport" /
+    = display_meta_tags site: 'CTEM sign in', reverse: true
+    = csrf_meta_tags
+    = stylesheet_link_tag 'admin/application'
+    = javascript_include_tag 'admin/application'
+    link href='https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i' rel='stylesheet'
+
+  body.horizontal-layout.horizontal-menu.1-column.menu-expanded.blank-page.blank-page data-col="1-column" data-menu="horizontal-menu"
+    .content-wrapper
+      .content-header.row
+      .content-body
+        section.flexbox-container
+          .col-12.d-flex.align-items-center.justify-content-center
+            .col-md-4.col-10.box-shadow-2.p-0
+              .card.border-grey.border-lighten-3.m-0
+                .card-header.border-0
+                  = yield

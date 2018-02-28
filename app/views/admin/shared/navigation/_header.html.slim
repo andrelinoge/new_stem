@@ -33,7 +33,7 @@ nav.header-navbar.navbar-expand-md.navbar.navbar-with-menu.navbar-static-top.nav
                   | Українська
           li.dropdown.dropdown-user.nav-item
             a.dropdown-toggle.nav-link.dropdown-user-link data-toggle="dropdown" href="#" 
-              span.user-name John Doe
+              span.user-name = current_user.full_name
             .dropdown-menu.dropdown-menu-right
               a.dropdown-item href="#" 
                 = fa_icon :gears, text: 'Change password'

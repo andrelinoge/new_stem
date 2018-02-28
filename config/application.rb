@@ -12,5 +12,9 @@ module NewStem
     config.i18n.default_locale      = :ua
     config.i18n.available_locales   = %i( ua en )
     config.i18n.fallbacks           = true
+
+    config.to_prepare do
+      Devise::SessionsController.layout "admin_signin"
+    end
   end
 end
