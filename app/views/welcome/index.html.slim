@@ -1,1 +1,624 @@
-b test
+header
+  .logowraper
+    .container
+      .row
+        .col-md-3
+          a.logo href="index.html" 
+            = image_tag "logo-dark.png"
+        .col-md-9
+          .topLinks
+            a.reg href="#" 
+              | Register
+              i.fa.fa-user aria-hidden="true" 
+            a href="#" 
+              | Login
+              i.fa.fa-sign-in aria-hidden="true" 
+          .topcall
+            span Mon-Fri 7-7, Sat 8-4 CST
+            strong 770-123-4567
+  /! Nav
+  .container
+    nav.navbar.navbar-toggleable-md.navbar-light
+      button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link.dropdown-toggle href="Index.html"  Home
+            ul.dropdown-menu
+              li
+                a.dropdown-item href="index.html"  Home With Slider
+              li
+                a.dropdown-item href="index-2.html"  Home With Static Image
+          li.nav-item
+            a.nav-link href="about-us.html"  About Us
+          li.nav-item
+            a.nav-link.dropdown-toggle href="#"  Services
+            ul.dropdown-menu
+              li
+                a.dropdown-item href="services-1.html"  Services 1
+              li
+                a.dropdown-item href="services-2.html"  Services 2
+              li
+                a.dropdown-item href="services-detail.html"  Services Detail
+          li.nav-item
+            a.nav-link.dropdown-toggle href="#"  Projects
+            ul.dropdown-menu
+              li
+                a.dropdown-item href="project-1.html"  Project gallery 1
+              li
+                a.dropdown-item href="project-2.html"  Project gallery 2
+              li
+                a.dropdown-item href="project-3.html"  Project gallery 3
+              li
+                a.dropdown-item href="project-detail.html"  Project Detail
+          li.nav-item
+            a.nav-link.dropdown-toggle href="#"  Pages
+            ul.dropdown-menu
+              li
+                a.dropdown-item href="faqs.html"  FAQ's
+              li
+                a.dropdown-item href="testimonials.html"  Testimonials
+              li
+                a.dropdown-item href="packages.html"  Packages
+              li
+                a.dropdown-item href="register.html"  Register
+              li
+                a.dropdown-item href="login.html"  Login
+              li
+                a.dropdown-item href="404.html"  404 Error
+          li.nav-item
+            a.nav-link.dropdown-toggle href="#"  Blog
+            ul.dropdown-menu
+              li
+                a.dropdown-item href="blog.html"  Blog List
+              li
+                a.dropdown-item href="blog-grid.html"  Blog Grid
+              li
+                a.dropdown-item href="blog-full-width.html"  Blog Full Width
+              li
+                a.dropdown-item href="blog-detail.html"  Blog Detail
+          li.nav-item
+            a.nav-link href="contact-us.html"  Contact Us
+        form.form-inline
+          .input-group
+            input.form-control placeholder="Search" type="text" /
+            .input-group-append
+              button.btn.btn-outline-secondary type="button" 
+                i.fa.fa-search aria-hidden="true" 
+/! Header End
+/! Revolution slider start
+#slider.tp-banner-container
+  .tp-banner
+    ul
+      li data-masterspeed="1000" data-saveperformance="on" data-slotamount="7" data-transition="fade" 
+        = image_tag "slider/dummy.png", data:{ lazyload: image_path("slider/banner.jpg")}
+        .caption.lfb.large-title.tp-resizeme.slidertext2 data-speed="600" data-start="1000" data-x="center" data-y="200"  Welcome to Home Build Template
+        .caption.lfb.large-title.tp-resizeme.slidertext1 data-speed="600" data-start="1600" data-x="center" data-y="230"  We Take Care of your Homes
+        .caption.lfb.large-title.tp-resizeme.sliderpara data-speed="600" data-start="2200" data-x="center" data-y="300"  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id justo nulla.
+        .caption.lfb.large-title.tp-resizeme.sliderbtn data-speed="600" data-start="2800" data-x="center" data-y="370" 
+          a.btn href="#."  Get Started
+      li data-masterspeed="1000" data-saveperformance="on" data-slotamount="7" data-transition="fade" 
+        = image_tag "slider/dummy.png", data: {lazyload: image_path("slider/banner2.jpg")}
+        .caption.lfb.large-title.tp-resizeme.slidertext1 data-speed="600" data-start="1000" data-x="center" data-y="230"  Lipsum Construction Template
+        .caption.lfb.large-title.tp-resizeme.sliderpara data-speed="600" data-start="1600" data-x="center" data-y="300"  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id justo nulla.
+        .caption.lfb.large-title.tp-resizeme.sliderbtn data-speed="600" data-start="2200" data-x="center" data-y="350" 
+          a.btn href="#."  Get Started
+/! Revolution slider end
+/! About
+section.section.aboutwrap
+  .container
+    .row
+      .col-lg-5
+        .abimage
+          = image_tag "about-company.jpg"
+      .col-lg-7
+        .titleTop
+          .subtitle Welcome to
+          h3 Construction Company
+          .seprate
+            = image_tag "seprator.png"
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula malesuada nisi eu rutrum. Maecenas purus diam, lobortis at velit eget, ultricies posuere augue. Nullam nec lectus a augue dictum euismod ut sed ex. Integer pretium arcu neque, vitae mollis massa consequat eu. In eget dolor luctus, varius dui fringilla, lobortis odio. Cras molestie nunc pretium, dictum lorem vel, vulputate mi. Etiam ac ligula bibendum, luctus diam sit amet, rutrum ipsum.
+          br/
+          br/
+          | Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate fringilla. Sed purus dui, tempus tempor velit vel, feugiat eleifend nulla [...]
+        /! <a href="#" class="sitebtn">More About Us <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a
+        ul.circleList.row
+          li.col-md-4.col-sm-4
+            .cricle
+              i.fa.fa-cogs aria-hidden="true" 
+            .title BUILDING
+            p Lorem ipsum dolor sit amet, consectetur adipiscing
+          li.col-md-4.col-sm-4
+            .cricle
+              i.fa.fa-desktop aria-hidden="true" 
+            .title RENOVATION
+            p Lorem ipsum dolor sit amet, consectetur adipiscing
+          li.col-md-4.col-sm-4
+            .cricle
+              i.fa.fa-tags aria-hidden="true" 
+            .title INTERIOR
+            p Lorem ipsum dolor sit amet, consectetur adipiscing
+/! Services
+section.section.greybg
+  .container
+    .titleTop
+      .subtitle Lorem ipsum dolor sit amet
+      h3 Our Construction Services
+      .seprate
+        = image_tag "seprator.png"
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+    ul.row.servicesgrid
+      li.col-lg-3.col-sm-6
+        .flip-container ontouchstart="this.classList.toggle('hover');" 
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "pic1.jpg"
+            .back
+              a.viewlink href="#." 
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Hose Build
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec gravida erat fermentum a.
+      li.col-lg-3.col-sm-6
+        .flip-container ontouchstart="this.classList.toggle('hover');" 
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "pic2.jpg"
+            .back
+              a.viewlink href="#." 
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Hose Build
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec gravida erat fermentum a.
+      li.col-lg-3.col-sm-6
+        .flip-container ontouchstart="this.classList.toggle('hover');" 
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "pic3.jpg"
+            .back
+              a.viewlink href="#." 
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Hose Build
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec gravida erat fermentum a.
+      li.col-lg-3.col-sm-6
+        .flip-container ontouchstart="this.classList.toggle('hover');" 
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "pic4.jpg"
+            .back
+              a.viewlink href="#." 
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Hose Build
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec gravida erat fermentum a.
+/! Why Choose
+section.section.whychoose
+  .container
+    .titleTop
+      .subtitle Lorem ipsum dolor sit amet
+      h3 Why Choose Us
+      .seprate
+        = image_tag "seprator.png"
+    ul.row.chooselist
+      li.col-lg-4.col-sm-6
+        .thumb-icon
+          i.fa.fa-building aria-hidden="true" 
+        h3 Safety
+        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
+      li.col-lg-4.col-sm-6
+        .thumb-icon
+          i.fa.fa-briefcase aria-hidden="true" 
+        h3 Experience
+        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
+      li.col-lg-4.col-sm-6
+        .thumb-icon
+          i.fa.fa-cogs aria-hidden="true" 
+        h3 Perfessional
+        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
+      li.col-lg-4.col-sm-6
+        .thumb-icon
+          i.fa.fa-users aria-hidden="true" 
+        h3 Qualified Staff
+        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
+      li.col-lg-4.col-sm-6
+        .thumb-icon
+          i.fa.fa-home aria-hidden="true" 
+        h3 Quality Work
+        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
+      li.col-lg-4.col-sm-6
+        .thumb-icon
+          i.fa.fa-paper-plane aria-hidden="true" 
+        h3 Delivery
+        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
+/! Gallery Section
+section#work.section
+  .container
+    /! SECTION TITLE
+    .titleTop
+      .subtitle see our awesome work
+      h3 Our Latest Projects
+      .seprate
+        = image_tag "seprator.png"
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+    ul.portfolio-grid.row
+      li.col-md-3.col-sm-6
+        a.image-popup href="images/gallery/1.jpg" 
+          /! Gallery Thumb
+        .flip-container
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "gallery/1.jpg", class: 'img-responsive'
+            .back
+              span.viewlink
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Project Title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec.
+      li.col-md-3.col-sm-6
+        a.image-popup href="images/gallery/2.jpg" 
+          /! Gallery Thumb
+        .flip-container
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "gallery/2.jpg", class: 'img-responsive'
+            .back
+              span.viewlink
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Project Title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec.
+      li.col-md-3.col-sm-6
+        a.image-popup href="images/gallery/3.jpg" 
+          /! Gallery Thumb
+        .flip-container
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "gallery/3.jpg", class: 'img-responsive'
+            .back
+              span.viewlink
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Project Title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec.
+      li.col-md-3.col-sm-6
+        a.image-popup href="images/gallery/4.jpg" 
+          /! Gallery Thumb
+        .flip-container
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "gallery/4.jpg", class: 'img-responsive'
+            .back
+              span.viewlink
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Project Title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec.
+      li.col-md-3.col-sm-6
+        a.image-popup href="images/gallery/5.jpg" 
+          /! Gallery Thumb
+        .flip-container
+          .flipper
+            .front
+              span.imgbox
+                = image_tag src="gallery/5.jpg", class: 'img-responsive'
+            .back
+              span.viewlink
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Project Title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec.
+      li.col-md-3.col-sm-6
+        a.image-popup href="images/gallery/6.jpg" 
+          /! Gallery Thumb
+        .flip-container
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "gallery/6.jpg", class: 'img-responsive'
+            .back
+              span.viewlink
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Project Title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec.
+      li.col-md-3.col-sm-6
+        a.image-popup href="images/gallery/7.jpg" 
+          /! Gallery Thumb
+        .flip-container
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "gallery/7.jpg", class: 'img-responsive'
+            .back
+              span.viewlink
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Project Title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec.
+      li.col-md-3.col-sm-6
+        a.image-popup href="images/gallery/8.jpg" 
+          /! Gallery Thumb
+        .flip-container
+          .flipper
+            .front
+              span.imgbox
+                = image_tag "gallery/8.jpg", class: 'img-responsive'
+            .back
+              span.viewlink
+                i.fa.fa-link aria-hidden="true" 
+              .inner
+                .back-title Project Title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec.
+/! Team
+section#team.section
+  .container
+    /! SECTION TITLE
+    .titleTop
+      .subtitle we have experts
+      h3 Our Team
+      .seprate
+        = image_tag "seprator.png"
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+    .row
+      /! team 1
+      .col-md-3.col-sm-6
+        .team-thumb
+          .thumb-image
+            = image_tag "team/team-img1.jpg", class: 'animate'
+          ul.list-inline.social
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-twitter aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-facebook aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-linkedin aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-google-plus aria-hidden="true" 
+          h4 JOHN DOE
+          h5 Building Worker
+      /! team 2
+      .col-md-3.col-sm-6
+        .team-thumb
+          .thumb-image
+            = image_tag "team/team-img2.jpg", class: 'animate'
+          ul.list-inline.social
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-twitter aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-facebook aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-linkedin aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-google-plus aria-hidden="true" 
+          h4 JASON DOE
+          h5 Building Worker
+      /! team 3
+      .col-md-3.col-sm-6
+        .team-thumb
+          .thumb-image
+            = image_tag "team/team-img3.jpg", class: 'animate'
+          ul.list-inline.social
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-twitter aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-facebook aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-linkedin aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-google-plus aria-hidden="true" 
+          h4 JANE DOE
+          h5 Building Worker
+      /! team 4
+      .col-md-3.col-sm-6
+        .team-thumb
+          .thumb-image
+            = image_tag "team/team-img4.jpg", class: 'animate'
+          ul.list-inline.social
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-twitter aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-facebook aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-linkedin aria-hidden="true" 
+            li
+              a href="javascript:void(0);" 
+                i.fa.fa-google-plus aria-hidden="true" 
+          h4 MARTIN DOE
+          h5 Building Worker
+/! Blog
+section#blog.section
+  .container
+    /! SECTION TITLE
+    .titleTop
+      .subtitle Lorem ipsum dolor
+      h3 Latest From Blog
+      .seprate
+        = image_tag "seprator.png"
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+    ul.blogGrid.row
+      li.col-lg-4
+        .int
+          /! Blog Image
+          .postimg
+            = image_tag "blog/1.jpg"
+          /! Blog info
+          .post-header
+            .date
+              i.fa.fa-calendar aria-hidden="true" 
+              | Sep 25, 2017
+            h4
+              a href="#."  Duis ultricies aliquet mauris
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...
+          a.readmore href="#."  Read More
+      li.col-lg-4
+        .int
+          /! Blog Image
+          .postimg
+            = image_tag "blog/1.jpg"
+          /! Blog info
+          .post-header
+            .date
+              i.fa.fa-calendar aria-hidden="true" 
+              | Sep 25, 2017
+            h4
+              a href="#."  Duis ultricies aliquet mauris
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...
+          a.readmore href="#."  Read More
+      li.col-lg-4
+        .int
+          /! Blog Image
+          .postimg
+            = image_tag "blog/1.jpg"
+          /! Blog info
+          .post-header
+            .date
+              i.fa.fa-calendar aria-hidden="true" 
+              | Sep 25, 2017
+            h4
+              a href="#."  Duis ultricies aliquet mauris
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...
+          a.readmore href="#."  Read More
+/! Newsletter Ideas
+section.newsletter
+  .container
+    .titleTop
+      .subtitle Newsletter
+      h3 Promos. Deals. New products
+      .seprate
+        = image_tag "seprator.png"
+    .input-group
+      input.form-control placeholder=("Enter Your Email Address") type="text" /
+      span.input-group-btn
+        button.btn.btn-secondary type="button" 
+          | Sign Up
+          i.fa.fa-paper-plane aria-hidden="true" 
+/! Testimonials
+section.testimonials
+  .container
+    .titleTop
+      .subtitle What Our Clients Saying
+      h3 Our Testimonials
+      .seprate
+        = image_tag "seprator.png"
+    ul.testimonialsList.owl-carousel
+      li.item
+        .testinner
+          .userimg
+            = image_tag "client-img1.jpg"
+          .clientname
+            | Adam Stone
+            span  CEO at Google INC
+          p Sed elit quam, iaculis sed semper sit amet udin vitae nibh. at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup. Sed elit quam, iaculis sed semper sit amet udin
+      li.item
+        .testinner
+          .userimg
+            = image_tag "client-img2.jpg"
+          .clientname
+            | Adam Stone
+            span  CEO at Google INC
+          p Sed elit quam, iaculis sed semper sit amet udin vitae nibh. at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup. Sed elit quam, iaculis sed semper sit amet udin
+/! Footer
+.site-footer
+  /! Footer Top start
+  .footer-top-area
+    .container
+      .row
+        .col-xs-12.col-sm-6.col-md-3
+          .footer-lwf
+            h3.footer-logo
+              = image_tag "logo.png"
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet, massa ac ornare feugiat, nunc dui auctor ipsum, sed posuere eros sapien id quam.
+            .socialLinks
+              a href="#" 
+                i.fa.fa-facebook aria-hidden="true" 
+              a href="#" 
+                i.fa.fa-twitter aria-hidden="true" 
+              a href="#" 
+                i.fa.fa-linkedin aria-hidden="true" 
+              a href="#" 
+                i.fa.fa-google-plus aria-hidden="true" 
+              a href="#" 
+                i.fa.fa-behance aria-hidden="true" 
+        .col-xs-12.col-sm-6.col-md-3
+          .footer-lwf.footer-menu
+            h3.footer-lwf-title Quick Links
+            ul
+              li
+                a href="index.html"  Home
+              li
+                a href="about-us.html"  About Company
+              li
+                a href="services-1.html"  Our Services
+              li
+                a href="blog.html"  Blog
+              li
+                a href="contact-us.html"  Contact Us
+              li
+                a href="project-1.html"  Gallery
+        .col-xs-12.col-sm-6.col-md-3
+          .footer-lwf.footer-menu
+            h3.footer-lwf-title Services
+            ul
+              li
+                a href="#"  Nascetur Ridiculus Mus
+              li
+                a href="#"  Curabitur Eu Tempor
+              li
+                a href="#"  Nullam Mollis Accumsan
+              li
+                a href="#"  Curabitur Bibendum
+              li
+                a href="#"  Metus Suscipit Efficitur
+              li
+                a href="#"  Proin Mattis Finibus
+        .col-xs-12.col-sm-6.col-md-3
+          .footer-lwf.footer-menu
+            h3.footer-lwf-title Get In Touch
+            ul.footer-contact
+              li
+                i.fa.fa-phone
+                | +1 1234 456789
+              li
+                i.fa.fa-envelope
+                | info@companyname.com
+              li
+                i.fa.fa-map-marker
+                | 795 South Park Avenue, Door 6 Wonderland, NY 94107, New York
+  /! footer top end
+  /! copyright start
+  .footer-bottom-area
+    .container
+      .row
+        .col-md-6
+          | Copyright &copy; 2018
+          span Build Homes
+          | All Rights Reserved
+        .col-md-6.text-right
+          | Design &amp; Development By:
+          a href="http://sharjeelanjum.com/" target="_blank"  Sharjeel Anjum

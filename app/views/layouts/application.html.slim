@@ -9,9 +9,9 @@ html
     = stylesheet_link_tag    'application'
     = javascript_include_tag 'application'
   body
-    = render 'shared/navigation/header'
+    /= render 'shared/navigation/header'
     = yield
-    = render 'shared/navigation/footer'
+    /= render 'shared/navigation/footer'
       
     /= javascript_include_tag 'init_theme'
     = yield :after_js_load

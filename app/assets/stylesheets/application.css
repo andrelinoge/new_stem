@@ -1,3 +1,11 @@
 /*
+ *= require './theme/bootstrap.min.css'
+ *= require font-awesome
+ *= require './theme/magnific-popup.css'
+ *= require './theme/owl.carousel.css'
+ *= require './theme/owl.theme.css'
+ *= require './theme/style.css'
+ *= require './theme/revolution-slider/settings.css'
  *= require_self
- */
+*/
+
