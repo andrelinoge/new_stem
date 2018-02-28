@@ -984,7 +984,7 @@ button, html [type='button'], [type='reset'], [type='submit'] {
   margin-right : 0.5rem;
 }
 .header-navbar .navbar-container ul.nav li a.dropdown-user-link {
-  padding : 0.9rem 0.6rem;
+  padding : 1.5rem 0.6rem;
 }
 .header-navbar .navbar-container ul.nav li a.dropdown-user-link .user-name {
   display : inline-block;

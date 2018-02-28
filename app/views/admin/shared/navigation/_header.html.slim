@@ -16,26 +16,28 @@ nav.header-navbar.navbar-expand-md.navbar.navbar-with-menu.navbar-static-top.nav
         ul.nav.navbar-nav.mr-auto.float-left
         ul.nav.navbar-nav.float-right
           li.dropdown.dropdown-language.nav-item
-            a#dropdown-flag.dropdown-toggle.nav-link aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" 
-              i.flag-icon.flag-icon-gb
+            a#dropdown-flag.dropdown-toggle.nav-link aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"
+              - if I18n.locale == :ua
+                i.flag-icon.flag-icon-ua
+              - else
+                i.flag-icon.flag-icon-us
               span.selected-language
             .dropdown-menu aria-labelledby="dropdown-flag" 
-              a.dropdown-item href="#" 
-                i.flag-icon.flag-icon-gb
-                | English
-              a.dropdown-item href="#" 
-                i.flag-icon.flag-icon-fr
-                | French
-              a.dropdown-item href="#" 
-                i.flag-icon.flag-icon-cn
-                | Chinese
-              a.dropdown-item href="#" 
-                i.flag-icon.flag-icon-de
-                | German
+              - if I18n.locale == :ua
+                = link_to url_for(locale: 'en'), class: 'dropdown-item' do
+                  i.flag-icon.flag-icon-us
+                  | English
+              - else
+                = link_to url_for(locale: 'ua'), class: 'dropdown-item' do
+                  i.flag-icon.flag-icon-ua
+                  | Українська
           li.dropdown.dropdown-user.nav-item
             a.dropdown-toggle.nav-link.dropdown-user-link data-toggle="dropdown" href="#" 
               span.user-name John Doe
             .dropdown-menu.dropdown-menu-right
+              a.dropdown-item href="#" 
+                = fa_icon :gears, text: 'Change password'
+              .dropdown-divider
               a.dropdown-item href="#" 
                 i.ft-power
                 | Logout
