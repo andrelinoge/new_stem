@@ -1,4 +1,5 @@
 require 'database_cleaner'
+require 'factory_bot_rails'
 require 'faker'
 
 def clean_db
