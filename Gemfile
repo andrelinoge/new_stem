@@ -38,10 +38,10 @@ gem 'activemodel-serializers-xml'
 gem 'google-analytics-rails', '1.1.1'
 gem 'truncate_html'
 gem 'rails_12factor', group: :production
+gem 'database_cleaner'
+gem 'factory_bot_rails'
 
 group :development, :test do
-	gem 'factory_bot_rails'
-  gem 'database_cleaner'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'annotate'
   gem 'colorize'
