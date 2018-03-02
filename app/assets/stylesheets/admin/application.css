@@ -6,4 +6,5 @@
   *= require './theme/fonts/simple-line-icons/style.css'
   *= require './theme/pages/timeline.css'
   *= require animate
+  *= require font-awesome
 */

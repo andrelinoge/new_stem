@@ -40,11 +40,11 @@ gem 'truncate_html'
 gem 'rails_12factor', group: :production
 gem 'database_cleaner'
 gem 'factory_bot_rails'
+gem 'colorize'
 
 group :development, :test do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'annotate'
-  gem 'colorize'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'faker'

@@ -1,3 +1,5 @@
-@import url('bootstrap-extended.css');
-@import url('colors.css');
-@import url('components.css');
+/*
+  *= require './bootstrap-extended.css'
+  *= require './colors.css'
+  *= require './components.css'
+*/
