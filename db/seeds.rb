@@ -1,6 +1,6 @@
 require 'database_cleaner'
 require 'factory_bot_rails'
-require 'faker'
+#require 'faker'
 
 puts 'Clean DB...'.yellow
 DatabaseCleaner.strategy = :truncation
