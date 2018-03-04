@@ -38,7 +38,7 @@ nav.header-navbar.navbar-expand-md.navbar.navbar-with-menu.navbar-static-top.nav
               a.dropdown-item href="#" 
                 = fa_icon :gears, text: 'Change password'
               .dropdown-divider
-              a.dropdown-item href="#" 
+              = link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do
                 i.ft-power
                 | Logout
 
