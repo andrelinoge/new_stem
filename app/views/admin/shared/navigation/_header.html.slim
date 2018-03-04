@@ -52,6 +52,10 @@ nav.header-navbar.navbar-expand-md.navbar.navbar-with-menu.navbar-static-top.nav
         = link_to admin_root_path, class: 'nav-link' do
           = fa_icon 'home'
           span Dashboard
+      li.nav-item
+        = link_to admin_site_settings_path, class: 'nav-link' do
+          = fa_icon 'gears'
+          span Site settings
 
       / li.nav-item
       /   = link_to account_contents_path, class: 'nav-link' do

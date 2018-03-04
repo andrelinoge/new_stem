@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180228071829) do
+ActiveRecord::Schema.define(version: 20180304120118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,24 @@ ActiveRecord::Schema.define(version: 20180228071829) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
+  create_table "site_setting_translations", force: :cascade do |t|
+    t.integer "site_setting_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "value"
+    t.string "label"
+    t.index ["locale"], name: "index_site_setting_translations_on_locale"
+    t.index ["site_setting_id"], name: "index_site_setting_translations_on_site_setting_id"
+  end
+
+  create_table "site_settings", force: :cascade do |t|
+    t.string "key"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_site_settings_on_key"
   end
 
   create_table "users", force: :cascade do |t|

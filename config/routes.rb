@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       devise_for :users, only: :sessions
       root 'dashboard#index'
 
-      resources :settings, only: [:index, :edit, :update]
+      resources :site_settings, only: [:index, :edit, :update]
     end
   end
 end
