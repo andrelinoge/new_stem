@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304120118) do
+ActiveRecord::Schema.define(version: 20180304190410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blog_translations", force: :cascade do |t|
+    t.integer "blog_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "description"
+    t.text "content"
+    t.string "meta_keys"
+    t.text "meta_description"
+    t.index ["blog_id"], name: "index_blog_translations_on_blog_id"
+    t.index ["locale"], name: "index_blog_translations_on_locale"
+  end
+
+  create_table "blogs", force: :cascade do |t|
+    t.string "cover"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false

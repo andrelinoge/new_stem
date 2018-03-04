@@ -7,3 +7,4 @@
 //= require rails-ujs
 //= require bootstrap-notify
 //= require moment
+//= require ckeditor/init

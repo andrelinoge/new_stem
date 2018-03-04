@@ -41,23 +41,3 @@ nav.header-navbar.navbar-expand-md.navbar.navbar-with-menu.navbar-static-top.nav
               = link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do
                 i.ft-power
                 | Logout
-
- 
-
-
-.header-navbar.navbar-expand-sm.navbar.navbar-horizontal.navbar-fixed.navbar-light.navbar-without-dd-arrow.navbar-shadow.menu-border data-menu="menu-wrapper" role="navigation" 
-  .navbar-container.main-menu-content.container-fluid.center-layout data-menu="menu-container" 
-    ul#main-menu-navigation.nav.navbar-nav data-menu="menu-navigation" 
-      li.nav-item
-        = link_to admin_root_path, class: 'nav-link' do
-          = fa_icon 'home'
-          span Dashboard
-      li.nav-item
-        = link_to admin_site_settings_path, class: 'nav-link' do
-          = fa_icon 'gears'
-          span Site settings
-
-      / li.nav-item
-      /   = link_to account_contents_path, class: 'nav-link' do
-      /     = fa_icon 'indent'
-      /     span Content
