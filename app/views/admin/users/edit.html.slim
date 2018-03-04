@@ -1,0 +1,11 @@
+.card
+  .card-header
+    h2.card-title Change password
+  .card-content
+    .card-body
+      .row
+        .col-6
+          = simple_form_for @user, url: { :action => "update_password" } do |f|
+            = f.input :password, autocomplete: 'off'
+            = f.input :password_confirmation, autocomplete: 'off'
+            = f.submit

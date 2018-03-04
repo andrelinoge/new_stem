@@ -10,6 +10,11 @@ Rails.application.routes.draw do
       root 'dashboard#index'
 
       resources :site_settings, only: [:index, :edit, :update]
+      resource :user, only: [:edit] do
+        collection do
+          patch 'update_password'
+        end
+      end
     end
   end
 end
