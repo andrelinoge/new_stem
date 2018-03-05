@@ -1,37 +1,81 @@
 require 'database_cleaner'
 require 'factory_bot_rails'
-#require 'faker'
+require 'faker'
 
 puts 'Clean DB...'.yellow
 DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.clean
 
+
 puts "\nSeeding users...".blue
-FactoryBot.create(:user,
-  email: "admin@example.com",
-  password: '123456'
-)
+FactoryBot.create(:user, email: "admin@example.com", password: '123456')
+
 
 puts "\nSeeding settings...".blue
 I18n.locale  = :en
-record       = SiteSetting.find_or_create_by(key: :phone)
-record.label = 'Phone(s)'
-record.value = '095 820 5556, 067 177 8308'
-record.save
+SiteSetting.find_or_create_by(key: :phone).update({
+  label: 'Phone(s)',
+  value: '095 820 5556, 067 177 8308'
+})
 
-record       = SiteSetting.find_or_create_by(key: :address)
-record.label = 'Address'
-record.value = 'м. Івано-Франківськ вул. Пулюя 15А'
-record.save
+SiteSetting.find_or_create_by(key: :address).update({
+  label: 'Address',
+  value: 'м. Івано-Франківськ вул. Пулюя 15А'
+})
+
+SiteSetting.find_or_create_by(key: :email).update({
+  label: 'Email',
+  value: ''
+})
+
+SiteSetting.find_or_create_by(key: :google_map).update({
+  label: 'GoogleMap script',
+  value: ''
+})
+
+
+puts "\nSeeding blog...".blue
+11.times do |_i| 
+  FactoryBot.create(:blog).update(
+    title: Faker::Lorem.sentence,
+    content: Faker::Lorem.paragraph,
+    description: Faker::Lorem.sentence,
+    meta_keys: Faker::Lorem.words(4).join(','),
+    meta_description: Faker::Lorem.sentence
+  )
+end
+
+{
+  wecome: 'Construction Company',
+  our_services: 'Our Construction Services',
+  safety: 'Safety',
+  experience: 'Experience',
+  perfessional: 'Perfessional',
+  staff: 'Qualified Staff',
+  quality: 'Quality Work',
+  delivery: 'Delivery',
+  last_projects: 'Our Latest Projects',
+  our_team: 'Our Team',
+  last_blog_posts: 'Latest From Blog',
+  testimonials: 'Our Testimonials',
+  footer_text: ''
+}.each_pair do |key, title|
+  ContentBlock.find_or_create_by(key: key).update(
+    small_title: Faker::Lorem.sentence,
+    title: title,
+    content: Faker::Lorem.paragraph
+  )
+end
 
 I18n.locale = :ua
-record       = SiteSetting.find_or_create_by(key: :phone)
-record.label = 'Телефон(и)'
-record.value = '095 820 5556, 067 177 8308'
-record.save
+SiteSetting.find_or_create_by(key: :phone).update({
+  label: 'Телефон(и)',
+  value: '095 820 5556, 067 177 8308'
+})
 
-record       = SiteSetting.find_or_create_by(key: :address)
-record.label = 'Адреса'
-record.value = 'м. Івано-Франківськ вул. Пулюя 15А'
-record.save
+SiteSetting.find_or_create_by(key: :address).update({
+  label: 'Адреса',
+  value: 'м. Івано-Франківськ вул. Пулюя 15А'
+})
+
 I18n.locale  = :en

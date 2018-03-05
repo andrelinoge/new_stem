@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304190410) do
+ActiveRecord::Schema.define(version: 20180305073304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,27 @@ ActiveRecord::Schema.define(version: 20180304190410) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
+  create_table "content_block_translations", force: :cascade do |t|
+    t.integer "content_block_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "small_title"
+    t.text "content"
+    t.index ["content_block_id"], name: "index_content_block_translations_on_content_block_id"
+    t.index ["locale"], name: "index_content_block_translations_on_locale"
+  end
+
+  create_table "content_blocks", force: :cascade do |t|
+    t.string "key"
+    t.boolean "visible", default: true
+    t.string "cover"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_content_blocks_on_key"
   end
 
   create_table "site_setting_translations", force: :cascade do |t|

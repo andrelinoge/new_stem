@@ -10,6 +10,10 @@
 
 FactoryBot.define do
   factory :blog do
-    cover "MyString"
+    sequence :cover do |n|
+      x = n % 4
+      x = 4 if x.zero?
+      Rack::Test::UploadedFile.new(Rails.root.join('test', 'fixtures', 'files', 'blog', "#{x}.jpg"))
+    end
   end
 end

@@ -7,8 +7,12 @@
           span Dashboard
       li.nav-item
         = link_to admin_blogs_path, class: 'nav-link' do
-          = fa_icon 'newspaper'
+          = fa_icon 'newspaper-o'
           span Blog
+      li.nav-item
+        = link_to admin_content_blocks_path, class: 'nav-link' do
+          = fa_icon 'th'
+          span Content blocks
       li.nav-item
         = link_to admin_site_settings_path, class: 'nav-link' do
           = fa_icon 'gears'

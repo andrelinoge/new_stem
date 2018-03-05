@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       end
 
       resources :blogs
+      resources :content_blocks, only: [:index, :edit, :update, :show]
     end
   end
 end

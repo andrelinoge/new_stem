@@ -1,0 +1,28 @@
+.card
+  .card-header
+    h2.card-title Content blocks
+
+  .card-content
+    - if @content_blocks.any?
+      table.table
+        thead.bg-teal.bg-lighten-4
+          tr
+            th.width-50 ID
+            th.text-left Title
+            th Visible
+            th.width-200 Actions
+        tbody
+          - @content_blocks.find_each do |record|
+            tr
+              td= record.id
+              td= link_to record.title, [:admin, record], class: 'card-link'
+              td= record.visible
+              td
+                => link_to [:edit, :admin, record], class: 'card-link' do
+                  = fa_icon 'pencil', text: 'Edit'
+    - else
+      .card-body
+        h4 No content blocks
+
+    .card-body
+      = paginate @content_blocks

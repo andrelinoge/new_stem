@@ -1,16 +1,16 @@
 # == Schema Information
 #
-# Table name: blogs
+# Table name: content_blocks
 #
 #  id         :integer          not null, primary key
+#  key        :string
+#  visible    :boolean          default(TRUE)
 #  cover      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Blog < ApplicationRecord
-  translates :title, :description, :content, :meta_keys, :meta_description
+class ContentBlock < ApplicationRecord
+  translates :title, :content, :small_title
   mount_uploader :cover, BlogCoverUploader
-
-  validates_presence_of :cover
 end

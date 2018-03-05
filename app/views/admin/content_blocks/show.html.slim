@@ -1,0 +1,35 @@
+.row
+  .col-8
+    .card
+      .card-header
+        h4.card-title Content block details
+        .heading-elements
+          = link_to [:edit, :admin, @content_block], class: 'card-link' do
+            = fa_icon 'pencil', text: 'Edit'
+
+      .card-content
+        table.table
+          tbody
+            tr
+              td.width-250 Title
+              td = @content_block.title
+            tr
+              td Small title
+              td = @content_block.small_title
+
+            tr
+              td Visible?
+              td = @content_block.visible
+
+            tr
+              td Content
+              td = @content_block.content
+
+
+  .col-4
+    .card
+      .card-header
+        h4.card-title Cover image
+      .card-content
+        .card-body
+          = image_tag @content_block.cover_url, class: 'img-thumbnail img-fluid'

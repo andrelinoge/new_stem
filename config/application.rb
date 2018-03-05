@@ -9,9 +9,10 @@ module NewStem
     config.load_defaults 5.1
     config.time_zone                = 'Europe/Minsk'
     
-    config.i18n.default_locale      = :ua
-    config.i18n.available_locales   = %i( ua en )
-    config.i18n.fallbacks           = true
+    config.i18n.default_locale    = :ua
+    config.i18n.available_locales = %i( ua en )
+    config.i18n.fallbacks         = true
+    config.i18n.fallbacks         = { ua: :en, en: :ua}
 
     config.to_prepare do
       Devise::SessionsController.layout "admin_signin"
