@@ -10,16 +10,15 @@
       table.table
         thead.bg-teal.bg-lighten-4
           tr
-            th ID
-            th Title
-            th Description
+            th.width-50 ID
+            th.text-left Title
             th.width-200 Actions
         tbody
           - @blog_posts.find_each do |record|
             tr
               td= record.id
-              td= record.title
-              td= record.description
+              td
+                = link_to record.title, [:admin, record], class: 'card-link'
               td
                 => link_to [:edit, :admin, record], class: 'card-link' do
                   = fa_icon 'pencil', text: 'Edit'
