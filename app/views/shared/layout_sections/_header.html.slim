@@ -1,0 +1,14 @@
+header
+  .logowraper
+    .container
+      .row
+        .col-md-3
+          = link_to root_path, class: 'logo' do
+            = image_tag "logo-dark.png"
+        .col-md-9
+          .topcall
+            span = SiteSetting[:work_hours]
+            strong = SiteSetting[:phone]
+
+  .container
+    = render 'shared/navigation/top_menu'

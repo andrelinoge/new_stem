@@ -13,4 +13,8 @@
 class ContentBlock < ApplicationRecord
   translates :title, :content, :small_title
   mount_uploader :cover, BlogCoverUploader
+
+  def ContentBlock.[](str)
+    self.find_by(key: str).try(:value)
+  end
 end

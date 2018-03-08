@@ -18,6 +18,11 @@ SiteSetting.find_or_create_by(key: :phone).update({
   value: '095 820 5556, 067 177 8308'
 })
 
+SiteSetting.find_or_create_by(key: :work_hours).update({
+  label: 'Work hours for call',
+  value: 'Mon-Fri 8:00-17:00'
+})
+
 SiteSetting.find_or_create_by(key: :address).update({
   label: 'Address',
   value: 'м. Івано-Франківськ вул. Пулюя 15А'
@@ -31,6 +36,11 @@ SiteSetting.find_or_create_by(key: :email).update({
 SiteSetting.find_or_create_by(key: :google_map).update({
   label: 'GoogleMap script',
   value: ''
+})
+
+SiteSetting.find_or_create_by(key: :shop_url).update({
+  label: 'Link to shop',
+  value: '#'
 })
 
 
@@ -76,6 +86,16 @@ SiteSetting.find_or_create_by(key: :phone).update({
 SiteSetting.find_or_create_by(key: :address).update({
   label: 'Адреса',
   value: 'м. Івано-Франківськ вул. Пулюя 15А'
+})
+
+SiteSetting.find_or_create_by(key: :work_hours).update({
+  label: 'Робочий час прийому дзвінків',
+  value: 'Пн-Пт 8:00-17:00'
+})
+
+SiteSetting.find_or_create_by(key: :shop_url).update({
+  label: 'Посилання на магазин',
+  value: '#'
 })
 
 I18n.locale  = :en

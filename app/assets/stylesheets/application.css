@@ -6,6 +6,10 @@
  *= require './theme/owl.theme.css'
  *= require './theme/style.css'
  *= require './theme/revolution-slider/settings.css'
+ *= require './theme/fonts/flag-icon-css/css/flag-icon'
  *= require_self
 */
 
+.flag-min-width {
+  min-width: 5.2rem;
+}
