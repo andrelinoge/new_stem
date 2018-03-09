@@ -1,0 +1,24 @@
+.row
+  .col-8
+    .card
+      .card-header
+        h4.card-title Testimonial details
+        .heading-elements
+          = link_to [:edit, :admin, @testimonial], class: 'card-link' do
+            = fa_icon 'pencil', text: 'Edit'
+          = link_to [:admin, @testimonial], method: :delete, data: { confirm: 'Are you sure?' } do
+            = fa_icon 'trash', text: 'Delete'
+
+      .card-content
+        table.table
+          tbody
+            tr
+              td.width-250 Author
+              td = @testimonial.author
+            tr
+              td Positions
+              td = @testimonial.position
+
+            tr
+              td Content
+              td = @testimonial.content

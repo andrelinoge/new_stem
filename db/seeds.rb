@@ -55,8 +55,9 @@ puts "\nSeeding blog...".blue
   )
 end
 
+puts "\nContent blocks...".blue
 {
-  wecome: 'Construction Company',
+  welcome: 'Construction Company',
   our_services: 'Our Construction Services',
   safety: 'Safety',
   experience: 'Experience',
@@ -74,6 +75,15 @@ end
     small_title: Faker::Lorem.sentence,
     title: title,
     content: Faker::Lorem.paragraph
+  )
+end
+
+puts "\nSeeding testimonials...".blue
+6.times do |_i| 
+  FactoryBot.create(:testimonial).update(
+    author: Faker::Name.name,
+    content: Faker::Lorem.paragraph,
+    position: Faker::Company.profession
   )
 end
 

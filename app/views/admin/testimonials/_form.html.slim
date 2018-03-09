@@ -1,0 +1,12 @@
+= simple_form_for [:admin, @testimonial] do |f|
+  .row
+    .col-12
+      = f.error_notification
+
+  .row
+    .col-12
+      = f.input :author
+      = f.input :position
+      = f.input :content, as: :text
+
+      = f.button :submit, class: 'btn btn-primary', data: { disable_with: submitting_message(f) }

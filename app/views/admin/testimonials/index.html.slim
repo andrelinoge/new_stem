@@ -1,0 +1,33 @@
+.card
+  .card-header
+    h2.card-title Testimonials
+    .heading-elements.heading-top-elements
+      = link_to new_admin_testimonial_path, class: 'btn btn-primary btn-md' do
+        = fa_icon 'plus', text: 'New testimonial'
+
+  .card-content
+    - if @testimonials.any?
+      table.table
+        thead.bg-teal.bg-lighten-4
+          tr
+            th.width-50 ID
+            th.text-left Author
+            th.text-left Content
+            th.width-200 Actions
+        tbody
+          - @testimonials.find_each do |testimonial|
+            tr
+              td = testimonial.id
+              td = link_to testimonial.author, [:admin, testimonial], class: 'card-link'
+              td = testimonial.content
+              td
+                => link_to [:edit, :admin, testimonial], class: 'card-link' do
+                  = fa_icon 'pencil', text: 'Edit'
+                =< link_to [:admin, testimonial], class: 'card-link', method: :delete, data: { confirm: 'Are you sure?' } do
+                  = fa_icon 'trash', text: 'Delete'
+    - else
+      .card-body
+        h4 No testimonials
+
+    .card-body
+      = paginate @testimonials

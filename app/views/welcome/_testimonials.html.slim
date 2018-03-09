@@ -1,20 +1,18 @@
+- content_block = ContentBlock[:testimonials]
+
 section.testimonials
   .container
     .titleTop
-      .subtitle What Our Clients Saying
-      h3 Our Testimonials
+      .subtitle = content_block.small_title
+      h3 = content_block.title
       .seprate
         = image_tag "seprator.png"
     ul.testimonialsList.owl-carousel
-      li.item
-        .testinner
-          .clientname
-            | Adam Stone
-            span  CEO at Google INC
-          p Sed elit quam, iaculis sed semper sit amet udin vitae nibh. at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup. Sed elit quam, iaculis sed semper sit amet udin
-      li.item
-        .testinner
-          .clientname
-            | Adam Stone
-            span  CEO at Google INC
-          p Sed elit quam, iaculis sed semper sit amet udin vitae nibh. at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup. Sed elit quam, iaculis sed semper sit amet udin
+      - Testimonial.all.each do |testimonial|
+        li.item
+          .testinner
+            .clientname
+              = testimonial.author
+              span = testimonial.position
+            p = testimonial.content
+      

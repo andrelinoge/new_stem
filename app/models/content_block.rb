@@ -15,6 +15,6 @@ class ContentBlock < ApplicationRecord
   mount_uploader :cover, BlogCoverUploader
 
   def ContentBlock.[](str)
-    self.find_by(key: str).try(:value)
+    self.find_by(key: str)
   end
 end
