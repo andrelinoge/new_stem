@@ -13,3 +13,8 @@
 .flag-min-width {
   min-width: 5.2rem;
 }
+
+.flag-label {
+  margin-left: 5px;
+  color: #fff;
+}

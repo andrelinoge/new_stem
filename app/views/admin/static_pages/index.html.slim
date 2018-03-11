@@ -1,0 +1,26 @@
+.card
+  .card-header
+    h2.card-title Static pages
+
+  .card-content
+    - if @static_pages.any?
+      table.table
+        thead.bg-teal.bg-lighten-4
+          tr
+            th.width-50 ID
+            th.text-left Title
+            th.width-200 Actions
+        tbody
+          - @static_pages.find_each do |record|
+            tr
+              td= record.id
+              td= link_to record.label, [:admin, record], class: 'card-link'
+              td
+                => link_to [:edit, :admin, record], class: 'card-link' do
+                  = fa_icon 'pencil', text: 'Edit'
+    - else
+      .card-body
+        h4 No static pages
+
+    .card-body
+      = paginate @static_pages

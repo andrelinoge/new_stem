@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180309071224) do
+ActiveRecord::Schema.define(version: 20180310110505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20180309071224) do
   create_table "content_blocks", force: :cascade do |t|
     t.string "key"
     t.boolean "visible", default: true
-    t.string "cover"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_content_blocks_on_key"
@@ -84,6 +84,25 @@ ActiveRecord::Schema.define(version: 20180309071224) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_site_settings_on_key"
+  end
+
+  create_table "static_page_translations", force: :cascade do |t|
+    t.integer "static_page_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "content"
+    t.string "meta_keys"
+    t.string "label"
+    t.text "meta_description"
+    t.index ["locale"], name: "index_static_page_translations_on_locale"
+    t.index ["static_page_id"], name: "index_static_page_translations_on_static_page_id"
+  end
+
+  create_table "static_pages", force: :cascade do |t|
+    t.string "key"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "testimonial_translations", force: :cascade do |t|

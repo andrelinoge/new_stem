@@ -1,0 +1,37 @@
+= render 'shared/navigation/breadcrumbs', main_title: 'Contact Us', current_page: 'Contact Us'
+// To-Do: add meta tags
+
+section.section.innercms
+  .container
+    .contact-wrap
+      /! Contact Info
+      .contact-now.row
+        .col-md-4.column
+          .contact
+            span
+              i.fa.fa-home
+            .information
+              strong Address:
+              p = SiteSetting[:address]
+                
+        /! Contact Info
+        .col-md-4.column
+          .contact
+            span
+              i.fa.fa-envelope
+            .information
+              strong Email Address:
+              p = SiteSetting[:email]
+        /! Contact Info
+        .col-md-4.column
+          .contact
+            span
+              i.fa.fa-phone
+            .information
+              strong Phone No:
+              - SiteSetting[:all_phones].split(',').each do |phone|
+                p = phone
+        /! Contact Info
+      /! Contact form
+      .column
+        == SiteSetting[:google_map]

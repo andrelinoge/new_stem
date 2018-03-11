@@ -19,6 +19,12 @@ Rails.application.routes.draw do
       resources :blogs
       resources :testimonials
       resources :content_blocks, only: [:index, :edit, :update, :show]
+      resources :static_pages, only: [:index, :edit, :update, :show]
     end
+
+    get '/about', to: 'pages#about', as: :about_page
+    get '/contacts', to: 'pages#contact_us', as: :contacts_page
+    resources :blogs, only: [:index, :show]
+    resources :projects, only: [:index, :show]
   end
 end

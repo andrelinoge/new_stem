@@ -1,0 +1,39 @@
+class Admin::StaticPagesController < Admin::ApplicationController
+  def index
+    @static_pages = collection.page(params[:page]).per(10)
+  end
+
+  def show
+    @static_page = resource
+  end
+
+  def edit
+    @static_page = resource
+  end
+
+  def update
+    @static_page = resource
+
+    if @static_page.update(resource_params)
+      redirect_to admin_static_page_path(@static_page), notice: 'Static page was updated'
+    else
+      render :edit
+    end
+  end
+
+  protected
+
+  def collection
+    StaticPage.all
+  end
+
+  def resource
+    collection.find(params[:id])
+  end
+
+  def resource_params
+    params
+      .require(:static_page)
+      .permit(:content)
+  end
+end

@@ -1,3 +1,5 @@
+- content_block = ContentBlock[:welcome]
+
 section.section.aboutwrap
   .container
     .row
@@ -15,22 +17,23 @@ section.section.aboutwrap
           br/
           br/
           | Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate fringilla. Sed purus dui, tempus tempor velit vel, feugiat eleifend nulla [...]
-        / a.sitebtn href="#" 
-        /   | More About Us 
-        /   i.fa.fa-long-arrow-right
-        ul.circleList.row
-          li.col-md-4.col-sm-4
-            .cricle
-              i.fa.fa-cogs aria-hidden="true" 
-            .title BUILDING
-            p Lorem ipsum dolor sit amet, consectetur adipiscing
-          li.col-md-4.col-sm-4
-            .cricle
-              i.fa.fa-desktop aria-hidden="true" 
-            .title RENOVATION
-            p Lorem ipsum dolor sit amet, consectetur adipiscing
-          li.col-md-4.col-sm-4
-            .cricle
-              i.fa.fa-tags aria-hidden="true" 
-            .title INTERIOR
-            p Lorem ipsum dolor sit amet, consectetur adipiscing
+        br/
+        = link_to about_page_path, class: 'sitebtn' do
+          | More About Us 
+          i.fa.fa-long-arrow-right
+        / ul.circleList.row
+        /   li.col-md-4.col-sm-4
+        /     .cricle
+        /       i.fa.fa-cogs aria-hidden="true" 
+        /     .title BUILDING
+        /     p Lorem ipsum dolor sit amet, consectetur adipiscing
+        /   li.col-md-4.col-sm-4
+        /     .cricle
+        /       i.fa.fa-desktop aria-hidden="true" 
+        /     .title RENOVATION
+        /     p Lorem ipsum dolor sit amet, consectetur adipiscing
+        /   li.col-md-4.col-sm-4
+        /     .cricle
+        /       i.fa.fa-tags aria-hidden="true" 
+        /     .title INTERIOR
+        /     p Lorem ipsum dolor sit amet, consectetur adipiscing

@@ -14,6 +14,10 @@
           = fa_icon 'th'
           span Content blocks
       li.nav-item
+        = link_to admin_static_pages_path, class: 'nav-link' do
+          = fa_icon 'indent'
+          span Static pages
+      li.nav-item
         = link_to admin_testimonials_path, class: 'nav-link' do
           = fa_icon 'star'
           span Testimonials
@@ -21,8 +25,3 @@
         = link_to admin_site_settings_path, class: 'nav-link' do
           = fa_icon 'gears'
           span Site settings
-
-      / li.nav-item
-      /   = link_to account_contents_path, class: 'nav-link' do
-      /     = fa_icon 'indent'
-      /     span Content

@@ -5,14 +5,14 @@
 #  id         :integer          not null, primary key
 #  key        :string
 #  visible    :boolean          default(TRUE)
-#  cover      :string
+#  image      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 class ContentBlock < ApplicationRecord
   translates :title, :content, :small_title
-  mount_uploader :cover, BlogCoverUploader
+  mount_uploader :image, ContentBlockImageUploader
 
   def ContentBlock.[](str)
     self.find_by(key: str)

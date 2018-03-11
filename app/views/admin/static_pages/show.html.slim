@@ -1,0 +1,30 @@
+.row
+  .col-12
+    .card
+      .card-header
+        h4.card-title Static page details
+        .heading-elements
+          = link_to [:edit, :admin, @static_page], class: 'card-link' do
+            = fa_icon 'pencil', text: 'Edit'
+
+      .card-content
+        table.table
+          tbody
+            tr
+              td.width-250 Label
+              td = @static_page.label
+            tr
+              td Meta keys
+              td = @static_page.meta_keys
+
+            tr
+              td Meta description
+              td = @static_page.meta_description
+
+  .col-12
+    .card
+      .card-header
+        h4.card-title Content
+      .card-content
+        .card-body
+          == @static_page.content

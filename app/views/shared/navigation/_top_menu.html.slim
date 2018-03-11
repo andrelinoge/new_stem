@@ -6,28 +6,32 @@ nav.navbar.navbar-toggleable-md.navbar-light
       li.nav-item
         = link_to 'Home', root_path, class: 'nav-link'
       li.nav-item
-        = link_to 'About us', root_path, class: 'nav-link'
+        = link_to 'About us', about_page_path, class: 'nav-link'
       li.nav-item
         = link_to 'Shop', SiteSetting[:shop_url], class: 'nav-link'
       li.nav-item
-        = link_to 'Our projects', root_path, class: 'nav-link'
+        = link_to 'Our projects', projects_path, class: 'nav-link'
       li.nav-item
-        = link_to 'Blog', root_path, class: 'nav-link'
+        = link_to 'Blog', blogs_path, class: 'nav-link'
       li.nav-item
-        = link_to 'Contact Us', root_path, class: 'nav-link'
+        = link_to 'Contact Us', contacts_page_path, class: 'nav-link'
 
     ul.navbar-nav
       li.dropdown.dropdown-language.nav-item
         a#dropdown-flag.dropdown-toggle.nav-link aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"
           - if I18n.locale == :ua
             i.flag-icon.flag-icon-ua
+            span.flag-label ua
           - else
             i.flag-icon.flag-icon-us
+            span.flag-label en
           span.selected-language
         .dropdown-menu.flag-min-width aria-labelledby="dropdown-flag" 
           - if I18n.locale == :ua
             = link_to url_for(locale: 'en'), class: 'dropdown-item' do
               i.flag-icon.flag-icon-us
+              span.flag-label en
           - else
             = link_to url_for(locale: 'ua'), class: 'dropdown-item' do
               i.flag-icon.flag-icon-ua
+              span.flag-label ua

@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  key        :string
 #  visible    :boolean          default(TRUE)
-#  cover      :string
+#  image      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -14,9 +14,9 @@ FactoryBot.define do
   factory :content_block do
     key :test
     visible { true }
-    cover {
+    image {
       [nil, nil, nil, 
-        Rack::Test::UploadedFile.new(Dir[Rails.root.join('spec', 'support', 'files', 'infographics', '*.*')].sample)
+        Rack::Test::UploadedFile.new(Dir[Rails.root.join('test', 'fixtures', 'misc', '*.*')].sample)
       ].sample
     }
   end

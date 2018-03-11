@@ -3,7 +3,7 @@ class CreateContentBlocks < ActiveRecord::Migration[5.1]
     create_table :content_blocks do |t|
       t.string :key, index: true
       t.boolean :visible, default: true
-      t.string :cover
+      t.string :image
 
       t.timestamps
     end

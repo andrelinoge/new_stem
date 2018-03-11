@@ -1,0 +1,10 @@
+.pageTitle
+  .container
+    .row
+      .col-md-6.col-sm-6
+        h1.page-heading = main_title
+      .col-md-6.col-sm-6
+        .breadCrumb
+          = link_to 'Home', root_path
+          | /
+          span = current_page
