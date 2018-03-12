@@ -1,0 +1,13 @@
+= simple_form_for [:admin, @team_member] do |f|
+  .row
+    .col-12
+      = f.error_notification
+
+  .row
+    .col-6
+      = f.input :name
+      = f.input :position
+      = f.button :submit, class: 'btn btn-primary', data: { disable_with: submitting_message(f) }
+    .col-6
+      = image_tag @team_member.photo_url, class: 'img-thumbnail img-fluid'
+      = f.input :photo, input_html: {class: 'form-control-file'}

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       resources :testimonials
       resources :content_blocks, only: [:index, :edit, :update, :show]
       resources :static_pages, only: [:index, :edit, :update, :show]
+      resources :team_members
     end
 
     get '/about', to: 'pages#about', as: :about_page

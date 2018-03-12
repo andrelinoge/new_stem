@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180310110505) do
+ActiveRecord::Schema.define(version: 20180312072241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,23 @@ ActiveRecord::Schema.define(version: 20180310110505) do
 
   create_table "static_pages", force: :cascade do |t|
     t.string "key"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "team_member_translations", force: :cascade do |t|
+    t.integer "team_member_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "position"
+    t.index ["locale"], name: "index_team_member_translations_on_locale"
+    t.index ["team_member_id"], name: "index_team_member_translations_on_team_member_id"
+  end
+
+  create_table "team_members", force: :cascade do |t|
+    t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

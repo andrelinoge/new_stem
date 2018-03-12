@@ -1,0 +1,33 @@
+.card
+  .card-header
+    h2.card-title Team members
+    .heading-elements.heading-top-elements
+      = link_to new_admin_team_member_path, class: 'btn btn-primary btn-md' do
+        = fa_icon 'plus', text: 'New member'
+
+  .card-content
+    - if @team_members.any?
+      table.table
+        thead.bg-teal.bg-lighten-4
+          tr
+            th.width-50 ID
+            th.text-left Name
+            th.text-left Position
+            th.width-200 Actions
+        tbody
+          - @team_members.find_each do |record|
+            tr
+              td = record.id
+              td = link_to record.name, [:admin, record], class: 'card-link'
+              td = record.position
+              td
+                => link_to [:edit, :admin, record], class: 'card-link' do
+                  = fa_icon 'pencil', text: 'Edit'
+                =< link_to [:admin, record], class: 'card-link', method: :delete, data: { confirm: 'Are you sure?' } do
+                  = fa_icon 'trash', text: 'Delete'
+    - else
+      .card-body
+        h4 No team members
+
+    .card-body
+      = paginate @team_members

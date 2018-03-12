@@ -1,90 +1,22 @@
-section#team.section
-  .container
-    /! SECTION TITLE
-    .titleTop
-      .subtitle we have experts
-      h3 Our Team
-      .seprate
-        = image_tag "seprator.png"
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-    .row
-      /! team 1
-      .col-md-3.col-sm-6
-        .team-thumb
-          .thumb-image
-            = image_tag "team/team-img1.jpg", class: 'animate'
-          ul.list-inline.social
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-twitter aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-facebook aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-linkedin aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-google-plus aria-hidden="true" 
-          h4 JOHN DOE
-          h5 Building Worker
-      /! team 2
-      .col-md-3.col-sm-6
-        .team-thumb
-          .thumb-image
-            = image_tag "team/team-img2.jpg", class: 'animate'
-          ul.list-inline.social
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-twitter aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-facebook aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-linkedin aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-google-plus aria-hidden="true" 
-          h4 JASON DOE
-          h5 Building Worker
-      /! team 3
-      .col-md-3.col-sm-6
-        .team-thumb
-          .thumb-image
-            = image_tag "team/team-img3.jpg", class: 'animate'
-          ul.list-inline.social
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-twitter aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-facebook aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-linkedin aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-google-plus aria-hidden="true" 
-          h4 JANE DOE
-          h5 Building Worker
-      /! team 4
-      .col-md-3.col-sm-6
-        .team-thumb
-          .thumb-image
-            = image_tag "team/team-img4.jpg", class: 'animate'
-          ul.list-inline.social
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-twitter aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-facebook aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-linkedin aria-hidden="true" 
-            li
-              a href="javascript:void(0);" 
-                i.fa.fa-google-plus aria-hidden="true" 
-          h4 MARTIN DOE
-          h5 Building Worker
+- team_members  = TeamMember.all
+- content_block = ContentBlock[:our_team]
+
+- if team_members.any?
+  section#team.section
+    .container
+      .titleTop
+        .subtitle = content_block.small_title
+        h3 = content_block.title
+        .seprate
+          = image_tag "seprator.png"
+        p = content_block.content
+      .row
+        - team_members.each do |member|
+          .col-md-3.col-sm-6
+            .team-thumb
+              .thumb-image
+                = image_tag member.photo_url(:medium), class: 'animate'
+                
+              h4 = member.name
+              h5 = member.position
+        

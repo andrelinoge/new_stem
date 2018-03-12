@@ -22,6 +22,10 @@
           = fa_icon 'star'
           span Testimonials
       li.nav-item
+        = link_to admin_team_members_path, class: 'nav-link' do
+          = fa_icon 'users'
+          span Team members
+      li.nav-item
         = link_to admin_site_settings_path, class: 'nav-link' do
           = fa_icon 'gears'
           span Site settings

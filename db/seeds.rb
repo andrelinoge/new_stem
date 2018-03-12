@@ -104,6 +104,16 @@ StaticPage.find_or_create_by(key: :contact_us).update(
   meta_keys: Faker::Lorem.words.join(',')
 )
 
+puts "\nSeeding team members...".blue
+4.times do |_i| 
+  FactoryBot.create(:team_member).update(
+    name: Faker::Name.name,
+    position: Faker::Company.profession
+  )
+end
+
+################# UA #################
+
 I18n.locale = :ua
 SiteSetting.find_or_create_by(key: :phone).update({
   label: 'Основні Телефон(и)',
