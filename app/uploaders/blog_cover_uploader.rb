@@ -19,10 +19,9 @@ class BlogCoverUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process resize_to_fit: [50, 50]
-  # end
+  version :preview_for_recent do
+    process resize_to_fit: [350, 250]
+  end
 
   def extension_whitelist
     %w(jpg jpeg gif png)

@@ -13,4 +13,6 @@ class Blog < ApplicationRecord
   mount_uploader :cover, BlogCoverUploader
 
   validates_presence_of :cover
+
+  scope :recent, -> { order(id: :desc).limit(3) }
 end

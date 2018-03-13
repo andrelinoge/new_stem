@@ -1,52 +1,28 @@
-section#blog.section
-  .container
-    /! SECTION TITLE
-    .titleTop
-      .subtitle Lorem ipsum dolor
-      h3 Latest From Blog
-      .seprate
-        = image_tag "seprator.png"
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-    ul.blogGrid.row
-      li.col-lg-4
-        .int
-          /! Blog Image
-          .postimg
-            = image_tag "blog/1.jpg"
-          /! Blog info
-          .post-header
-            .date
-              i.fa.fa-calendar aria-hidden="true" 
-              | Sep 25, 2017
-            h4
-              a href="#."  Duis ultricies aliquet mauris
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...
-          a.readmore href="#."  Read More
-      li.col-lg-4
-        .int
-          /! Blog Image
-          .postimg
-            = image_tag "blog/1.jpg"
-          /! Blog info
-          .post-header
-            .date
-              i.fa.fa-calendar aria-hidden="true" 
-              | Sep 25, 2017
-            h4
-              a href="#."  Duis ultricies aliquet mauris
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...
-          a.readmore href="#."  Read More
-      li.col-lg-4
-        .int
-          /! Blog Image
-          .postimg
-            = image_tag "blog/1.jpg"
-          /! Blog info
-          .post-header
-            .date
-              i.fa.fa-calendar aria-hidden="true" 
-              | Sep 25, 2017
-            h4
-              a href="#."  Duis ultricies aliquet mauris
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...
-          a.readmore href="#."  Read More
+- if Blog.any?
+  - content_block = ContentBlock[:last_blog_posts]
+
+  section#blog.section
+    .container
+      .titleTop
+        .subtitle = content_block.small_title
+        h3 = content_block.title
+        .seprate
+          = image_tag "seprator.png"
+        p = content_block.content
+
+      ul.blogGrid.row
+        - Blog.recent.all.each do |record|
+          li.col-lg-4
+            .int
+              .postimg
+                = image_tag record.cover_url(:preview_for_recent)
+              /! Blog info
+              .post-header
+                .date
+                  i.fa.fa-calendar aria-hidden="true" 
+                  =<> l record.created_at, format: "%d %B, %Y"
+                h4
+                  = link_to record.title, blog_path(record)
+              p = record.description
+              = link_to 'Read more', blog_path(record), class: 'readmore'
+        
