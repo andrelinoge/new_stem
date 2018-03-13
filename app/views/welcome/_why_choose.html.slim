@@ -1,38 +1,27 @@
+- content_block = ContentBlock[:why_choose_us]
+- keys = { \
+  safety: 'building', \
+  experience: 'briefcase', \
+  perfessional: 'cogs', \
+  staff: 'users', \
+  quality: 'home', \
+  delivery: 'paper-plane' \
+}
+
 section.section.whychoose
   .container
     .titleTop
-      .subtitle Lorem ipsum dolor sit amet
-      h3 Why Choose Us
+      .subtitle = content_block.small_title
+      h3 = content_block.title
       .seprate
         = image_tag "seprator.png"
+
     ul.row.chooselist
-      li.col-lg-4.col-sm-6
-        .thumb-icon
-          i.fa.fa-building aria-hidden="true" 
-        h3 Safety
-        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
-      li.col-lg-4.col-sm-6
-        .thumb-icon
-          i.fa.fa-briefcase aria-hidden="true" 
-        h3 Experience
-        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
-      li.col-lg-4.col-sm-6
-        .thumb-icon
-          i.fa.fa-cogs aria-hidden="true" 
-        h3 Perfessional
-        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
-      li.col-lg-4.col-sm-6
-        .thumb-icon
-          i.fa.fa-users aria-hidden="true" 
-        h3 Qualified Staff
-        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
-      li.col-lg-4.col-sm-6
-        .thumb-icon
-          i.fa.fa-home aria-hidden="true" 
-        h3 Quality Work
-        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
-      li.col-lg-4.col-sm-6
-        .thumb-icon
-          i.fa.fa-paper-plane aria-hidden="true" 
-        h3 Delivery
-        p Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate.
+      - keys.each_pair do |key, icon|
+        - content_block = ContentBlock[key]
+        li.col-lg-4.col-sm-6
+          .thumb-icon
+            = fa_icon icon
+          h3 = content_block.title
+          p = content_block.content
+      

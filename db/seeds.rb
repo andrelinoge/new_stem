@@ -65,6 +65,7 @@ puts "\nContent blocks...".blue
 {
   welcome: 'Construction Company',
   our_services: 'Our Construction Services',
+  why_choose_us: 'Why Choose Us',
   safety: 'Safety',
   experience: 'Experience',
   perfessional: 'Perfessional',
