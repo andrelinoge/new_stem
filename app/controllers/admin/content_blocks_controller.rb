@@ -34,6 +34,6 @@ class Admin::ContentBlocksController < Admin::ApplicationController
   def resource_params
     params
       .require(:content_block)
-      .permit(:title, :small_title, :content, :cover)
+      .permit(:title, :small_title, :content, :image)
   end
 end

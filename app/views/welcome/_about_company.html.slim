@@ -3,37 +3,32 @@
 section.section.aboutwrap
   .container
     .row
-      .col-lg-5
-        .abimage
-          = image_tag "about-company.jpg"
-      .col-lg-7
-        .titleTop
-          .subtitle Welcome to
-          h3 Construction Company
-          .seprate
-            = image_tag "seprator.png"
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula malesuada nisi eu rutrum. Maecenas purus diam, lobortis at velit eget, ultricies posuere augue. Nullam nec lectus a augue dictum euismod ut sed ex. Integer pretium arcu neque, vitae mollis massa consequat eu. In eget dolor luctus, varius dui fringilla, lobortis odio. Cras molestie nunc pretium, dictum lorem vel, vulputate mi. Etiam ac ligula bibendum, luctus diam sit amet, rutrum ipsum.
+      - if content_block.image.file.present?
+        .col-lg-5
+          .abimage
+            = image_tag content_block.image_url
+        .col-lg-7
+          .titleTop
+            .subtitle = content_block.small_title
+            h3 = content_block.title
+            .seprate
+              = image_tag "seprator.png"
+          p = content_block.content
+
           br/
+          = link_to about_page_path, class: 'sitebtn' do
+            | More About Us 
+            i.fa.fa-long-arrow-right
+      - else
+        .col-lg-12
+          .titleTop
+            .subtitle = content_block.small_title
+            h3 = content_block.title
+            .seprate
+              = image_tag "seprator.png"
+          p = content_block.content
+          
           br/
-          | Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate fringilla. Sed purus dui, tempus tempor velit vel, feugiat eleifend nulla [...]
-        br/
-        = link_to about_page_path, class: 'sitebtn' do
-          | More About Us 
-          i.fa.fa-long-arrow-right
-        / ul.circleList.row
-        /   li.col-md-4.col-sm-4
-        /     .cricle
-        /       i.fa.fa-cogs aria-hidden="true" 
-        /     .title BUILDING
-        /     p Lorem ipsum dolor sit amet, consectetur adipiscing
-        /   li.col-md-4.col-sm-4
-        /     .cricle
-        /       i.fa.fa-desktop aria-hidden="true" 
-        /     .title RENOVATION
-        /     p Lorem ipsum dolor sit amet, consectetur adipiscing
-        /   li.col-md-4.col-sm-4
-        /     .cricle
-        /       i.fa.fa-tags aria-hidden="true" 
-        /     .title INTERIOR
-        /     p Lorem ipsum dolor sit amet, consectetur adipiscing
+          = link_to about_page_path, class: 'sitebtn' do
+            | More About Us 
+            i.fa.fa-long-arrow-right
