@@ -22,6 +22,7 @@ Rails.application.routes.draw do
       resources :static_pages, only: [:index, :edit, :update, :show]
       resources :team_members
       resources :services
+      resources :slides
     end
 
     get '/about', to: 'pages#about', as: :about_page

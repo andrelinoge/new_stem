@@ -120,6 +120,15 @@ puts "\nSeeding service...".blue
   )
 end
 
+puts "\nSeeding slider...".blue
+2.times do |_i| 
+  FactoryBot.create(:slide).update(
+    small_title: Faker::Lorem.sentence,
+    title: Faker::Lorem.sentence,
+    content: Faker::Lorem.paragraph
+  )
+end
+
 ################# UA #################
 
 I18n.locale = :ua

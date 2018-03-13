@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313072357) do
+ActiveRecord::Schema.define(version: 20180313075907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,24 @@ ActiveRecord::Schema.define(version: 20180313072357) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_site_settings_on_key"
+  end
+
+  create_table "slide_translations", force: :cascade do |t|
+    t.integer "slide_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "small_title"
+    t.text "content"
+    t.index ["locale"], name: "index_slide_translations_on_locale"
+    t.index ["slide_id"], name: "index_slide_translations_on_slide_id"
+  end
+
+  create_table "slides", force: :cascade do |t|
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "static_page_translations", force: :cascade do |t|

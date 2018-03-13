@@ -1,0 +1,14 @@
+= simple_form_for [:admin, @slide] do |f|
+  .row
+    .col-12
+      = f.error_notification
+
+  .row
+    .col-6
+      = f.input :title
+      = f.input :small_title
+      = f.input :content, as: :text
+      = f.button :submit, class: 'btn btn-primary', data: { disable_with: submitting_message(f) }
+    .col-6
+      = image_tag @slide.image_url(:thumb), class: 'img-thumbnail img-fluid'
+      = f.input :image, input_html: {class: 'form-control-file'}

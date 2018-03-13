@@ -1,0 +1,31 @@
+.row
+  .col-8
+    .card
+      .card-header
+        h4.card-title Slide details
+        .heading-elements
+          = link_to [:edit, :admin, @slide], class: 'card-link' do
+            = fa_icon 'pencil', text: 'Edit'
+          = link_to [:admin, @slide], method: :delete, data: { confirm: 'Are you sure?' } do
+            = fa_icon 'trash', text: 'Delete'
+
+      .card-content
+        table.table
+          tbody
+            tr
+              td.width-250 Title
+              td = @slide.title
+            tr
+              td Small title
+              td = @slide.small_title
+            tr
+              td Content
+              td = @slide.content
+
+  .col-4
+    .card
+      .card-header
+        h4.card-title Image
+      .card-content
+        .card-body
+          = image_tag @slide.image_url, class: 'img-thumbnail img-fluid'
