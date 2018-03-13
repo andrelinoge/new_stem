@@ -19,7 +19,7 @@ class BlogCoverUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  version :preview_for_recent do
+  version :medium do
     process resize_to_fit: [350, 250]
   end
 

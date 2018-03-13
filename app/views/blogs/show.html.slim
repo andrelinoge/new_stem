@@ -1,0 +1,23 @@
+= render 'shared/navigation/breadcrumbs', main_title: 'Blog', current_page: @blog_post.title
+
+.innercms
+  .container
+    .row
+      .col-md-8
+        .blogWraper
+          .blogList.blogdetailbox
+            .postimg
+              = image_tag @blog_post.cover_url, alt: @blog_post.title
+            .post-header.margin-top30
+              h4 
+                a href="#." = @blog_post.title
+              br /
+              .date = l @blog_post.created_at, format: "%d %B, %Y"
+
+            == @blog_post.content
+
+      .col-md-4
+        .sidebar
+          .widget
+            h5.widget-title Recent Projects
+            = render '/shared/recent_projects'

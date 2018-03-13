@@ -1,0 +1,35 @@
+= render 'shared/navigation/breadcrumbs', main_title: 'Blog', current_page: 'Blog'
+
+.innercms
+  .container
+    .row
+      .col-md-4
+        .sidebar
+          .widget
+            h5.widget-title Recent Projects
+            = render '/shared/recent_projects'
+         
+      .col-md-8
+        .blogWraper
+          ul.blogList
+            - @blog_posts.each do |blog_post|
+              li
+                .row
+                  .col-md-5
+                    .postimg
+                      = image_tag blog_post.cover_url(:medium)
+                  .col-md-7
+                    .post-header
+                      h4
+                        = link_to blog_post.title, blog_path(blog_post)
+                      br/
+                      .date
+                        i.fa.fa-calendar aria-hidden="true" 
+                        = l blog_post.created_at, format: "%d %B, %Y"
+                    p = blog_post.description
+                    = link_to blog_path(blog_post), class: 'readmore' do
+                      | Read More
+                      i.fa.fa-caret-right aria-hidden="true" 
+            
+        .pagiWrap
+            = paginate @blog_posts
