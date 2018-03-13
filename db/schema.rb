@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180312072241) do
+ActiveRecord::Schema.define(version: 20180313072357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,23 @@ ActiveRecord::Schema.define(version: 20180312072241) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_content_blocks_on_key"
+  end
+
+  create_table "service_translations", force: :cascade do |t|
+    t.integer "service_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "content"
+    t.index ["locale"], name: "index_service_translations_on_locale"
+    t.index ["service_id"], name: "index_service_translations_on_service_id"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "site_setting_translations", force: :cascade do |t|

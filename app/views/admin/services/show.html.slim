@@ -1,0 +1,28 @@
+.row
+  .col-8
+    .card
+      .card-header
+        h4.card-title Service details
+        .heading-elements
+          = link_to [:edit, :admin, @service], class: 'card-link' do
+            = fa_icon 'pencil', text: 'Edit'
+          = link_to [:admin, @service], method: :delete, data: { confirm: 'Are you sure?' } do
+            = fa_icon 'trash', text: 'Delete'
+
+      .card-content
+        table.table
+          tbody
+            tr
+              td.width-250 Title
+              td = @service.title
+            tr
+              td Content
+              td = @service.content
+
+  .col-4
+    .card
+      .card-header
+        h4.card-title Image
+      .card-content
+        .card-body
+          = image_tag @service.image_url, class: 'img-thumbnail img-fluid'

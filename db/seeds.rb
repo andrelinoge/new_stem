@@ -112,6 +112,14 @@ puts "\nSeeding team members...".blue
   )
 end
 
+puts "\nSeeding service...".blue
+4.times do |_i| 
+  FactoryBot.create(:service).update(
+    title: Faker::Lorem.sentence,
+    content: Faker::Lorem.paragraph
+  )
+end
+
 ################# UA #################
 
 I18n.locale = :ua

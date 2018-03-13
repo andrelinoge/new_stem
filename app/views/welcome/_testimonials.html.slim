@@ -1,18 +1,19 @@
-- content_block = ContentBlock[:testimonials]
+- if Testimonial.any?
+  - content_block = ContentBlock[:testimonials]
 
-section.testimonials
-  .container
-    .titleTop
-      .subtitle = content_block.small_title
-      h3 = content_block.title
-      .seprate
-        = image_tag "seprator.png"
-    ul.testimonialsList.owl-carousel
-      - Testimonial.all.each do |testimonial|
-        li.item
-          .testinner
-            .clientname
-              = testimonial.author
-              span = testimonial.position
-            p = testimonial.content
-      
+  section.testimonials
+    .container
+      .titleTop
+        .subtitle = content_block.small_title
+        h3 = content_block.title
+        .seprate
+          = image_tag "seprator.png"
+      ul.testimonialsList.owl-carousel
+        - Testimonial.all.each do |testimonial|
+          li.item
+            .testinner
+              .clientname
+                = testimonial.author
+                span = testimonial.position
+              p = testimonial.content
+        

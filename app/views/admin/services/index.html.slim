@@ -1,0 +1,31 @@
+.card
+  .card-header
+    h2.card-title Our Services
+    .heading-elements.heading-top-elements
+      = link_to new_admin_service_path, class: 'btn btn-primary btn-md' do
+        = fa_icon 'plus', text: 'New service'
+
+  .card-content
+    - if @services.any?
+      table.table
+        thead.bg-teal.bg-lighten-4
+          tr
+            th.width-50 ID
+            th.text-left Title
+            th.width-200 Actions
+        tbody
+          - @services.find_each do |record|
+            tr
+              td = record.id
+              td = link_to record.title, [:admin, record], class: 'card-link'
+              td
+                => link_to [:edit, :admin, record], class: 'card-link' do
+                  = fa_icon 'pencil', text: 'Edit'
+                =< link_to [:admin, record], class: 'card-link', method: :delete, data: { confirm: 'Are you sure?' } do
+                  = fa_icon 'trash', text: 'Delete'
+    - else
+      .card-body
+        h4 No services
+
+    .card-body
+      = paginate @services
