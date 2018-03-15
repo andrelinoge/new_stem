@@ -94,6 +94,17 @@ puts "\nSeeding testimonials...".blue
   )
 end
 
+puts "\nSeeding projects...".blue
+8.times do |_i| 
+  FactoryBot.create(:project).update(
+    title: Faker::Lorem.sentence,
+    content: Faker::Lorem.paragraph,
+    description: Faker::Lorem.sentence,
+    meta_keys: Faker::Lorem.words(4).join(','),
+    meta_description: Faker::Lorem.sentence
+  )
+end
+
 puts "\nSeeding static pages...".blue
 StaticPage.find_or_create_by(key: :about_us).update(
   label: 'About us',

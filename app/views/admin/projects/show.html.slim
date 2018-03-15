@@ -1,0 +1,45 @@
+.row
+  .col-8
+    .card
+      .card-header
+        h4.card-title Project details
+        .heading-elements
+          = link_to [:edit, :admin, @project], class: 'card-link' do
+            = fa_icon 'pencil', text: 'Edit'
+          = link_to [:admin, @project], method: :delete, data: { confirm: 'Are you sure?' } do
+            = fa_icon 'trash', text: 'Delete'
+
+      .card-content
+        table.table
+          tbody
+            tr
+              td.width-250 Title
+              td = @project.title
+            tr
+              td Description
+              td = @project.description
+
+            tr
+              td Meta tag: keys
+              td = @project.meta_keys
+
+            tr
+              td Meta tag: description
+              td = @project.meta_description
+
+
+  .col-4
+    .card
+      .card-header
+        h4.card-title Project cover image
+      .card-content
+        .card-body
+          = image_tag @project.cover_url, class: 'img-thumbnail img-fluid'
+.row              
+  .col-12
+    .card
+      .card-header
+        h4.card-title Project content
+      .card-content
+        .card-body
+          == @project.content

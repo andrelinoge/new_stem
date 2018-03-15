@@ -16,6 +16,7 @@ Rails.application.routes.draw do
         end
       end
 
+      resources :projects
       resources :blogs
       resources :testimonials
       resources :content_blocks, only: [:index, :edit, :update, :show]

@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: blogs
+# Table name: projects
 #
 #  id         :integer          not null, primary key
 #  cover      :string
@@ -8,12 +8,10 @@
 #  updated_at :datetime         not null
 #
 
-class Blog < ApplicationRecord
+class Project < ApplicationRecord
+  mount_uploader :cover, ProjectCoverUploader
   translates :title, :description, :content, :meta_keys, :meta_description
-  mount_uploader :cover, BlogCoverUploader
 
-  validates_presence_of :cover
-
-  scope :recent, -> { order(id: :desc).limit(3) }
-  scope :recent_for_index, -> { order(id: :desc).limit(3) }
+  scope :recent, -> { order(id: :desc).limit(5) }
+  scope :recent_for_index, -> { order(id: :desc).limit(8) }
 end

@@ -11,7 +11,7 @@
         p = content_block.content
 
       ul.blogGrid.row
-        - Blog.recent.all.each do |record|
+        - Blog.recent_for_index.all.each do |record|
           li.col-lg-4
             .int
               .postimg

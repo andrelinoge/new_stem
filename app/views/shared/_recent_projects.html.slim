@@ -1,36 +1,11 @@
-ul.papu-post
-  li
-    .media-left
-      a href="#." 
-        = image_tag asset_path "blog/1.jpg"
-    .media-body
-      a.media-heading href="#"  Integer vel magna urna. Vestibulum id nisi
-      span Dec 18, 2016
-  li
-    .media-left
-      a href="#." 
-        = image_tag asset_path "blog/2.jpg"
-    .media-body
-      a.media-heading href="#"  Integer vel magna urna. Vestibulum id nisi
-      span Dec 18, 2016
-  li
-    .media-left
-      a href="#." 
-        = image_tag asset_path "blog/3.jpg"
-    .media-body
-      a.media-heading href="#"  Integer vel magna urna. Vestibulum id nisi
-      span Dec 18, 2016
-  li
-    .media-left
-      a href="#." 
-        = image_tag asset_path "blog/4.jpg"
-    .media-body
-      a.media-heading href="#"  Integer vel magna urna. Vestibulum id nisi
-      span Dec 18, 2016
-  li
-    .media-left
-      a href="#." 
-        = image_tag asset_path "blog/1.jpg"
-    .media-body
-      a.media-heading href="#"  Integer vel magna urna. Vestibulum id nisi
-      span Dec 18, 2016
+- if Project.any?
+  ul.papu-post
+    - Project.recent.all.each do |project|
+      li
+        .media-left
+          = link_to project_path(project) do
+            = image_tag project.cover_url(:small)
+        .media-body
+          = link_to project.description, project_path(project), class: 'media-heading'
+          span = l project.created_at, format: "%d %B, %Y"
+    
