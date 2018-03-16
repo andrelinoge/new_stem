@@ -1,0 +1,10 @@
+= render 'shared/navigation/breadcrumbs', main_title: 'Projects', current_page: @project.title
+
+.innercms
+  .container
+    .service-details
+      .serviceWrp
+        .serviceImg
+          = image_tag @project.cover_url(:wide)
+        h3 = @project.title
+        == @project.content

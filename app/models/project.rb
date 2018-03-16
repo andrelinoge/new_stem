@@ -12,6 +12,9 @@ class Project < ApplicationRecord
   mount_uploader :cover, ProjectCoverUploader
   translates :title, :description, :content, :meta_keys, :meta_description
 
-  scope :recent, -> { order(id: :desc).limit(5) }
+  has_many :project_images, dependent: :destroy
+  accepts_nested_attributes_for :project_images, reject_if: :all_blank, allow_destroy: true
+
+  scope :recent, -> { order(id: :desc) }
   scope :recent_for_index, -> { order(id: :desc).limit(8) }
 end

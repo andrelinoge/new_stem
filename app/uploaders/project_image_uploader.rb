@@ -1,4 +1,4 @@
-class ProjectCoverUploader < CarrierWave::Uploader::Base
+class ProjectImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   storage :file
 
@@ -10,16 +10,8 @@ class ProjectCoverUploader < CarrierWave::Uploader::Base
     ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default_cover.jpg"].compact.join('_'))
   end
 
-  version :medium do
+  version :thumb do
     process resize_to_fit: [350, 250]
-  end
-
-  version :tall do
-    process resize_to_fill: [600, 900]
-  end
-
-  version :wide do
-    process resize_to_fit: [1200, 900]
   end
 
   def extension_whitelist

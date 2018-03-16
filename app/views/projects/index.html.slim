@@ -1,0 +1,19 @@
+= render 'shared/navigation/breadcrumbs', main_title: 'Projects', current_page: 'Our recent projects'
+/to-do meta tags from StaticPages
+.innercms
+  .container
+    ul.portfolio-grid.row
+      - @projects.each do |project|
+        li.col-md-4.col-sm-6
+          = link_to '', project.cover_url, class: 'image-popup'
+          .flip-container
+            .flipper
+              .front
+                span.imgbox
+                  = image_tag project.cover_url(:tall), class: 'img-responsive', alt: project.title
+              .back
+                .inner
+                  .back-title = link_to project.title, project_path(project)
+                  p = project.description
+  .pagiWrap
+    = paginate @projects

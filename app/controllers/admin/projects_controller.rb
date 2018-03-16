@@ -58,6 +58,14 @@ class Admin::ProjectsController < Admin::ApplicationController
   def resource_params
     params
       .require(:project)
-      .permit(:cover, :title, :description, :content, :meta_keys, :meta_description)
+      .permit(
+        :cover, 
+        :title, 
+        :description, 
+        :content, 
+        :meta_keys, 
+        :meta_description,
+        project_images_attributes: [:id, :_destroy, :image, :title, :description]
+      )
   end
 end

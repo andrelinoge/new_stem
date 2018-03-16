@@ -116,6 +116,16 @@ StaticPage.find_or_create_by(key: :contact_us).update(
   meta_keys: Faker::Lorem.words.join(',')
 )
 
+StaticPage.find_or_create_by(key: :blog_list).update(
+  label: 'Blog posts list',
+  meta_keys: Faker::Lorem.words.join(',')
+)
+
+StaticPage.find_or_create_by(key: :project_list).update(
+  label: 'Projects list',
+  meta_keys: Faker::Lorem.words.join(',')
+)
+
 puts "\nSeeding team members...".blue
 4.times do |_i| 
   FactoryBot.create(:team_member).update(
@@ -176,6 +186,16 @@ StaticPage.find_or_create_by(key: :about_us).update(
 
 StaticPage.find_or_create_by(key: :contact_us).update(
   label: 'Наші контакти',
+  meta_keys: Faker::Lorem.words.join(',')
+)
+
+StaticPage.find_or_create_by(key: :blog_list).update(
+  label: 'Статті з блогу',
+  meta_keys: Faker::Lorem.words.join(',')
+)
+
+StaticPage.find_or_create_by(key: :project_list).update(
+  label: 'Список проектів',
   meta_keys: Faker::Lorem.words.join(',')
 )
 
