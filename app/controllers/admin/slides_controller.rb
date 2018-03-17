@@ -1,4 +1,6 @@
 class Admin::SlidesController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+  
   def index
     @slides = collection.page(params[:page]).per(10)
   end
@@ -59,5 +61,9 @@ class Admin::SlidesController < Admin::ApplicationController
     params
       .require(:slide)
       .permit(:title, :small_title, :content, :image)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Slides", admin_slides_path
   end
 end

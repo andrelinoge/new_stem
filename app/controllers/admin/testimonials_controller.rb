@@ -1,4 +1,6 @@
 class Admin::TestimonialsController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+  
   def index
     @testimonials = collection.page(params[:page]).per(10)
   end
@@ -59,5 +61,9 @@ class Admin::TestimonialsController < Admin::ApplicationController
     params
       .require(:testimonial)
       .permit(:author, :position, :content)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Testimonials", admin_testimonials_path
   end
 end

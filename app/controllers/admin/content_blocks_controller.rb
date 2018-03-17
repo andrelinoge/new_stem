@@ -1,4 +1,6 @@
 class Admin::ContentBlocksController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+  
   def index
     @content_blocks = collection.page(params[:page]).per(10)
   end
@@ -35,5 +37,9 @@ class Admin::ContentBlocksController < Admin::ApplicationController
     params
       .require(:content_block)
       .permit(:title, :small_title, :content, :image)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Content blocks", admin_content_blocks_path
   end
 end

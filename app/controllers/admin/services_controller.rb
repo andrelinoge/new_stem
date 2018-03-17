@@ -1,4 +1,6 @@
 class Admin::ServicesController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+  
   def index
     @services = collection.page(params[:page]).per(10)
   end
@@ -59,5 +61,9 @@ class Admin::ServicesController < Admin::ApplicationController
     params
       .require(:service)
       .permit(:title, :content, :image)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Services", admin_services_path
   end
 end

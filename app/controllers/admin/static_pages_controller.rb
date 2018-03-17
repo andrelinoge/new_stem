@@ -1,4 +1,6 @@
 class Admin::StaticPagesController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+  
   def index
     @static_pages = collection.page(params[:page]).per(10)
   end
@@ -35,5 +37,9 @@ class Admin::StaticPagesController < Admin::ApplicationController
     params
       .require(:static_page)
       .permit(:content)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Static pages", admin_static_pages_path
   end
 end

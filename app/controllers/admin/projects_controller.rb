@@ -1,4 +1,6 @@
 class Admin::ProjectsController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+
   def index
     @projects = collection.page(params[:page]).per(10)
   end
@@ -66,5 +68,9 @@ class Admin::ProjectsController < Admin::ApplicationController
         :meta_keys, 
         :meta_description
       )
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Projects", admin_projects_path
   end
 end

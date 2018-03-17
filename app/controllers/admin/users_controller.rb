@@ -1,4 +1,6 @@
 class Admin::UsersController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+  
   def edit
     @user = current_user
   end
@@ -17,5 +19,9 @@ class Admin::UsersController < Admin::ApplicationController
 
   def user_params
     params.require(:user).permit(:password, :password_confirmation)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Users", ''
   end
 end

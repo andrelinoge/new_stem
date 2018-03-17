@@ -1,4 +1,6 @@
 class Admin::TeamMembersController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+  
   def index
     @team_members = collection.page(params[:page]).per(10)
   end
@@ -59,5 +61,9 @@ class Admin::TeamMembersController < Admin::ApplicationController
     params
       .require(:team_member)
       .permit(:name, :position, :photo)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Team members", admin_team_members_path
   end
 end

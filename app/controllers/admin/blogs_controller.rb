@@ -1,4 +1,6 @@
 class Admin::BlogsController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+  
   def index
     @blog_posts = collection.page(params[:page]).per(10)
   end
@@ -59,5 +61,9 @@ class Admin::BlogsController < Admin::ApplicationController
     params
       .require(:blog)
       .permit(:cover, :title, :description, :content, :meta_keys, :meta_description)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Blogs", admin_blogs_path
   end
 end

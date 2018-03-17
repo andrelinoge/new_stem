@@ -1,4 +1,6 @@
 class Admin::SiteSettingsController < Admin::ApplicationController
+  before_action :set_breadcrumbs
+  
   def index
     @settings = collection.page(params[:page]).per(10)
   end
@@ -31,5 +33,9 @@ class Admin::SiteSettingsController < Admin::ApplicationController
     params
       .require(:site_setting)
       .permit(:value)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb "Site settings", admin_site_settings_path
   end
 end
