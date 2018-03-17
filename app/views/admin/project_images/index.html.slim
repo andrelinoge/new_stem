@@ -1,0 +1,33 @@
+- add_breadcrumb 'Project images'
+
+.card
+  .card-header
+    h2.card-title Project images
+    .heading-elements.heading-top-elements
+      = link_to [:new, :admin, @project, :project_image], class: 'btn btn-primary btn-md' do
+        = fa_icon 'plus', text: 'New project image'
+
+  .card-content
+    - if @project_images.any?
+      table.table
+        thead.bg-teal.bg-lighten-4
+          tr
+            th.width-50 ID
+            th.text-left Title
+            th.width-300 Actions
+        tbody
+          - @project_images.find_each do |image|
+            tr
+              td= image.id
+              td= link_to image.title, [:admin, @project, image], class: 'card-link'
+              td
+                =<> link_to [:edit, :admin, @project, image], class: 'card-link' do
+                  = fa_icon 'pencil', text: 'Edit'
+                =< link_to [:admin, @project, image], class: 'card-link', method: :delete, data: { confirm: 'Are you sure?' } do
+                  = fa_icon 'trash', text: 'Delete'
+    - else
+      .card-body
+        h4 No project images
+
+    .card-body
+      = paginate @project_images

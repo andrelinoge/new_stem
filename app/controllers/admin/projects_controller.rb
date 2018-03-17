@@ -39,9 +39,9 @@ class Admin::ProjectsController < Admin::ApplicationController
     @project = resource
 
     if @project.destroy
-      redirect_to admin_projects_path, success: 'Blog post was deleted successfully'
+      redirect_to admin_projects_path, success: 'Project was deleted successfully'
     else
-      redirect_to admin_projects_path, error: 'Blog post was not deleted'
+      redirect_to admin_projects_path, error: 'Project was not deleted'
     end
   end
 
@@ -64,8 +64,7 @@ class Admin::ProjectsController < Admin::ApplicationController
         :description, 
         :content, 
         :meta_keys, 
-        :meta_description,
-        project_images_attributes: [:id, :_destroy, :image, :title, :description]
+        :meta_description
       )
   end
 end

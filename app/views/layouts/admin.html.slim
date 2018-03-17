@@ -15,8 +15,8 @@ html
 
     .app-content.container-fluid.center-layout.mt-2
       .content-wrapper
-        - if content_for?(:breadcrumbs)
-          = yield(:breadcrumbs)
+        - if breadcrumbs.present?
+          = render 'admin/shared/navigation/breadcrumbs'
           
         .content-body
           = yield

@@ -1,0 +1,9 @@
+- add_breadcrumb 'Project images', admin_project_project_images_path(@project)
+- add_breadcrumb 'Project project image'
+
+.card
+  .card-header
+    h2.card-title Edit project image
+  .card-content
+    .card-body
+      = render 'admin/project_images/form'

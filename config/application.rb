@@ -14,6 +14,8 @@ module NewStem
     config.i18n.fallbacks         = true
     config.i18n.fallbacks         = { ua: :en, en: :ua}
 
+    config.autoload_paths << Rails.root.join('app', 'lib')
+
     config.to_prepare do
       Devise::SessionsController.layout "admin_signin"
     end

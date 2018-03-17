@@ -1,0 +1,15 @@
+.content-header
+  .content-header-left.col-12.mb-2
+    .breadcrumbs-top
+      .breadcrumb-wrapper
+        ol.breadcrumb
+          - active_item = breadcrumbs.pop
+          - breadcrumbs.each do |element|
+            li.breadcrumb-item
+              - if element.path.present?
+                = link_to element.name, element.path
+              - else
+                = element.name
+            
+          li.breadcrumb-item.active
+            = active_item.name
