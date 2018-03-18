@@ -9,6 +9,7 @@ class CreateStaticPages < ActiveRecord::Migration[5.1]
     reversible do |dir|
       dir.up do
         StaticPage.create_translation_table!({
+          title: :string,
           content: :text,
           meta_keys: :string,
           label: :string,

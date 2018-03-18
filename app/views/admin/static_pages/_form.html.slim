@@ -5,7 +5,8 @@
 
   .row
     .col-12
+      = f.input :title
       = f.input :content, as: :ckeditor
       = f.input :meta_keys
-      = f.input :meta_keys, as: :text
+      = f.input :meta_description, as: :text
       = f.button :submit, class: 'btn btn-primary', data: { disable_with: submitting_message(f) }

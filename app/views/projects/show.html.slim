@@ -1,10 +1,19 @@
 = render 'shared/navigation/breadcrumbs', main_title: 'Projects', current_page: @project.title
 
+- title @project.title
+- description @project.meta_description
+- keywords @project.meta_keys.split(',')
+
 .innercms
   .container
-    .service-details
-      .serviceWrp
-        .serviceImg
-          = image_tag @project.cover_url(:wide)
-        h3 = @project.title
-        == @project.content
+    .row
+      .col-12
+        .service-details
+          .serviceWrp
+            .serviceImg
+              = image_tag @project.cover_url(:wide)
+            h3 = @project.title
+            == @project.content
+
+    - if @project.project_images.any?
+      = render 'projects/images', images: @project.project_images.all

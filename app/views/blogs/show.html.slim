@@ -1,5 +1,9 @@
 = render 'shared/navigation/breadcrumbs', main_title: 'Blog', current_page: @blog_post.title
 
+- title @blog_post.title
+- description @blog_post.meta_description
+- keywords @blog_post.meta_keys.split(',')
+
 .innercms
   .container
     .row

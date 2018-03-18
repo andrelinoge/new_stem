@@ -1,0 +1,17 @@
+.row
+  .col-12
+    h3.gallery-header Project gallery
+    ul.portfolio-grid.row
+      - images.each do |image|
+        li.col-md-4.col-sm-6
+          a.image-popup[href=image.image_url]
+            .flip-container
+              .flipper
+                .front
+                  span.imgbox
+                    = image_tag image.image_url(:thumb), class: 'img-responsive', alt: image.title
+                .back
+                  .inner
+                    .back-title = image.title
+                    p = image.description
+    

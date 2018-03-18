@@ -1,5 +1,10 @@
 = render 'shared/navigation/breadcrumbs', main_title: 'Projects', current_page: 'Our recent projects'
-/to-do meta tags from StaticPages
+
+- page = StaticPage[:project_list]
+- title page.title
+- description page.meta_description
+- keywords page.meta_keys.split(',')
+
 .innercms
   .container
     ul.portfolio-grid.row

@@ -1,5 +1,10 @@
 = render 'shared/navigation/breadcrumbs', main_title: 'Blog', current_page: 'Blog'
-/to-do meta tags from StaticPages
+
+- page = StaticPage[:blog_list]
+- title page.title
+- description page.meta_description
+- keywords page.meta_keys.split(',')
+
 .innercms
   .container
     .row

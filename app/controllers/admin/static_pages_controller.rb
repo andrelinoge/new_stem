@@ -36,7 +36,7 @@ class Admin::StaticPagesController < Admin::ApplicationController
   def resource_params
     params
       .require(:static_page)
-      .permit(:content)
+      .permit(:content, :title, :meta_description, :meta_keys)
   end
 
   def set_breadcrumbs

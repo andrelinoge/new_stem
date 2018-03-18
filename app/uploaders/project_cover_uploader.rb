@@ -19,7 +19,7 @@ class ProjectCoverUploader < CarrierWave::Uploader::Base
   end
 
   version :wide do
-    process resize_to_fit: [1200, 900]
+    process resize_to_fit: [1200, 600]
   end
 
   def extension_whitelist

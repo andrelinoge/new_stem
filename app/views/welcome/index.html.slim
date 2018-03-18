@@ -1,3 +1,8 @@
+- page = StaticPage[:landing]
+- title page.title if page.title.present?
+- description page.meta_description
+- keywords page.meta_keys.split(',')
+
 = render 'slider'
 = render 'about_company'
 = render 'our_services'

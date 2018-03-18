@@ -9,7 +9,7 @@
 #
 
 class StaticPage < ApplicationRecord
-  translates :content, :meta_keys, :meta_description, :label
+  translates :content, :meta_keys, :meta_description, :label, :title
 
   def StaticPage.[](str)
     self.find_by(key: str)

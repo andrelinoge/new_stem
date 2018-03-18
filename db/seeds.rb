@@ -49,6 +49,10 @@ SiteSetting.find_or_create_by(key: :shop_url).update({
   value: '#'
 })
 
+SiteSetting.find_or_create_by(key: :site_title).update({
+  label: 'Site title',
+  value: '#'
+})
 
 puts "\nSeeding blog...".blue
 11.times do |_i| 
@@ -107,22 +111,38 @@ end
 
 puts "\nSeeding static pages...".blue
 StaticPage.find_or_create_by(key: :about_us).update(
+  title: 'About us',
   label: 'About us',
-  content: Faker::Lorem.paragraph
+  content: Faker::Lorem.paragraph,
+  meta_description: Faker::Lorem.paragraph,
+  meta_keys: Faker::Lorem.words.join(',')
 )
 
 StaticPage.find_or_create_by(key: :contact_us).update(
   label: 'Contact us',
+  title: 'Contact us',
+  meta_description: Faker::Lorem.paragraph,
   meta_keys: Faker::Lorem.words.join(',')
 )
 
 StaticPage.find_or_create_by(key: :blog_list).update(
-  label: 'Blog posts list',
+  label: 'Blog',
+  title: 'Blog',
+  meta_description: Faker::Lorem.paragraph,
   meta_keys: Faker::Lorem.words.join(',')
 )
 
 StaticPage.find_or_create_by(key: :project_list).update(
-  label: 'Projects list',
+  label: 'Projects',
+  title: 'Projects',
+  meta_description: Faker::Lorem.paragraph,
+  meta_keys: Faker::Lorem.words.join(',')
+)
+
+StaticPage.find_or_create_by(key: :landing).update(
+  label: 'Landing page',
+  title: 'Landing page',
+  meta_description: Faker::Lorem.paragraph,
   meta_keys: Faker::Lorem.words.join(',')
 )
 
@@ -179,23 +199,43 @@ SiteSetting.find_or_create_by(key: :shop_url).update({
   value: '#'
 })
 
+SiteSetting.find_or_create_by(key: :site_title).update({
+  label: 'Назва сайту',
+  value: '#'
+})
+
 StaticPage.find_or_create_by(key: :about_us).update(
   label: 'Про нас',
-  content: "UA" + Faker::Lorem.paragraph
+  title: 'Про нас',
+  content: "UA" + Faker::Lorem.paragraph,
+  meta_description: Faker::Lorem.paragraph
 )
 
 StaticPage.find_or_create_by(key: :contact_us).update(
   label: 'Наші контакти',
-  meta_keys: Faker::Lorem.words.join(',')
+  title: 'Наші контакти',
+  meta_keys: Faker::Lorem.words.join(','),
+  meta_description: Faker::Lorem.paragraph
 )
 
 StaticPage.find_or_create_by(key: :blog_list).update(
-  label: 'Статті з блогу',
-  meta_keys: Faker::Lorem.words.join(',')
+  label: 'Блог',
+  title: 'Блог',
+  meta_keys: Faker::Lorem.words.join(','),
+  meta_description: Faker::Lorem.paragraph
 )
 
 StaticPage.find_or_create_by(key: :project_list).update(
-  label: 'Список проектів',
+  label: 'Наші проекти',
+  title: 'Наші проекти',
+  meta_keys: Faker::Lorem.words.join(','),
+  meta_description: Faker::Lorem.paragraph
+)
+
+StaticPage.find_or_create_by(key: :landing).update(
+  label: 'Головна сторінка',
+  title: 'Landing page',
+  meta_description: Faker::Lorem.paragraph,
   meta_keys: Faker::Lorem.words.join(',')
 )
 
