@@ -1,8 +1,5 @@
 {
   "name": "new_stem",
   "private": true,
-  "dependencies": {},
-  "engines": {
-    "yarn": "1.5.1"
-  }
+  "dependencies": {}
 }
