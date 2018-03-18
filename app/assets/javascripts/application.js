@@ -9,3 +9,20 @@
 //= require "./theme/jquery.fancybox.min.js"
 //= require "./theme/custom.js"
 //= require rails-ujs
+
+$(function() {
+  var header = $("#top_nav");
+  
+  if ($(window).width() > 769)  {
+    $(window).scroll(function() 
+    {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 100) {
+        header.addClass('fixed-top');
+      } else {
+        header.removeClass('fixed-top');
+      }
+    });  
+  }
+});
