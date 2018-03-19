@@ -40,6 +40,6 @@ class Admin::ContentBlocksController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Content blocks", admin_content_blocks_path
+    add_breadcrumb I18n.t('admin.navigation.content_blocks'), admin_content_blocks_path
   end
 end

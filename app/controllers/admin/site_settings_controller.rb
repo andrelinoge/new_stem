@@ -36,6 +36,6 @@ class Admin::SiteSettingsController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Site settings", admin_site_settings_path
+    add_breadcrumb I18n.t('admin.navigation.site_settings'), admin_site_settings_path
   end
 end

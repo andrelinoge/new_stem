@@ -1,9 +1,9 @@
-- add_breadcrumb 'Project images', admin_project_project_images_path(@project)
-- add_breadcrumb 'Project new image'
+- add_breadcrumb I18n.t('admin.label.project_image'), admin_project_project_images_path(@project)
+- add_breadcrumb I18n.t('admin.label.new_project_image')
 
 .card
   .card-header
-    h2.card-title New project image
+    h2.card-title = I18n.t('admin.label.new_project_image')
   .card-content
     .card-body
       = render 'admin/project_images/form'

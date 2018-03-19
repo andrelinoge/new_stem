@@ -1,9 +1,9 @@
 - add_breadcrumb @slide.title, admin_slide_path(@slide)
-- add_breadcrumb "Edit slide", ''
+- add_breadcrumb I18n.t('admin.link.edit_slide'), ''
 
 .card
   .card-header
-    h2.card-title Edit slide
+    h2.card-title = I18n.t('admin.link.edit_slide')
   .card-content
     .card-body
       = render 'admin/slides/form'

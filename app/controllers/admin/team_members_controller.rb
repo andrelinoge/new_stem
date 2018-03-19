@@ -64,6 +64,6 @@ class Admin::TeamMembersController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Team members", admin_team_members_path
+    add_breadcrumb I18n.t('admin.navigation.team_members'), admin_team_members_path
   end
 end

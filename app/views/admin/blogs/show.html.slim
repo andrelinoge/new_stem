@@ -3,36 +3,36 @@
   .col-8
     .card
       .card-header
-        h4.card-title Blog post details
+        h4.card-title = I18n.t('admin.label.details')
         .heading-elements
           = link_to [:edit, :admin, @blog_post], class: 'card-link' do
-            = fa_icon 'pencil', text: 'Edit'
+            = fa_icon 'pencil', text: I18n.t('admin.link.edit')
           = link_to [:admin, @blog_post], method: :delete, data: { confirm: 'Are you sure?' } do
-            = fa_icon 'trash', text: 'Delete'
+            = fa_icon 'trash', text: I18n.t('admin.link.delete')
 
       .card-content
         table.table
           tbody
             tr
-              td.width-250 Title
+              td.width-250 = I18n.t('admin.label.title')
               td = @blog_post.title
             tr
-              td Description
+              td = I18n.t('admin.label.description')
               td = @blog_post.description
 
             tr
-              td Meta tag: keys
+              td = I18n.t('admin.label.meta_tag_keys')
               td = @blog_post.meta_keys
 
             tr
-              td Meta tag: description
+              td = I18n.t('admin.label.meta_tag_description')
               td = @blog_post.meta_description
 
 
   .col-4
     .card
       .card-header
-        h4.card-title Blog post cover image
+        h4.card-title = I18n.t('admin.label.cover_image')
       .card-content
         .card-body
           = image_tag @blog_post.cover_url, class: 'img-thumbnail img-fluid'
@@ -40,7 +40,7 @@
   .col-12
     .card
       .card-header
-        h4.card-title Blog post content
+        h4.card-title = I18n.t('admin.label.content')
       .card-content
         .card-body
           == @blog_post.content

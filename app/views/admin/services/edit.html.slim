@@ -1,9 +1,9 @@
 - add_breadcrumb @service.title, admin_service_path(@service)
-- add_breadcrumb "Edit service", ''
+- add_breadcrumb I18n.t('admin.label.edit_service'), ''
 
 .card
   .card-header
-    h2.card-title Edit service
+    h2.card-title = I18n.t('admin.label.edit_service')
   .card-content
     .card-body
       = render 'admin/services/form'

@@ -4,23 +4,23 @@
   .col-8
     .card
       .card-header
-        h4.card-title Testimonial details
+        h4.card-title = I18n.t('admin.label.testimonial_details')
         .heading-elements
           = link_to [:edit, :admin, @testimonial], class: 'card-link' do
-            = fa_icon 'pencil', text: 'Edit'
+            = fa_icon 'pencil', text: I18n.t('admin.link.edit')
           = link_to [:admin, @testimonial], method: :delete, data: { confirm: 'Are you sure?' } do
-            = fa_icon 'trash', text: 'Delete'
+            = fa_icon 'trash', text: I18n.t('admin.link.delete')
 
       .card-content
         table.table
           tbody
             tr
-              td.width-250 Author
+              td.width-250 = I18n.t('admin.label.author')
               td = @testimonial.author
             tr
-              td Positions
+              td = I18n.t('admin.label.positions')
               td = @testimonial.position
 
             tr
-              td Content
+              td = I18n.t('admin.label.content')
               td = @testimonial.content

@@ -64,6 +64,6 @@ class Admin::TestimonialsController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Testimonials", admin_testimonials_path
+    add_breadcrumb I18n.t('admin.navigation.testimonials'), admin_testimonials_path
   end
 end

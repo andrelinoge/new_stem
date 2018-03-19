@@ -1,7 +1,7 @@
-- add_breadcrumb "New blog", ''
+- add_breadcrumb I18n.t('admin.label.new_blog_post'), ''
 .card
   .card-header
-    h2.card-title New blog post
+    h2.card-title = I18n.t('admin.label.new_blog_post')
   .card-content
     .card-body
       = render 'admin/blogs/form'

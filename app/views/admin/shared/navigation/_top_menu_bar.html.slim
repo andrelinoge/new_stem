@@ -4,40 +4,40 @@
       li.nav-item
         = link_to root_path, class: 'nav-link' do
           = fa_icon 'home'
-          span Back to website
+          span = I18n.t('admin.navigation.back_to_website')
       li.nav-item
         = link_to admin_projects_path, class: 'nav-link' do
           = fa_icon 'list-alt'
-          span Projects
+          span = I18n.t('admin.navigation.projects')
       li.nav-item
         = link_to admin_blogs_path, class: 'nav-link' do
           = fa_icon 'newspaper-o'
-          span Blog
+          span = I18n.t('admin.navigation.blog')
       li.nav-item
         = link_to admin_content_blocks_path, class: 'nav-link' do
           = fa_icon 'th'
-          span Content blocks
+          span = I18n.t('admin.navigation.content_blocks')
       li.nav-item
         = link_to admin_static_pages_path, class: 'nav-link' do
           = fa_icon 'indent'
-          span Static pages
+          span = I18n.t('admin.navigation.static_pages')
       li.nav-item
         = link_to admin_services_path, class: 'nav-link' do
           = fa_icon 'suitcase'
-          span Services
+          span = I18n.t('admin.navigation.services')
       li.nav-item
         = link_to admin_slides_path, class: 'nav-link' do
           = fa_icon 'image'
-          span Slides
+          span = I18n.t('admin.navigation.slides')
       li.nav-item
         = link_to admin_testimonials_path, class: 'nav-link' do
           = fa_icon 'star'
-          span Testimonials
+          span = I18n.t('admin.navigation.testimonials')
       li.nav-item
         = link_to admin_team_members_path, class: 'nav-link' do
           = fa_icon 'users'
-          span Team members
+          span = I18n.t('admin.navigation.team_members')
       li.nav-item
         = link_to admin_site_settings_path, class: 'nav-link' do
           = fa_icon 'gears'
-          span Site settings
+          span = I18n.t('admin.navigation.site_settings')

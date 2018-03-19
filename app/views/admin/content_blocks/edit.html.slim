@@ -1,9 +1,9 @@
 - add_breadcrumb @content_block.title, admin_content_block_path(@content_block)
-- add_breadcrumb "Edit content block", ''
+- add_breadcrumb I18n.t('admin.label.edit_content_block'), ''
 
 .card
   .card-header
-    h2.card-title Edit content block
+    h2.card-title = I18n.t('admin.label.edit_content_block')
   .card-content
     .card-body
       = render 'admin/content_blocks/form'

@@ -1,6 +1,6 @@
 .card
   .card-header
-    h2.card-title Static pages
+    h2.card-title = I18n.t('admin.label.static_pages')
 
   .card-content
     - if @static_pages.any?
@@ -8,8 +8,8 @@
         thead.bg-teal.bg-lighten-4
           tr
             th.width-50 ID
-            th.text-left Title
-            th.width-200 Actions
+            th.text-left = I18n.t('admin.label.title')
+            th.width-200 = I18n.t('admin.label.actions')
         tbody
           - @static_pages.find_each do |record|
             tr
@@ -17,10 +17,10 @@
               td= link_to record.label, [:admin, record], class: 'card-link'
               td
                 => link_to [:edit, :admin, record], class: 'card-link' do
-                  = fa_icon 'pencil', text: 'Edit'
+                  = fa_icon 'pencil', text: I18n.t('admin.link.edit')
     - else
       .card-body
-        h4 No static pages
+        h4 = I18n.t('admin.text.no_data')
 
     .card-body
       = paginate @static_pages

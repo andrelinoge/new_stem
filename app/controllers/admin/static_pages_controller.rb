@@ -40,6 +40,6 @@ class Admin::StaticPagesController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Static pages", admin_static_pages_path
+    add_breadcrumb I18n.t('admin.navigation.static_pages'), admin_static_pages_path
   end
 end

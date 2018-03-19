@@ -1,7 +1,7 @@
-- add_breadcrumb "New testimonial", ''
+- add_breadcrumb I18n.t('admin.label.new_testimonial'), ''
 .card
   .card-header
-    h2.card-title New testimonial
+    h2.card-title = I18n.t('admin.label.new_testimonial')
   .card-content
     .card-body
       = render 'admin/testimonials/form'

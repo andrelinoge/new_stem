@@ -79,7 +79,7 @@ class Admin::ProjectImagesController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Projects", admin_projects_path
+    add_breadcrumb I18n.t('admin.navigation.projects'), admin_projects_path
     add_breadcrumb project.title, admin_project_path(project)
   end
 end

@@ -1,4 +1,103 @@
+---
 en:
-  header:
-  footer:
-  navigation: "Hello world"
+  admin:
+    btn:
+      new_blog_post: New blog post
+      new_member: New member
+      new_project: New project
+      new_project_image: New project image
+      new_service: New service
+      new_slide: New slide
+      new_testimonial: New testimonial
+    label:
+      Label: Label
+      Meta_description: Meta description
+      Meta_keys: Meta keys
+      Meta_tag_description: Meta tag description
+      Meta_tag_keys: Meta tag keys
+      actions: Actions
+      author: Author
+      blog_posts: Blog posts
+      change_password: Change password
+      content: Content
+      content_block_details: Content block details
+      content_blocks: Content blocks
+      cover_image: Cover image
+      description: Description
+      details: Details
+      edit_blog_post: Edit blog post
+      edit_content_block: Edit content block
+      edit_project: Edit project
+      edit_project_image: Edit project image
+      edit_service: Edit service
+      edit_team_member: Edit team member
+      edit_testimonial: Edit testimonial
+      full_name: Full name
+      image: Image
+      key: Key
+      label: Label
+      meta_tag_description: Meta tag description
+      meta_tag_keys: Meta tag keys
+      name: Name
+      new_blog_post: New blog post
+      new_project: New project
+      new_project_image: New project image
+      new_service: New service
+      new_team_member: New team member
+      new_testimonial: New testimonial
+      our_services: Our services
+      photo: Photo
+      position: Position
+      positions: Positions
+      project_content: Project content
+      project_cover_image: Project cover image
+      project_details: Project details
+      project_image: Project image
+      project_image_details: Project image details
+      project_images: Project images
+      projects: Projects
+      service_details: Service details
+      services: Services
+      site_settings: Site settings
+      slide_details: Slide details
+      slides: Slides
+      small_title: Small title
+      static_page_details: Static page details
+      static_pages: Static pages
+      team_member_details: Team member details
+      team_members: Team members
+      testimonial_details: Testimonial details
+      testimonials: Testimonials
+      title: Title
+      value: Value
+      visible: Visible
+    link:
+      change_password: Change password
+      delete: Delete
+      edit: Edit
+      edit_slide: Edit slide
+      gallery: Gallery
+      logout: Logout
+      new_slide: New slide
+    navigation:
+      back_to_website: Back to website
+      blog: Blog
+      content_blocks: Content blocks
+      dashboard: Dashboard
+      projects: Projects
+      services: Services
+      site_settings: Site settings
+      slides: Slides
+      static_pages: Static pages
+      team_members: Team members
+      testimonials: Testimonials
+    text:
+      control_panel: Control panel
+      no_data: No data
+  views:
+    pagination:
+      first: First
+      last: Last
+      next: Next
+      previous: Previous
+      truncate: Truncate

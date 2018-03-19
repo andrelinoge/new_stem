@@ -1,8 +1,8 @@
 - add_breadcrumb @project.title, admin_project_path(@project)
-- add_breadcrumb "Edit project", ''
+- add_breadcrumb I18n.t('admin.label.edit_project'), ''
 .card
   .card-header
-    h2.card-title Edit project
+    h2.card-title = I18n.t('admin.label.edit_project')
   .card-content
     .card-body
       = render 'admin/projects/form'

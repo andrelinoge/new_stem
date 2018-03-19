@@ -4,29 +4,29 @@
   .col-12
     .card
       .card-header
-        h4.card-title Static page details
+        h4.card-title = I18n.t('admin.label.static_page_details')
         .heading-elements
           = link_to [:edit, :admin, @static_page], class: 'card-link' do
-            = fa_icon 'pencil', text: 'Edit'
+            = fa_icon 'pencil', text: I18n.t('admin.link.edit')
 
       .card-content
         table.table
           tbody
             tr
-              td.width-250 Label
+              td.width-250 = I18n.t('admin.label.Label')
               td = @static_page.label
             tr
-              td Meta keys
+              td = I18n.t('admin.label.Meta_keys')
               td = @static_page.meta_keys
 
             tr
-              td Meta description
+              td = I18n.t('admin.label.Meta_description')
               td = @static_page.meta_description
 
   .col-12
     .card
       .card-header
-        h4.card-title Content
+        h4.card-title = I18n.t('admin.label.content')
       .card-content
         .card-body
           == @static_page.content

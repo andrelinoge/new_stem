@@ -1,9 +1,9 @@
 .card
   .card-header
-    h2.card-title Slides
+    h2.card-title = I18n.t('admin.label.slides')
     .heading-elements.heading-top-elements
       = link_to new_admin_slide_path, class: 'btn btn-primary btn-md' do
-        = fa_icon 'plus', text: 'New slide'
+        = fa_icon 'plus', text: I18n.t('admin.btn.new_slide')
 
   .card-content
     - if @slides.any?
@@ -11,9 +11,9 @@
         thead.bg-teal.bg-lighten-4
           tr
             th.width-50 ID
-            th.text-left Title
-            th.text-left Small title
-            th.width-200 Actions
+            th.text-left = I18n.t('admin.label.title')
+            th.text-left = I18n.t('admin.label.small_title')
+            th.width-300 = I18n.t('admin.label.actions')
         tbody
           - @slides.find_each do |record|
             tr
@@ -22,12 +22,12 @@
               td = record.small_title
               td
                 => link_to [:edit, :admin, record], class: 'card-link' do
-                  = fa_icon 'pencil', text: 'Edit'
+                  = fa_icon 'pencil', text: I18n.t('admin.link.edit')
                 =< link_to [:admin, record], class: 'card-link', method: :delete, data: { confirm: 'Are you sure?' } do
-                  = fa_icon 'trash', text: 'Delete'
+                  = fa_icon 'trash', text: I18n.t('admin.link.delete')
     - else
       .card-body
-        h4 No slides
+        h4 = I18n.t('admin.text.no_data')
 
     .card-body
       = paginate @slides

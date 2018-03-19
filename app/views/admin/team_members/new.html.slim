@@ -1,7 +1,7 @@
-- add_breadcrumb "New team member", ''
+- add_breadcrumb I18n.t('admin.label.new_team_member'), ''
 .card
   .card-header
-    h2.card-title New team member
+    h2.card-title = I18n.t('admin.label.new_team_member')
   .card-content
     .card-body
       = render 'admin/team_members/form'

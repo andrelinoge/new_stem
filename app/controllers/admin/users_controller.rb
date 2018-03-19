@@ -22,6 +22,6 @@ class Admin::UsersController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Users", ''
+    add_breadcrumb I18n.t('admin.navigation.users'), ''
   end
 end

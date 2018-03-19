@@ -1,9 +1,9 @@
 - add_breadcrumb @team_member.name, admin_team_member_path(@team_member)
-- add_breadcrumb "Edit team member", ''
+- add_breadcrumb I18n.t('admin.label.edit_team_member'), ''
 
 .card
   .card-header
-    h2.card-title Edit team member
+    h2.card-title = I18n.t('admin.label.edit_team_member')
   .card-content
     .card-body
       = render 'admin/team_members/form'

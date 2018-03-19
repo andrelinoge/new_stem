@@ -1,8 +1,8 @@
-- add_breadcrumb "New service", ''
+- add_breadcrumb I18n.t('admin.label.new_service'), ''
 
 .card
   .card-header
-    h2.card-title New service
+    h2.card-title = I18n.t('admin.label.new_service')
   .card-content
     .card-body
       = render 'admin/services/form'

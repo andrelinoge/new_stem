@@ -64,6 +64,6 @@ class Admin::BlogsController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Blogs", admin_blogs_path
+    add_breadcrumb I18n.t('admin.navigation.blog'), admin_blogs_path
   end
 end

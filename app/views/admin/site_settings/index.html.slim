@@ -1,15 +1,15 @@
 .card
   .card-header
-    h2.card-title Site settings
+    h2.card-title = I18n.t('admin.label.site_settings')
     
   .card-content
     - if @settings.any?
       table.table
         thead.bg-teal.bg-lighten-4
           tr
-            th.width-200 Label
-            th Value
-            th Actions
+            th.width-200 = I18n.t('admin.label.label')
+            th = I18n.t('admin.label.value')
+            th.width-200 = I18n.t('admin.label.actions')
         tbody
           - @settings.find_each do |record|
             tr
@@ -17,10 +17,10 @@
               td= truncate(record.value, length: 300)
               td
                 => link_to edit_admin_site_setting_path(record), class: 'card-link' do
-                  = fa_icon 'pencil', text: 'Edit'
+                  = fa_icon 'pencil', text: I18n.t('admin.link.edit')
     - else
       .card-body
-        h4 No data
+        h4 = I18n.t('admin.text.no_data')
 
     .card-body
       = paginate @settings

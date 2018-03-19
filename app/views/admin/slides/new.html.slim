@@ -1,8 +1,8 @@
-- add_breadcrumb "New slide", ''
+- add_breadcrumb I18n.t('admin.link.new_slide'), ''
 
 .card
   .card-header
-    h2.card-title New slide
+    h2.card-title = I18n.t('admin.link.new_slide')
   .card-content
     .card-body
       = render 'admin/slides/form'

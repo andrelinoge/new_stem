@@ -64,6 +64,6 @@ class Admin::ServicesController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Services", admin_services_path
+    add_breadcrumb I18n.t('admin.navigation.services'), admin_services_path
   end
 end

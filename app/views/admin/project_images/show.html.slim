@@ -1,30 +1,30 @@
-- add_breadcrumb 'Project images', admin_project_project_images_path(@project)
-- add_breadcrumb 'Project image details'
+- add_breadcrumb I18n.t('admin.label.project_image'), admin_project_project_images_path(@project)
+- add_breadcrumb I18n.t('admin.label.details')
 
 .row
   .col-8
     .card
       .card-header
-        h4.card-title Project image details
+        h4.card-title = I18n.t('admin.label.project_image_details')
         .heading-elements
           = link_to [:edit, :admin, @project, @project_image], class: 'card-link' do
-            = fa_icon 'pencil', text: 'Edit'
+            = fa_icon 'pencil', text: I18n.t('admin.link.edit')
           = link_to [:admin, @project, @project_image], method: :delete, data: { confirm: 'Are you sure?' } do
-            = fa_icon 'trash', text: 'Delete'
+            = fa_icon 'trash', text: I18n.t('admin.link.delete')
 
       .card-content
         table.table
           tbody
             tr
-              td.width-250 Title
+              td.width-250 = I18n.t('admin.label.title')
               td = @project_image.title
             tr
-              td Description
+              td = I18n.t('admin.label.description')
               td = @project_image.description
   .col-4
     .card
       .card-header
-        h4.card-title Image
+        h4.card-title = I18n.t('admin.label.image')
       .card-content
         .card-body
           = image_tag @project_image.image_url, class: 'img-thumbnail img-fluid'

@@ -1,16 +1,16 @@
 .card
   .card-header
-    h2.card-title Content blocks
+    h2.card-title = I18n.t('admin.label.content_blocks')
 
   .card-content
     - if @content_blocks.any?
       table.table
         thead.bg-teal.bg-lighten-4
           tr
-            th.width-50 Key
-            th.text-left Title
-            th Visible
-            th.width-200 Actions
+            th.width-50 = I18n.t('admin.label.key')
+            th.text-left = I18n.t('admin.label.title')
+            th = I18n.t('admin.label.visible')
+            th.width-300 = I18n.t('admin.label.actions')
         tbody
           - @content_blocks.find_each do |record|
             tr
@@ -19,10 +19,10 @@
               td= record.visible
               td
                 => link_to [:edit, :admin, record], class: 'card-link' do
-                  = fa_icon 'pencil', text: 'Edit'
+                  = fa_icon 'pencil', text: I18n.t('admin.link.edit')
     - else
       .card-body
-        h4 No content blocks
+        h4 = I18n.t('admin.text.no_data')
 
     .card-body
       = paginate @content_blocks

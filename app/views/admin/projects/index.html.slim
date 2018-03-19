@@ -1,9 +1,9 @@
 .card
   .card-header
-    h2.card-title Projects
+    h2.card-title = I18n.t('admin.label.projects')
     .heading-elements.heading-top-elements
       = link_to new_admin_project_path, class: 'btn btn-primary btn-md' do
-        = fa_icon 'plus', text: 'New project'
+        = fa_icon 'plus', text: I18n.t('admin.btn.new_project')
 
   .card-content
     - if @projects.any?
@@ -11,8 +11,8 @@
         thead.bg-teal.bg-lighten-4
           tr
             th.width-50 ID
-            th.text-left Title
-            th.width-300 Actions
+            th.text-left = I18n.t('admin.label.title')
+            th.width-400 = I18n.t('admin.label.actions')
         tbody
           - @projects.find_each do |record|
             tr
@@ -21,14 +21,14 @@
                 = link_to record.title, [:admin, record], class: 'card-link'
               td
                 => link_to admin_project_project_images_path(record), class: 'card-link' do
-                  = fa_icon 'object-ungroup', text: 'Gallery'
+                  = fa_icon 'object-ungroup', text: I18n.t('admin.link.gallery')
                 =<> link_to [:edit, :admin, record], class: 'card-link' do
-                  = fa_icon 'pencil', text: 'Edit'
+                  = fa_icon 'pencil', text: I18n.t('admin.link.edit')
                 =< link_to [:admin, record], class: 'card-link', method: :delete, data: { confirm: 'Are you sure?' } do
-                  = fa_icon 'trash', text: 'Delete'
+                  = fa_icon 'trash', text: I18n.t('admin.link.delete')
     - else
       .card-body
-        h4 No projects
+        h4 = I18n.t('admin.text.no_data')
 
     .card-body
       = paginate @projects

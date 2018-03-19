@@ -64,6 +64,6 @@ class Admin::SlidesController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb "Slides", admin_slides_path
+    add_breadcrumb I18n.t('admin.navigation.slides'), admin_slides_path
   end
 end

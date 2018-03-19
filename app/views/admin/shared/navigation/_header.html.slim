@@ -7,7 +7,7 @@ nav.header-navbar.navbar-expand-md.navbar.navbar-with-menu.navbar-static-top.nav
             i.ft-menu.font-large-1
         li.nav-item
            = link_to admin_root_path, class: 'navbar-brand' do
-            h3 СТЕМ - Control Panel
+            h3 = I18n.t('admin.text.control_panel')
         li.nav-item.d-md-none
           a.nav-link.open-navbar-container data-target="#navbar-mobile" data-toggle="collapse" 
             i.fa.fa-ellipsis-v
@@ -36,8 +36,8 @@ nav.header-navbar.navbar-expand-md.navbar.navbar-with-menu.navbar-static-top.nav
               span.user-name = current_user.full_name
             .dropdown-menu.dropdown-menu-right
               = link_to edit_admin_user_path, class: 'dropdown-item' do
-                = fa_icon :gears, text: 'Change password'
+                = fa_icon :gears, text: I18n.t('admin.link.change_password')
               .dropdown-divider
               = link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do
                 i.ft-power
-                | Logout
+                = I18n.t('admin.link.logout')

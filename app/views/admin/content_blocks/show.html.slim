@@ -4,34 +4,34 @@
   .col-8
     .card
       .card-header
-        h4.card-title Content block details
+        h4.card-title = I18n.t('admin.label.content_block_details')
         .heading-elements
           = link_to [:edit, :admin, @content_block], class: 'card-link' do
-            = fa_icon 'pencil', text: 'Edit'
+            = fa_icon 'pencil', text: I18n.t('admin.link.edit')
 
       .card-content
         table.table
           tbody
             tr
-              td.width-250 Title
+              td.width-250 = I18n.t('admin.label.title')
               td = @content_block.title
             tr
-              td Small title
+              td = I18n.t('admin.label.small_title')
               td = @content_block.small_title
 
             tr
-              td Visible?
+              td = I18n.t('admin.label.visible')
               td = @content_block.visible
 
             tr
-              td Content
+              td = I18n.t('admin.label.content')
               td = @content_block.content
 
 
   .col-4
     .card
       .card-header
-        h4.card-title Cover image
+        h4.card-title = I18n.t('admin.label.cover_image')
       .card-content
         .card-body
           = image_tag @content_block.image_url, class: 'img-thumbnail img-fluid'
