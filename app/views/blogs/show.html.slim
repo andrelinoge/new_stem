@@ -1,4 +1,4 @@
-= render 'shared/navigation/breadcrumbs', main_title: 'Blog', current_page: @blog_post.title
+= render 'shared/navigation/breadcrumbs', main_title: I18n.t('breadcrumbs.blog'), current_page: @blog_post.title
 
 - title @blog_post.title
 - description @blog_post.meta_description
@@ -23,5 +23,5 @@
       .col-md-4
         .sidebar
           .widget
-            h5.widget-title Recent Projects
+            h5.widget-title = I18n.t('text.recent_projects')
             = render '/shared/recent_projects'

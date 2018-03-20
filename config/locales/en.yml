@@ -91,9 +91,37 @@ en:
       static_pages: Static pages
       team_members: Team members
       testimonials: Testimonials
+      users: Users
     text:
       control_panel: Control panel
       no_data: No data
+  breadcrumbs:
+    about_us: About Us
+    blog: Blog
+    contact_us: Contact Us
+    our_recent_projects: Our Recent Projects
+    projects: Projects
+  btn:
+    more_about_us: More About Us
+    read_more: Read More
+  navigation:
+    about_company: About company
+    about_us: About us
+    admin_panel: Admin panel
+    blog: Blog
+    contact_us: Contact us
+    home: Home
+    our_projects: Our projects
+    shop: Shop
+  text:
+    address: 'Address:'
+    email_address: 'Email address:'
+    get_in_touch: Get in touch
+    phone_no: 'Phone no:'
+    project_gallery: Project gallery
+    quick_links: Quick links
+    recent_projects: Recent projects
+    services: Services
   views:
     pagination:
       first: First

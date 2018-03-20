@@ -1,4 +1,4 @@
-= render 'shared/navigation/breadcrumbs', main_title: 'Blog', current_page: 'Blog'
+= render 'shared/navigation/breadcrumbs', main_title: I18n.t('breadcrumbs.blog'), current_page: I18n.t('breadcrumbs.blog')
 
 - page = StaticPage[:blog_list]
 - title page.title
@@ -11,7 +11,7 @@
       .col-md-4
         .sidebar
           .widget
-            h5.widget-title Recent Projects
+            h5.widget-title = I18n.t('text.recent_projects')
             = render '/shared/recent_projects'
          
       .col-md-8
@@ -33,7 +33,7 @@
                         = l blog_post.created_at, format: "%d %B, %Y"
                     p = blog_post.description
                     = link_to blog_path(blog_post), class: 'readmore' do
-                      | Read More
+                      = I18n.t('btn.read_more')
                       i.fa.fa-caret-right aria-hidden="true" 
             
         .pagiWrap

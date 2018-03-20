@@ -3,47 +3,40 @@
     .col-xs-12.col-sm-6.col-md-3
       .footer-lwf
         h3.footer-logo
-          = image_tag "logo.png"
+          = image_tag "LogoStem.svg"
         p = ContentBlock[:footer_text].content
 
         .socialLinks
-          a href="#" 
+          a href="#{SiteSetting[:facebook_url]}"
             i.fa.fa-facebook aria-hidden="true" 
-          a href="#" 
+          a href="#{SiteSetting[:linkedin_url]}"
             i.fa.fa-linkedin aria-hidden="true" 
-          a href="#" 
+          a href="#{SiteSetting[:google_plus_url]}"
             i.fa.fa-google-plus aria-hidden="true" 
           
     .col-xs-12.col-sm-6.col-md-3
       .footer-lwf.footer-menu
-        h3.footer-lwf-title Quick Links
+        h3.footer-lwf-title = I18n.t('text.quick_links')
         ul
-          li = link_to 'Home', root_path
-          li = link_to 'About Company', about_page_path
-          li = link_to 'Shop', SiteSetting[:shop_url]
-          li = link_to 'Our projects', projects_path
-          li = link_to 'Blog', blogs_path
-          li = link_to 'Contact Us', contacts_page_path
+          li = link_to I18n.t('navigation.home'), root_path
+          li = link_to I18n.t('navigation.about_company'), about_page_path
+          li = link_to I18n.t('navigation.shop'), SiteSetting[:shop_url]
+          li = link_to I18n.t('navigation.our_projects'), projects_path
+          li = link_to I18n.t('navigation.blog'), blogs_path
+          li = link_to I18n.t('navigation.contact_us'), contacts_page_path
 
+    - if Service.any?
+      .col-xs-12.col-sm-6.col-md-3
+        .footer-lwf.footer-menu
+          h3.footer-lwf-title = I18n.t('text.services')
+          ul
+            - Service.last_six.each do |service|
+              li
+                a href="#" = service.title
+            
     .col-xs-12.col-sm-6.col-md-3
       .footer-lwf.footer-menu
-        h3.footer-lwf-title Services
-        ul
-          li
-            a href="#"  Nascetur Ridiculus Mus
-          li
-            a href="#"  Curabitur Eu Tempor
-          li
-            a href="#"  Nullam Mollis Accumsan
-          li
-            a href="#"  Curabitur Bibendum
-          li
-            a href="#"  Metus Suscipit Efficitur
-          li
-            a href="#"  Proin Mattis Finibus
-    .col-xs-12.col-sm-6.col-md-3
-      .footer-lwf.footer-menu
-        h3.footer-lwf-title Get In Touch
+        h3.footer-lwf-title = I18n.t('text.get_in_touch')
         ul.footer-contact
           li
             i.fa.fa-phone

@@ -54,6 +54,22 @@ SiteSetting.find_or_create_by(key: :site_title).update({
   value: '#'
 })
 
+SiteSetting.find_or_create_by(key: :facebook_url).update({
+  label: 'Facebook link',
+  value: '#'
+})
+
+SiteSetting.find_or_create_by(key: :linkedin_url).update({
+  label: 'Linkeding link',
+  value: '#'
+})
+
+SiteSetting.find_or_create_by(key: :google_plus_url).update({
+  label: 'Google Plus link',
+  value: '#'
+})
+
+
 puts "\nSeeding blog...".blue
 11.times do |_i| 
   FactoryBot.create(:blog).update(
@@ -238,5 +254,20 @@ StaticPage.find_or_create_by(key: :landing).update(
   meta_description: Faker::Lorem.paragraph,
   meta_keys: Faker::Lorem.words.join(',')
 )
+
+SiteSetting.find_or_create_by(key: :facebook_url).update({
+  label: 'Посилання на Facebook',
+  value: '#'
+})
+
+SiteSetting.find_or_create_by(key: :linkedin_url).update({
+  label: 'Посилання на Linkeding',
+  value: '#'
+})
+
+SiteSetting.find_or_create_by(key: :google_plus_url).update({
+  label: 'Посилання на Google Plus',
+  value: '#'
+})
 
 I18n.locale  = :en

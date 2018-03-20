@@ -1,4 +1,4 @@
-= render 'shared/navigation/breadcrumbs', main_title: 'Contact Us', current_page: 'Contact Us'
+= render 'shared/navigation/breadcrumbs', main_title: I18n.t('breadcrumbs.contact_us'), current_page: I18n.t('breadcrumbs.contact_us')
 - page = StaticPage[:contact_us]
 - title page.title
 - description page.meta_description
@@ -7,34 +7,31 @@
 section.section.innercms
   .container
     .contact-wrap
-      /! Contact Info
       .contact-now.row
         .col-md-4.column
           .contact
             span
               i.fa.fa-home
             .information
-              strong Address:
+              strong = I18n.t('text.address')
               p = SiteSetting[:address]
                 
-        /! Contact Info
         .col-md-4.column
           .contact
             span
               i.fa.fa-envelope
             .information
-              strong Email Address:
+              strong = I18n.t('text.email_address')
               p = SiteSetting[:email]
-        /! Contact Info
+        
         .col-md-4.column
           .contact
             span
               i.fa.fa-phone
             .information
-              strong Phone No:
+              strong = I18n.t('text.phone_no')
               - SiteSetting[:all_phones].split(',').each do |phone|
                 p = phone
-        /! Contact Info
-      /! Contact form
+        
       .column
         == SiteSetting[:google_map]

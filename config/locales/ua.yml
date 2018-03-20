@@ -91,13 +91,38 @@ ua:
       static_pages: Статичні сторінки
       team_members: Команда
       testimonials: Відгуки
+      users: Users
     text:
       control_panel: Панель управління
       no_data: Немає даних
+  breadcrumbs:
+    about_us: Про нас
+    blog: Блог
+    contact_us: Наші контакти
+    our_recent_projects: Останні проекти
+    projects: Наш роботи
+  btn:
+    more_about_us: Більше про нас
+    read_more: Дізнатися більше
+  navigation:
+    about_company: Про компанію
+    about_us: Про нас
+    admin_panel: Панель керування
+    blog: Блог
+    contact_us: Наші контакти
+    home: Головна
+    our_projects: Наш роботи
+    shop: Наш магазин
+  text:
+    address: 'Адреса:'
+    email_address: 'Email:'
+    get_in_touch: Контакти
+    phone_no: Телефони
+    project_gallery: Галерея проекту
+    quick_links: Швидкі посилання
+    recent_projects: Останні проекти
+    services: Наші послуги
   views:
     pagination:
       first: Перший
-      last: Останній
-      next: Далі
-      previous: Попередній
-      truncate: Урізати
+  
