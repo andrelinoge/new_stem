@@ -270,4 +270,27 @@ SiteSetting.find_or_create_by(key: :google_plus_url).update({
   value: '#'
 })
 
+{
+  welcome: 'Наша компанія',
+  our_services: 'Наші послуги',
+  why_choose_us: 'Чому нас обирають',
+  safety: 'Безпека',
+  experience: 'Досвід',
+  perfessional: 'Професіоналізи',
+  staff: 'Кваліфікована команда',
+  quality: 'Якість виконання',
+  delivery: 'Шивдко',
+  last_projects: 'Наші останні проекти',
+  our_team: 'Команада',
+  last_blog_posts: 'Останнє з блогу',
+  testimonials: 'Відгуки кліентів',
+  footer_text: ''
+}.each_pair do |key, title|
+  ContentBlock.find_or_create_by(key: key).update(
+    small_title: Faker::Lorem.sentence,
+    title: title,
+    content: Faker::Lorem.paragraph
+  )
+end
+
 I18n.locale  = :en

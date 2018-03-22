@@ -6,6 +6,7 @@
       .row
         .col-6
           = simple_form_for @user, url: { :action => "update_password" } do |f|
+            = f.input :email, autocomplete: 'off'
             = f.input :password, autocomplete: 'off'
             = f.input :password_confirmation, autocomplete: 'off'
             = f.submit
