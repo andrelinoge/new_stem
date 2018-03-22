@@ -293,4 +293,46 @@ SiteSetting.find_or_create_by(key: :google_plus_url).update({
   )
 end
 
+Blog.all.each do |blog|
+  blog.update(
+    title: Faker::Lorem.sentence,
+    content: Faker::Lorem.paragraph,
+    description: Faker::Lorem.sentence,
+    meta_keys: Faker::Lorem.words(4).join(','),
+    meta_description: Faker::Lorem.sentence
+  )
+end
+
+TeamMember.all.each do |row|
+  row.update(
+    name: Faker::Name.name,
+    position: Faker::Company.profession
+  )
+end
+
+Service.all.each do |row|
+  row.update(
+    title: Faker::Lorem.sentence,
+    content: Faker::Lorem.paragraph
+  )
+end
+
+Slide.all.each do |row|
+  row.update(
+    small_title: Faker::Lorem.sentence,
+    title: Faker::Lorem.sentence,
+    content: Faker::Lorem.paragraph
+  )
+end
+
+Project.all.each do |row|
+  row.update(
+    title: Faker::Lorem.sentence,
+    content: Faker::Lorem.paragraph,
+    description: Faker::Lorem.sentence,
+    meta_keys: Faker::Lorem.words(4).join(','),
+    meta_description: Faker::Lorem.sentence
+  )
+end
+
 I18n.locale  = :en
