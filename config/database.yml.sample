@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: deployer
+  password: deployer18
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: newstem_development
+
+test:
+  <<: *default
+  database: newstem_test
+
+production:
+  <<: *default
+  database: newstem_production
+  username: deployer
+  password: qwe123
