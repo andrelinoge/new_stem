@@ -53,4 +53,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'i18n-tasks'
   gem "capistrano", "~> 3.10", require: false
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler', '~> 1.3'
+  gem "capistrano-rails", "~> 1.3", require: false
+  gem 'capistrano-passenger'
 end
