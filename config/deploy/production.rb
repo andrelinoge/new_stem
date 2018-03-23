@@ -1,3 +1,6 @@
+set :user, 'deployer'
+server '139.162.163.22', user: fetch(:user), roles: %w{app db web}
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.

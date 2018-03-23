@@ -2,6 +2,7 @@
 lock "~> 3.10.1"
 
 set :application, "stem"
+set :log_level, :info
 set :repo_url, "git@github.com:andrelinoge/new_stem.git"
 
 # Default branch is :master
@@ -37,3 +38,17 @@ set :deploy_to, "/home/deployer/new_stem"
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
+
+desc 'Runs rake db:seed'
+task :seed do
+  on primary fetch(:migration_role) do
+    within release_path do
+      with rails_env: fetch(:rails_env) do
+        execute :rake, "db:seed"
+      end
+    end
+  end
+end

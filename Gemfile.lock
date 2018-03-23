@@ -69,6 +69,17 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
+    capistrano-bundler (1.3.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-passenger (0.2.0)
+      capistrano (~> 3.0)
+    capistrano-rails (1.3.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     carrierwave (1.2.2)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -302,6 +313,10 @@ DEPENDENCIES
   bootstrap-growl-rails
   breadcrumbs_on_rails
   capistrano (~> 3.10)
+  capistrano-bundler (~> 1.3)
+  capistrano-passenger
+  capistrano-rails (~> 1.3)
+  capistrano-rvm
   carrierwave (~> 1.0)
   ckeditor
   cocoon
