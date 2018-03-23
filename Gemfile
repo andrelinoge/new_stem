@@ -52,4 +52,5 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'i18n-tasks'
+  gem "capistrano", "~> 3.10", require: false
 end
