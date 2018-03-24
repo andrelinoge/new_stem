@@ -43,6 +43,7 @@ gem 'factory_bot_rails'
 gem 'colorize'
 gem 'faker'
 gem "breadcrumbs_on_rails"
+gem 'rollbar'
 
 group :development, :test do
   gem 'listen', '>= 3.0.5', '< 3.2'
