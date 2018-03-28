@@ -50,7 +50,7 @@ class Admin::ServicesController < Admin::ApplicationController
   protected
 
   def collection
-    Service.all
+    Service.ordered.all
   end
 
   def resource

@@ -56,7 +56,7 @@ ua:
       project_image_details: Деталі
       project_images: Зображення проекту
       projects: Проекти
-      service_details: Сервісні деталі
+      service_details: Опис сервісу
       services: Сервіси
       site_settings: Налаштування сайту
       slide_details: Деталі
@@ -85,7 +85,7 @@ ua:
       content_blocks: Контент-Блоки
       dashboard: Панель управління
       projects: Проекти
-      services: Сервісни
+      services: Сервіси
       site_settings: Налаштування
       slides: Слайди
       static_pages: Статичні сторінки

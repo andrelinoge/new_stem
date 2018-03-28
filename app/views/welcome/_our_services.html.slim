@@ -10,7 +10,7 @@
         p = content_block.content
 
       ul.row.servicesgrid
-        - Service.all.each do |service|
+        - Service.ordered.all.each do |service|
           li.col-lg-3.col-sm-6
             .flip-container ontouchstart="this.classList.toggle('hover');" 
               .flipper
