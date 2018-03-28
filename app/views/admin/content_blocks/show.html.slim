@@ -25,7 +25,7 @@
 
             tr
               td = I18n.t('admin.label.content')
-              td = @content_block.content
+              td == simple_format(@content_block.content)
 
 
   .col-4
