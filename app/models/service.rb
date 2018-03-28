@@ -12,6 +12,6 @@ class Service < ApplicationRecord
   translates :title, :content
   mount_uploader :image, ServiceImageUploader
 
-  scope :last_six, -> { order(id: :desc).limit(6) }
+  scope :for_bottom_nav, -> { order(id: :desc).limit(6) }
   scope :ordered, -> { order(id: :asc) }
 end

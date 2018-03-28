@@ -30,7 +30,7 @@
         .footer-lwf.footer-menu
           h3.footer-lwf-title = I18n.t('text.services')
           ul
-            - Service.last_six.each do |service|
+            - Service.for_bottom_nav.each do |service|
               li
                 a href="#" = service.title
             
