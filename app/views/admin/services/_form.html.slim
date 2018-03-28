@@ -6,7 +6,7 @@
   .row
     .col-6
       = f.input :title
-      = f.input :content, as: :text
+      = f.input :content, as: :text, input_html: {rows: 10}
       = f.button :submit, class: 'btn btn-primary', data: { disable_with: submitting_message(f) }
     .col-6
       = image_tag @service.image_url, class: 'img-thumbnail img-fluid'

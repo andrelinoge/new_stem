@@ -7,7 +7,7 @@
     .col-6
       = f.input :title
       = f.input :small_title
-      = f.input :content, as: :text
+      = f.input :content, as: :text, input_html: {rows: 10}
       = f.input :visible
       = f.button :submit, class: 'btn btn-primary', data: { disable_with: submitting_message(f) }
 

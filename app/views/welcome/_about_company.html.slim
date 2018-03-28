@@ -13,7 +13,7 @@ section.section.aboutwrap
             h3 = content_block.title
             .seprate
               = image_tag "seprator.png"
-          p = content_block.content
+          == simple_format(content_block.content)
 
           br/
           = link_to about_page_path, class: 'sitebtn' do
