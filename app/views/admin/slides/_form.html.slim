@@ -8,6 +8,7 @@
       = f.input :title
       = f.input :small_title
       = f.input :content, as: :text
+      = f.input :text_color, as: :colorpicker
       = f.button :submit, class: 'btn btn-primary', data: { disable_with: submitting_message(f) }
     .col-6
       = image_tag @slide.image_url(:thumb), class: 'img-thumbnail img-fluid'

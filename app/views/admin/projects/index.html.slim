@@ -11,14 +11,15 @@
         thead.bg-teal.bg-lighten-4
           tr
             th.width-50 ID
+            th.text-left = I18n.t('admin.label.project_position')
             th.text-left = I18n.t('admin.label.title')
             th.width-400 = I18n.t('admin.label.actions')
         tbody
           - @projects.find_each do |record|
             tr
-              td= record.id
-              td
-                = link_to record.title, [:admin, record], class: 'card-link'
+              td = record.id
+              td = record.position
+              td = link_to record.title, [:admin, record], class: 'card-link'
               td
                 => link_to admin_project_project_images_path(record), class: 'card-link' do
                   = fa_icon 'object-ungroup', text: I18n.t('admin.link.gallery')

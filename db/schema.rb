@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180316073555) do
+ActiveRecord::Schema.define(version: 20180505160508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20180316073555) do
     t.string "cover"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "position", default: 1
   end
 
   create_table "service_translations", force: :cascade do |t|
@@ -158,6 +159,7 @@ ActiveRecord::Schema.define(version: 20180316073555) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "text_color", default: "#fff"
   end
 
   create_table "static_page_translations", force: :cascade do |t|

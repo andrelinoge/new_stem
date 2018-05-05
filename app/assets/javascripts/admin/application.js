@@ -8,3 +8,4 @@
 //= require bootstrap-notify
 //= require moment
 //= require ckeditor/init
+//= require bootstrap-colorpicker

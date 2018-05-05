@@ -44,6 +44,7 @@ gem 'colorize'
 gem 'faker'
 gem "breadcrumbs_on_rails"
 gem 'rollbar'
+gem 'bootstrap_colorpicker_rails'
 
 group :development, :test do
   gem 'listen', '>= 3.0.5', '< 3.2'

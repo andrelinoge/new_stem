@@ -15,11 +15,14 @@
         table.table
           tbody
             tr
-              td.width-250 = I18n.t('admin.label.title')
+              td.width-200 = I18n.t('admin.label.title')
               td = @slide.title
             tr
               td = I18n.t('admin.label.small_title')
               td = @slide.small_title
+            tr
+              td = I18n.t('admin.label.text_color')
+              td = content_tag(:div, nil, class: 'color_preview', style: "background-color: #{@slide.text_color};")
             tr
               td = I18n.t('admin.label.content')
               td = @slide.content

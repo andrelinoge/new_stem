@@ -9,6 +9,7 @@
       = f.input :description, as: :text
       = f.input :meta_keys
       = f.input :meta_description, as: :text
+      = f.input :position
     .col-6
       = image_tag @project.cover_url, class: 'img-thumbnail img-fluid'
       = f.input :cover, input_html: {class: 'form-control-file'}

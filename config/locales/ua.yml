@@ -10,6 +10,8 @@ ua:
       new_slide: Новий слайд
       new_testimonial: Новий відгук
     label:
+      text_color: Колір тексту
+      project_position: Позиція
       Label: Лейбл(тех.дані)
       Meta_description: Мета опис
       Meta_keys: Мета ключі

@@ -6,6 +6,7 @@
 #  image      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  text_color :string           default("#fff")
 #
 
 require 'test_helper'

@@ -60,7 +60,7 @@ class Admin::SlidesController < Admin::ApplicationController
   def resource_params
     params
       .require(:slide)
-      .permit(:title, :small_title, :content, :image)
+      .permit(:title, :small_title, :content, :image, :text_color)
   end
 
   def set_breadcrumbs

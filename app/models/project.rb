@@ -6,6 +6,7 @@
 #  cover      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  position   :integer          default(1)
 #
 
 class Project < ApplicationRecord
@@ -14,6 +15,6 @@ class Project < ApplicationRecord
 
   has_many :project_images, dependent: :destroy
 
-  scope :recent, -> { order(id: :desc) }
-  scope :recent_for_index, -> { order(id: :desc).limit(8) }
+  scope :recent, -> { order(position: :desc) }
+  scope :recent_for_index, -> { order(position: :desc).limit(8) }
 end

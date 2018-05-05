@@ -7,4 +7,13 @@
   *= require './theme/pages/timeline.css'
   *= require animate
   *= require font-awesome
+  *= require bootstrap-colorpicker
 */
+
+
+.color_preview {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+}

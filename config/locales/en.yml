@@ -10,6 +10,7 @@ en:
       new_slide: New slide
       new_testimonial: New testimonial
     label:
+      text_color: Color of text
       Label: Label
       Meta_description: Meta description
       Meta_keys: Meta keys
