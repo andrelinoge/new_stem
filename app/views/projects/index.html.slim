@@ -13,12 +13,13 @@
           = link_to '', project.cover_url, class: 'image-popup'
           .flip-container
             .flipper
-              .front
-                span.imgbox
-                  = image_tag project.cover_url(:tall), class: 'img-responsive', alt: project.title
-              .back
-                .inner
-                  .back-title = link_to project.title, project_path(project)
-                  p = project.description
+              = link_to  project_path(project) do
+                .front
+                  span.imgbox
+                    = image_tag project.cover_url(:tall), class: 'img-responsive', alt: project.title
+                .back
+                  .inner
+                    .back-title = project.title
+                    p = project.description
   .pagiWrap
     = paginate @projects
