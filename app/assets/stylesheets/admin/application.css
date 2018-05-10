@@ -17,3 +17,29 @@
 	height: 20px;
 	border: 1px solid black;
 }
+
+.hermes .tp-bullet:hover {
+    background-color: rgba(0,0,0,0.21);
+}
+.hermes .tp-bullet {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  position: absolute;
+}
+.tp-bullet.selected, .tp-bullet:hover {
+  background: #fff;
+}
+.tp-bullet {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background: #fff;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+}

@@ -11,4 +11,6 @@
 class TeamMember < ApplicationRecord
   mount_uploader :photo, TeamMemberPhotoUploader
   translates :name, :position
+
+  validates_presence_of :photo
 end

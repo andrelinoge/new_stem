@@ -11,7 +11,7 @@
         .service-details
           .serviceWrp
             .serviceImg
-              = image_tag @project.cover_url(:wide)
+              = image_tag project_cover_url(@project)
             h3 = @project.title
             == @project.content
 

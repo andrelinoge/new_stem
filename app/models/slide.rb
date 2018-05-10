@@ -12,4 +12,6 @@
 class Slide < ApplicationRecord
   translates :title, :small_title, :content
   mount_uploader :image, SlideImageUploader
+
+  validates_presence_of :image
 end

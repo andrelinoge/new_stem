@@ -2,7 +2,7 @@ class Admin::SiteSettingsController < Admin::ApplicationController
   before_action :set_breadcrumbs
   
   def index
-    @settings = collection.page(params[:page]).per(10)
+    @settings = collection.page(params[:page]).per(20)
   end
 
   def edit

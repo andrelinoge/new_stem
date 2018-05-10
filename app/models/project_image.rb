@@ -13,5 +13,7 @@ class ProjectImage < ApplicationRecord
   translates :title, :description
   mount_uploader :image, ProjectImageUploader
 
+  validates_presence_of :image
+
   belongs_to :project
 end

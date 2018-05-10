@@ -67,7 +67,8 @@ class Admin::ProjectsController < Admin::ApplicationController
         :content, 
         :meta_keys, 
         :meta_description,
-        :position
+        :position,
+        :page_cover
       )
   end
 

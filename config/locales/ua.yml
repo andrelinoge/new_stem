@@ -10,6 +10,7 @@ ua:
       new_slide: Новий слайд
       new_testimonial: Новий відгук
     label:
+      project_page_cover_image: Обкладинка на сторінці проекту
       text_color: Колір тексту
       project_position: Позиція
       Label: Лейбл(тех.дані)
@@ -52,7 +53,7 @@ ua:
       position: Позиція(посада)
       positions: Позиції
       project_content: Вміст проекту
-      project_cover_image: Обкладинка проекту
+      project_cover_image: Обкладинка проекту (головна сторінка)
       project_details: Деталі
       project_image: Зображення проекту
       project_image_details: Деталі

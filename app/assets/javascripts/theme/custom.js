@@ -30,17 +30,47 @@
     if($('.tp-banner').length > 0)
     {
       $('.tp-banner').show().revolution({
-        delay:6000,
+        sliderType:"standard",
+        delay: 4000,
         startheight:700,
         startwidth: 1170,
         hideThumbs: 1000,
-        navigationType: 'none',
         touchenabled: 'on',
         onHoverStop: 'on',
         navOffsetHorizontal: 0,
         navOffsetVertical: 0,
         dottedOverlay: 'none',
-        fullWidth: 'on'
+        fullWidth: 'on',
+        navigation: {
+          keyboardNavigation:"off",
+          keyboard_direction: "horizontal",
+          mouseScrollNavigation:"off",
+          mouseScrollReverse:"default",
+          // onHoverStop:"off",
+          touch:{
+            touchenabled:"on",
+            touchOnDesktop:"off",
+            swipe_threshold: 75,
+            swipe_min_touches: 1,
+            swipe_direction: "horizontal",
+            drag_block_vertical: false
+          }
+          ,
+          bullets: {
+            enable:true,
+            hide_onmobile:true,
+            hide_under:778,
+            style:"hermes",
+            hide_onleave:false,
+            direction:"horizontal",
+            h_align:"center",
+            v_align:"bottom",
+            h_offset:0,
+            v_offset:20,
+            space:5,
+            tmp:''
+          }
+        },
       });
     }
   });

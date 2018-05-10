@@ -7,6 +7,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  position   :integer          default(1)
+#  page_cover :string
 #
 
 FactoryBot.define do

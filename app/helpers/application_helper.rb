@@ -6,4 +6,12 @@ module ApplicationHelper
       'Creating...'
     end
   end
+
+  def project_cover_url(project)
+  	if project.page_cover.file.present?
+  		project.page_cover_url
+  	else
+  		project.cover_url
+  	end
+  end
 end

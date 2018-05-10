@@ -1,7 +1,7 @@
 - add_breadcrumb @project.title, ''
 
 .row
-  .col-8
+  .col-12
     .card
       .card-header
         h4.card-title = I18n.t('admin.label.project_details')
@@ -30,13 +30,21 @@
               td = @project.meta_description
 
 
-  .col-4
+  .col-6
     .card
       .card-header
         h4.card-title = I18n.t('admin.label.project_cover_image')
       .card-content
         .card-body
-          = image_tag @project.cover_url, class: 'img-thumbnail img-fluid'
+          = image_tag @project.cover_url(:medium), class: 'img-thumbnail img-fluid'
+
+  .col-6
+    .card
+      .card-header
+        h4.card-title = I18n.t('admin.label.project_page_cover_image')
+      .card-content
+        .card-body
+          = image_tag @project.page_cover_url(:preview), class: 'img-thumbnail img-fluid'
 .row              
   .col-12
     .card
