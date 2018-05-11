@@ -50,7 +50,7 @@ class Admin::SlidesController < Admin::ApplicationController
   protected
 
   def collection
-    Slide.all
+    Slide.ordered
   end
 
   def resource
@@ -60,7 +60,7 @@ class Admin::SlidesController < Admin::ApplicationController
   def resource_params
     params
       .require(:slide)
-      .permit(:title, :small_title, :content, :image, :text_color)
+      .permit(:title, :small_title, :content, :image, :text_color, :position)
   end
 
   def set_breadcrumbs

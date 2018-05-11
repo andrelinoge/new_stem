@@ -31,7 +31,7 @@
     {
       $('.tp-banner').show().revolution({
         sliderType:"standard",
-        delay: 4000,
+        delay: 3000,
         startheight:700,
         startwidth: 1170,
         hideThumbs: 1000,

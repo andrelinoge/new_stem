@@ -12,13 +12,15 @@
           tr
             th.width-50 ID
             th.text-left = I18n.t('admin.label.title')
+            th = I18n.t('admin.label.project_position')
             th.text-left = I18n.t('admin.label.small_title')
             th.width-300 = I18n.t('admin.label.actions')
         tbody
-          - @slides.find_each do |record|
+          - @slides.each do |record|
             tr
               td = record.id
               td = link_to record.title, [:admin, record], class: 'card-link'
+              td = record.position
               td = record.small_title
               td
                 => link_to [:edit, :admin, record], class: 'card-link' do

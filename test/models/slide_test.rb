@@ -7,6 +7,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  text_color :string           default("#fff")
+#  position   :integer          default(1)
 #
 
 require 'test_helper'
