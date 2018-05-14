@@ -9,7 +9,7 @@ nav.navbar.navbar-toggleable-md.navbar-light
         = link_to I18n.t('navigation.about_us'), about_page_path, class: 'nav-link'
       li.nav-item
         = link_to I18n.t('navigation.shop'), SiteSetting[:shop_url], class: 'nav-link'
-      li.nav-item
+      li.nav-item.active.underline
         = link_to I18n.t('navigation.our_projects'), projects_path, class: 'nav-link'
       li.nav-item
         = link_to I18n.t('navigation.blog'), blogs_path, class: 'nav-link'
