@@ -32,5 +32,7 @@ Rails.application.routes.draw do
     get '/contacts', to: 'pages#contact_us', as: :contacts_page
     resources :blogs, only: [:index, :show]
     resources :projects, only: [:index, :show]
+
+    match '*path', via: :all, to: 'welcome#not_found'
   end
 end
