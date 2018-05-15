@@ -10,10 +10,10 @@
           = image_tag "seprator.png"
         p = content_block.content
 
-      ul.blogGrid.row
+      ul.blogGrid.row.d-flex.flex-row.align-items-stretch
         - Blog.recent_for_index.all.each do |record|
           li.col-lg-4
-            .int
+            .int.height_100percent.d-flex.flex-column.align-items-start
               .postimg
                 = image_tag record.cover_url(:medium)
               .post-header
@@ -23,5 +23,6 @@
                 h4
                   = link_to record.title, blog_path(record)
               p = record.description
-              = link_to 'Read more', blog_path(record), class: 'readmore'
+              .mt-auto
+                = link_to 'Read more', blog_path(record), class: 'readmore'
         

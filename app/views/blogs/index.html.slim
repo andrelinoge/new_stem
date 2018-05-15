@@ -30,10 +30,10 @@
                       br/
                       .date
                         i.fa.fa-calendar aria-hidden="true" 
-                        = l blog_post.created_at, format: "%d %B, %Y"
+                        =<> l blog_post.created_at, format: "%d %B, %Y"
                     p = blog_post.description
                     = link_to blog_path(blog_post), class: 'readmore' do
-                      = I18n.t('btn.read_more')
+                      => I18n.t('btn.read_more')
                       i.fa.fa-caret-right aria-hidden="true" 
             
         .pagiWrap

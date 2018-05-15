@@ -10,7 +10,7 @@
           = image_tag "seprator.png"
       ul.testimonialsList.owl-carousel
         - Testimonial.all.each do |testimonial|
-          li.item
+          li.item.height_100percent
             .testinner
               .clientname
                 = testimonial.author
