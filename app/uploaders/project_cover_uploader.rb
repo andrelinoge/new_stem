@@ -7,7 +7,7 @@ class ProjectCoverUploader < CarrierWave::Uploader::Base
   end
 
   def default_url(*args)
-    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default_cover.jpg"].compact.join('_'))
+    ActionController::Base.helpers.asset_path("fallback/" + ["default_cover.jpg"].compact.join('_'))
   end
 
   version :medium do
