@@ -18,3 +18,4 @@ html
       
     = yield :after_js_load
   = render 'shared/flash_messages'
+  = analytics_init if GoogleAnalytics.valid_tracker?

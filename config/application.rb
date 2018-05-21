@@ -20,4 +20,6 @@ module NewStem
       Devise::SessionsController.layout "admin_signin"
     end
   end
+
+  GA.tracker = "UA-102073692-2"
 end
