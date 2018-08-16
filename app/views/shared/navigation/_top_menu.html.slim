@@ -5,14 +5,16 @@ nav.navbar.navbar-toggleable-md.navbar-light
     ul.navbar-nav.mr-auto
       li.nav-item
         = link_to I18n.t('navigation.home'), root_path, class: 'nav-link'
-      li.nav-item
-        = link_to I18n.t('navigation.about_us'), about_page_path, class: 'nav-link'
-      li.nav-item
-        = link_to I18n.t('navigation.shop'), SiteSetting[:shop_url], class: 'nav-link'
-      li.nav-item.active.underline
+      li.nav-item.active
         = link_to I18n.t('navigation.our_projects'), projects_path, class: 'nav-link'
       li.nav-item
+        = link_to I18n.t('navigation.calc'), calc_path, class: 'nav-link'
+      li.nav-item
+        = link_to I18n.t('navigation.shop'), SiteSetting[:shop_url], class: 'nav-link'
+      li.nav-item
         = link_to I18n.t('navigation.blog'), blogs_path, class: 'nav-link'
+      li.nav-item
+        = link_to I18n.t('navigation.about_us'), about_page_path, class: 'nav-link'
       li.nav-item
         = link_to I18n.t('navigation.contact_us'), contacts_page_path, class: 'nav-link'
       - if current_user
