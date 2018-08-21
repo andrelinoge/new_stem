@@ -26,6 +26,12 @@ Rails.application.routes.draw do
       resources :team_members
       resources :services
       resources :slides
+
+      resources :panels, only: [:index, :edit, :update]
+      resources :inverters, only: [:index, :edit, :update]
+      resources :fastening, only: [:index, :edit, :update]
+      resources :component, only: [:index, :edit, :update]
+      resources :montage, only: [:index, :edit, :update]
     end
 
     get '/about', to: 'pages#about', as: :about_page

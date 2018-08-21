@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180511065412) do
+ActiveRecord::Schema.define(version: 20180821162523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 20180511065412) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
+  create_table "components", force: :cascade do |t|
+    t.string "name"
+    t.integer "category", default: 0
+    t.float "price_per_kw"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "content_block_translations", force: :cascade do |t|
     t.integer "content_block_id", null: false
     t.string "locale", null: false
@@ -66,6 +74,40 @@ ActiveRecord::Schema.define(version: 20180511065412) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_content_blocks_on_key"
+  end
+
+  create_table "fastenings", force: :cascade do |t|
+    t.string "name"
+    t.integer "category", default: 0
+    t.float "price_per_kw"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "inverters", force: :cascade do |t|
+    t.string "name"
+    t.integer "category", default: 0
+    t.float "price_per_kw"
+    t.integer "range_min"
+    t.integer "range_max"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "montages", force: :cascade do |t|
+    t.string "name"
+    t.integer "category", default: 0
+    t.float "price_per_kw"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "panels", force: :cascade do |t|
+    t.string "name"
+    t.integer "category", default: 0
+    t.float "price_per_kw"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "project_image_translations", force: :cascade do |t|

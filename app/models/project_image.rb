@@ -2,9 +2,9 @@
 #
 # Table name: project_images
 #
-#  id         :integer          not null, primary key
+#  id         :bigint(8)        not null, primary key
 #  image      :string
-#  project_id :integer
+#  project_id :bigint(8)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
