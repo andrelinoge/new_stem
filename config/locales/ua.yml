@@ -94,7 +94,8 @@ ua:
       static_pages: Статичні сторінки
       team_members: Команда
       testimonials: Відгуки
-      users: Users
+      users: Юзери
+      calc: Калькулятор
     text:
       control_panel: Панель управління
       no_data: Немає даних
@@ -116,6 +117,7 @@ ua:
     home: Головна
     our_projects: Наші роботи
     shop: Наш магазин
+    calc: Калькулятор
   text:
     address: 'Адреса:'
     email_address: 'Email:'

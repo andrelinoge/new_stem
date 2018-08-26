@@ -2,9 +2,9 @@ require 'database_cleaner'
 require 'factory_bot_rails'
 require 'faker'
 
-puts 'Clean DB...'.yellow
-DatabaseCleaner.strategy = :truncation
-DatabaseCleaner.clean
+# puts 'Clean DB...'.yellow
+# DatabaseCleaner.strategy = :truncation
+# DatabaseCleaner.clean
 
 
 puts "\nSeeding users...".blue

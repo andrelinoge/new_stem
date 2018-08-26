@@ -27,11 +27,11 @@ Rails.application.routes.draw do
       resources :services
       resources :slides
 
-      resources :panels, only: [:index, :edit, :update]
-      resources :inverters, only: [:index, :edit, :update]
-      resources :fastening, only: [:index, :edit, :update]
-      resources :component, only: [:index, :edit, :update]
-      resources :montage, only: [:index, :edit, :update]
+      resources :panels
+      resources :inverters
+      resources :fastening
+      resources :component
+      resources :montage
     end
 
     get '/about', to: 'pages#about', as: :about_page

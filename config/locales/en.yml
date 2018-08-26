@@ -93,6 +93,7 @@ en:
       team_members: Team members
       testimonials: Testimonials
       users: Users
+      calc: Сalculator
     text:
       control_panel: Control panel
       no_data: No data
@@ -114,6 +115,7 @@ en:
     home: Home
     our_projects: Our projects
     shop: Shop
+    calc: Сalculator
   text:
     address: 'Address:'
     email_address: 'Email address:'
