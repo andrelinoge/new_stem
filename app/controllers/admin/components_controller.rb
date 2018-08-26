@@ -1,32 +1,56 @@
-class Admin::XXXController < Admin::ApplicationController
+class Admin::ComponentsController < Admin::ApplicationController
   before_action :set_breadcrumbs
   
   def index
-    @static_pages = collection.page(params[:page]).per(10)
+    @components = collection.page(params[:page]).per(10)
   end
 
   def show
-    @static_page = resource
+    @component = resource
+  end
+
+  def new
+    @component = collection.build
+  end
+
+  def create
+    @component = collection.create(resource_params)
+
+    if @component.persisted?
+      redirect_to [:admin, @component], success: 'xxx post was created'
+    else
+      render :new
+    end
   end
 
   def edit
-    @static_page = resource
+    @component = resource
   end
 
   def update
-    @static_page = resource
+    @component = resource
 
-    if @static_page.update(resource_params)
-      redirect_to admin_static_page_path(@static_page), notice: 'xxx was updated'
+    if @component.update(resource_params)
+      redirect_to [:admin, @component], notice: 'Component was updated'
     else
       render :edit
+    end
+  end
+
+  def destroy
+    @component = resource
+
+    if @component.destroy
+      redirect_to admin_components_path, success: 'Component was deleted successfully'
+    else
+      redirect_to admin_components_path, error: 'Component was not deleted'
     end
   end
 
   protected
 
   def collection
-    XXX.all
+    Component.all
   end
 
   def resource
@@ -35,11 +59,11 @@ class Admin::XXXController < Admin::ApplicationController
 
   def resource_params
     params
-      .require(:xxx)
+      .require(:component)
       .permit()
   end
 
   def set_breadcrumbs
-    add_breadcrumb I18n.t('admin.navigation.xxx'), admin_static_pages_path
+    add_breadcrumb I18n.t('admin.navigation.component'), admin_components_path
   end
 end

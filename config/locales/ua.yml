@@ -74,6 +74,10 @@ ua:
       title: Назва
       value: Значення
       visible: Видимий?
+      panels: Панелі
+      inverters: Інвертори
+      montages: Монтаж
+      components: Комплектуючі
     link:
       change_password: Змінити пароль
       delete: Видалити

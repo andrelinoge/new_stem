@@ -9,6 +9,20 @@ class Admin::XXXController < Admin::ApplicationController
     @static_page = resource
   end
 
+  def new
+    @blog_post = collection.build
+  end
+
+  def create
+    @blog_post = collection.create(resource_params)
+
+    if @blog_post.persisted?
+      redirect_to [:admin, ], success: 'xxx post was created'
+    else
+      render :new
+    end
+  end
+
   def edit
     @static_page = resource
   end
@@ -20,6 +34,16 @@ class Admin::XXXController < Admin::ApplicationController
       redirect_to admin_static_page_path(@static_page), notice: 'xxx was updated'
     else
       render :edit
+    end
+  end
+
+  def destroy
+    @blog_post = resource
+
+    if @blog_post.destroy
+      redirect_to admin_blogs_path, success: 'Blog post was deleted successfully'
+    else
+      redirect_to admin_blogs_path, error: 'Blog post was not deleted'
     end
   end
 

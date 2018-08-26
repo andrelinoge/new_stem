@@ -72,6 +72,10 @@ en:
       title: Title
       value: Value
       visible: Visible
+      panels: Panels
+      inverters: Inverters
+      montages: Montages
+      components: Components
     link:
       change_password: Change password
       delete: Delete

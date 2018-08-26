@@ -1,32 +1,56 @@
-class Admin::XXXController < Admin::ApplicationController
+class Admin::InvertersController < Admin::ApplicationController
   before_action :set_breadcrumbs
   
   def index
-    @static_pages = collection.page(params[:page]).per(10)
+    @inverters = collection.page(params[:page]).per(10)
   end
 
   def show
-    @static_page = resource
+    @inverter = resource
+  end
+
+  def new
+    @inverter = collection.build
+  end
+
+  def create
+    @inverter = collection.create(resource_params)
+
+    if @inverter.persisted?
+      redirect_to [:admin, @inverter], success: 'Inverter post was created'
+    else
+      render :new
+    end
   end
 
   def edit
-    @static_page = resource
+    @inverter = resource
   end
 
   def update
-    @static_page = resource
+    @inverter = resource
 
-    if @static_page.update(resource_params)
-      redirect_to admin_static_page_path(@static_page), notice: 'xxx was updated'
+    if @inverter.update(resource_params)
+      redirect_to [:admin, @inverter], notice: 'Inverter was updated'
     else
       render :edit
+    end
+  end
+
+  def destroy
+    @inverter = resource
+
+    if @inverter.destroy
+      redirect_to admin_inverters_path, success: 'Inverter was deleted successfully'
+    else
+      redirect_to admin_inverters_path, error: 'Inverter was not deleted'
     end
   end
 
   protected
 
   def collection
-    XXX.all
+    Inverter.all
   end
 
   def resource
@@ -35,11 +59,11 @@ class Admin::XXXController < Admin::ApplicationController
 
   def resource_params
     params
-      .require(:xxx)
+      .require(:inverter)
       .permit()
   end
 
   def set_breadcrumbs
-    add_breadcrumb I18n.t('admin.navigation.xxx'), admin_static_pages_path
+    add_breadcrumb I18n.t('admin.navigation.inverter'), admin_inverters_path
   end
 end
