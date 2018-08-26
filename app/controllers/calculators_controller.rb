@@ -1,10 +1,15 @@
 class CalculatorsController < ApplicationController
-  def index
+  def show
     
   end
 
-  def show
+  def create
     
+  end
+
+  protected
+
+  def calc_params
   end
 
 end
