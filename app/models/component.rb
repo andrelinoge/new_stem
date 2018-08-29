@@ -11,4 +11,8 @@
 #
 
 class Component < ApplicationRecord
+	enum category: [:cheap, :standard, :premium]
+
+	validates_presence_of :name, :category, :price_per_kw
+	validates :price_per_kw, numericality: true
 end

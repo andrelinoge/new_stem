@@ -27,11 +27,11 @@ Rails.application.routes.draw do
       resources :services
       resources :slides
 
-      resources :panels
-      resources :inverters
-      resources :fastening
-      resources :component
-      resources :montage
+      resources :panels, except: [:show]
+      resources :inverters, except: [:show]
+      resources :fastenings, except: [:show]
+      resources :components, except: [:show]
+      resources :montages, except: [:show]
     end
 
     get '/about', to: 'pages#about', as: :about_page

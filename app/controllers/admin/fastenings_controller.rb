@@ -64,6 +64,6 @@ class Admin::FasteningsController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb I18n.t('admin.navigation.fastening'), admin_fastenings_path
+    add_breadcrumb I18n.t('admin.navigation.fastenings'), admin_fastenings_path
   end
 end

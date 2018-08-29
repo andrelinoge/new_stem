@@ -9,6 +9,11 @@ en:
       new_service: New service
       new_slide: New slide
       new_testimonial: New testimonial
+      new_panel: New panel
+      new_montage: New montage
+      new_component: New component
+      new_fastening: New fastening
+      new_inverter: New inverter
     label:
       text_color: Color of text
       Label: Label
@@ -76,6 +81,8 @@ en:
       inverters: Inverters
       montages: Montages
       components: Components
+      category: Category(Type)
+      price_per_kw: Price per kW
     link:
       change_password: Change password
       delete: Delete
@@ -98,6 +105,11 @@ en:
       testimonials: Testimonials
       users: Users
       calc: Сalculator
+      montage: Montage
+      components: Components
+      fastenings: Fastenings
+      inverters: Inverters
+      panels: Panels
     text:
       control_panel: Control panel
       no_data: No data

@@ -11,4 +11,8 @@
 #
 
 class Montage < ApplicationRecord
+	enum category: [:roof, :ground]
+
+	validates_presence_of :name, :category, :price_per_kw
+	validates :price_per_kw, numericality: true
 end

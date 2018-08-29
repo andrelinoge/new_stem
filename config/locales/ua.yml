@@ -9,6 +9,11 @@ ua:
       new_service: Новий сервіс
       new_slide: Новий слайд
       new_testimonial: Новий відгук
+      new_panel: Нова панель
+      new_montage: Додати монтаж
+      new_component: Нові комплектуючі
+      new_fastening: Нове кріплення
+      new_inverter: Новий інвертор
     label:
       project_page_cover_image: Обкладинка на сторінці проекту
       text_color: Колір тексту
@@ -78,6 +83,8 @@ ua:
       inverters: Інвертори
       montages: Монтаж
       components: Комплектуючі
+      category: Тип
+      price_per_kw: Ціна за кВт 
     link:
       change_password: Змінити пароль
       delete: Видалити
@@ -100,6 +107,11 @@ ua:
       testimonials: Відгуки
       users: Юзери
       calc: Калькулятор
+      montage: Монтаж
+      components: Комплектуючі
+      fastenings: Кріплення
+      inverters: Інвертори
+      panels: Панелі
     text:
       control_panel: Панель управління
       no_data: Немає даних

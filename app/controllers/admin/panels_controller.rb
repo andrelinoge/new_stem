@@ -1,56 +1,52 @@
-class Admin::XXXController < Admin::ApplicationController
+class Admin::PanelsController < Admin::ApplicationController
   before_action :set_breadcrumbs
   
   def index
-    @static_pages = collection.page(params[:page]).per(10)
-  end
-
-  def show
-    @static_page = resource
+    @panels = collection.page(params[:page]).per(10)
   end
 
   def new
-    @blog_post = collection.build
+    @panel = collection.build
   end
 
   def create
-    @blog_post = collection.create(resource_params)
+    @panel = collection.create(resource_params)
 
-    if @blog_post.persisted?
-      redirect_to [:admin, ], success: 'xxx post was created'
+    if @panel.persisted?
+      redirect_to admin_panels_path, success: 'Panel post was created'
     else
       render :new
     end
   end
 
   def edit
-    @static_page = resource
+    @panel = resource
   end
 
   def update
-    @static_page = resource
+    @panel = resource
 
-    if @static_page.update(resource_params)
-      redirect_to admin_static_page_path(@static_page), notice: 'xxx was updated'
+    if @panel.update(resource_params)
+      redirect_to admin_panels_path, notice: 'Panel was updated'
     else
       render :edit
     end
   end
 
   def destroy
-    @blog_post = resource
+    @panel = resource
 
-    if @blog_post.destroy
-      redirect_to admin_blogs_path, success: 'Blog post was deleted successfully'
+    if @panel.destroy
+      redirect_to admin_panels_path, success: 'Panel was deleted successfully'
     else
-      redirect_to admin_blogs_path, error: 'Blog post was not deleted'
+      redirect_to admin_panels_path, error: 'Panel was not deleted'
     end
   end
 
   protected
 
   def collection
-    XXX.all
+    Panel.all
   end
 
   def resource
@@ -59,11 +55,11 @@ class Admin::XXXController < Admin::ApplicationController
 
   def resource_params
     params
-      .require(:xxx)
+      .require(:panel)
       .permit()
   end
 
   def set_breadcrumbs
-    add_breadcrumb I18n.t('admin.navigation.xxx'), admin_static_pages_path
+    add_breadcrumb I18n.t('admin.navigation.panels'), admin_static_pages_path
   end
 end

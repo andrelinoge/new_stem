@@ -64,6 +64,6 @@ class Admin::InvertersController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb I18n.t('admin.navigation.inverter'), admin_inverters_path
+    add_breadcrumb I18n.t('admin.navigation.inverters'), admin_inverters_path
   end
 end

@@ -64,6 +64,6 @@ class Admin::ComponentsController < Admin::ApplicationController
   end
 
   def set_breadcrumbs
-    add_breadcrumb I18n.t('admin.navigation.component'), admin_components_path
+    add_breadcrumb I18n.t('admin.navigation.components'), admin_components_path
   end
 end

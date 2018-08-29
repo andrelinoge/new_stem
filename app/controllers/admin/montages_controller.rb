@@ -17,7 +17,7 @@ class Admin::MontagesController < Admin::ApplicationController
     @montage = collection.create(resource_params)
 
     if @montage.persisted?
-      redirect_to [:admin, @montage], success: 'mMontage was created'
+      redirect_to admin_montages_path, success: 'Montage was created'
     else
       render :new
     end
@@ -31,7 +31,7 @@ class Admin::MontagesController < Admin::ApplicationController
     @montage = resource
 
     if @montage.update(resource_params)
-      redirect_to [:admin, @montage], notice: 'Montage was updated'
+      redirect_to admin_montages_path, notice: 'Montage was updated'
     else
       render :edit
     end
