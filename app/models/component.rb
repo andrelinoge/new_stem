@@ -10,7 +10,7 @@
 #  updated_at   :datetime         not null
 #
 
-class Component < ApplicationRecord
+class Component < ApplicationRecord #комплектуючі
 	enum category: [:cheap, :standard, :premium]
 
 	validates_presence_of :name, :category, :price_per_kw

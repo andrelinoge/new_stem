@@ -40,6 +40,16 @@ ua:
       edit_service: Редагувати сервіс
       edit_team_member: Редагувати член команди
       edit_testimonial: Редагувати відгук
+      new_panel: Нова панель
+      new_montage: Додати монтаж
+      new_component: Нові комплектуючі
+      new_fastening: Нове кріплення
+      new_inverter: Новий інвертор
+      edit_panel: Редагувати панель
+      edit_montage: Редагувати монтаж
+      edit_component: Редагувати комплектуючі
+      edit_fastening: Редагувати кріплення
+      edit_inverter: Редагувати інвертор
       full_name: Повне ім'я
       image: Зображення
       key: Ключ(тех. дані)
@@ -115,6 +125,8 @@ ua:
     text:
       control_panel: Панель управління
       no_data: Немає даних
+    prompt:
+      select_category: Виберіть тип
   breadcrumbs:
     about_us: Про нас
     blog: Блог

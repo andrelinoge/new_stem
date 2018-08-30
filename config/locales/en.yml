@@ -38,6 +38,11 @@ en:
       edit_service: Edit service
       edit_team_member: Edit team member
       edit_testimonial: Edit testimonial
+      edit_panel: Edit panel
+      edit_montage: Edit montage
+      edit_component: Edit component
+      edit_fastening: Edit fastening
+      edit_inverter: Edit inverter
       full_name: Full name
       image: Image
       key: Key
@@ -51,6 +56,11 @@ en:
       new_service: New service
       new_team_member: New team member
       new_testimonial: New testimonial
+      new_panel: New panel
+      new_montage: New montage
+      new_component: New component
+      new_fastening: New fastening
+      new_inverter: New inverter
       our_services: Our services
       photo: Photo
       position: Position
@@ -113,6 +123,8 @@ en:
     text:
       control_panel: Control panel
       no_data: No data
+    prompt:
+      select_category: Select category
   breadcrumbs:
     about_us: About Us
     blog: Blog

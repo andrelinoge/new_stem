@@ -17,7 +17,7 @@ class Admin::FasteningsController < Admin::ApplicationController
     @fastening = collection.create(resource_params)
 
     if @fastening.persisted?
-      redirect_to [:admin, @fastening], success: 'Fastening post was created'
+      redirect_to admin_fastenings_path, success: 'Fastening post was created'
     else
       render :new
     end
@@ -31,7 +31,7 @@ class Admin::FasteningsController < Admin::ApplicationController
     @fastening = resource
 
     if @fastening.update(resource_params)
-      redirect_to [:admin, @fastening], notice: 'Fastening was updated'
+      redirect_to admin_fastenings_path, notice: 'Fastening was updated'
     else
       render :edit
     end
@@ -60,7 +60,7 @@ class Admin::FasteningsController < Admin::ApplicationController
   def resource_params
     params
       .require(:fastening)
-      .permit()
+      .permit(:name, :category, :price_per_kw)
   end
 
   def set_breadcrumbs

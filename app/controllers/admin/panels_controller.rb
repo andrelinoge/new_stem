@@ -56,7 +56,7 @@ class Admin::PanelsController < Admin::ApplicationController
   def resource_params
     params
       .require(:panel)
-      .permit()
+      .permit(:name, :category, :price_per_kw)
   end
 
   def set_breadcrumbs

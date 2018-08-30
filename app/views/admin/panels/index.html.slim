@@ -18,9 +18,10 @@
         tbody
           - @panels.find_each do |record|
             tr
-              td= record.id
-              td
-                = link_to record.name, [:admin, record], class: 'card-link'
+              td = record.id
+              td = record.name
+              td = record.category.humanize
+              td = record.price_per_kw
               td
                 => link_to [:edit, :admin, record], class: 'card-link' do
                   = fa_icon 'pencil', text: I18n.t('admin.link.edit')

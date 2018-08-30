@@ -17,7 +17,7 @@ class Admin::ComponentsController < Admin::ApplicationController
     @component = collection.create(resource_params)
 
     if @component.persisted?
-      redirect_to [:admin, @component], success: 'xxx post was created'
+      redirect_to admin_components_path, success: 'Component post was created'
     else
       render :new
     end
@@ -31,7 +31,7 @@ class Admin::ComponentsController < Admin::ApplicationController
     @component = resource
 
     if @component.update(resource_params)
-      redirect_to [:admin, @component], notice: 'Component was updated'
+      redirect_to admin_components_path, notice: 'Component was updated'
     else
       render :edit
     end
@@ -60,7 +60,7 @@ class Admin::ComponentsController < Admin::ApplicationController
   def resource_params
     params
       .require(:component)
-      .permit()
+      .permit(:name, :category, :price_per_kw)
   end
 
   def set_breadcrumbs

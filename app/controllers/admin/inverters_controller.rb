@@ -17,7 +17,7 @@ class Admin::InvertersController < Admin::ApplicationController
     @inverter = collection.create(resource_params)
 
     if @inverter.persisted?
-      redirect_to [:admin, @inverter], success: 'Inverter post was created'
+      redirect_to admin_inverters_path, success: 'Inverter post was created'
     else
       render :new
     end
@@ -31,7 +31,7 @@ class Admin::InvertersController < Admin::ApplicationController
     @inverter = resource
 
     if @inverter.update(resource_params)
-      redirect_to [:admin, @inverter], notice: 'Inverter was updated'
+      redirect_to admin_inverters_path, notice: 'Inverter was updated'
     else
       render :edit
     end
