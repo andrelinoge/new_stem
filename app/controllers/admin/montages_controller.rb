@@ -60,7 +60,7 @@ class Admin::MontagesController < Admin::ApplicationController
   def resource_params
     params
       .require(:montage)
-      .permit()
+      .permit(:name, :category, :price_per_kw)
   end
 
   def set_breadcrumbs

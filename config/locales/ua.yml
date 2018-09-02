@@ -94,7 +94,9 @@ ua:
       montages: Монтаж
       components: Комплектуючі
       category: Тип
-      price_per_kw: Ціна за кВт 
+      price_per_kw: Ціна за кВт
+      range_min: Діапазон Початок
+      range_max: Діапазон Кінець
     link:
       change_password: Змінити пароль
       delete: Видалити

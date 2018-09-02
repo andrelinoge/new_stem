@@ -1,0 +1,16 @@
+= simple_form_for [:admin, @inverter] do |f|
+  .row
+    .col-12
+      = f.error_notification
+
+  .row
+    .col-6
+      = f.input :name
+      = f.input :category, as: :select, collection: categories_by_price_options, include_blank: I18n.t('admin.prompt.select_category')
+      = f.input :price_per_kw
+      = f.input :range_min
+      = f.input :range_max
+
+  .row
+    .col-12
+      = f.button :submit, class: 'btn btn-primary', data: { disable_with: submitting_message(f) }

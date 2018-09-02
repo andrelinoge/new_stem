@@ -93,6 +93,8 @@ en:
       components: Components
       category: Category(Type)
       price_per_kw: Price per kW
+      range_min: Range MIN
+      range_max: Range MAX
     link:
       change_password: Change password
       delete: Delete

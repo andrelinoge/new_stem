@@ -60,7 +60,7 @@ class Admin::InvertersController < Admin::ApplicationController
   def resource_params
     params
       .require(:inverter)
-      .permit()
+      .permit(:name, :category, :price_per_kw, :range_min, :range_max)
   end
 
   def set_breadcrumbs
