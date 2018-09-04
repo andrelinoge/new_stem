@@ -143,7 +143,7 @@ ua:
     about_us: Про нас
     admin_panel: Панель керування
     blog: Блог
-    contact_us: Наші контакти
+    contact_us: Контакти
     home: Головна
     our_projects: Наші роботи
     shop: Наш магазин
@@ -160,4 +160,3 @@ ua:
   views:
     pagination:
       first: Перший
-  

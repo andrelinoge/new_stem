@@ -1,8 +1,8 @@
 nav.navbar.navbar-toggleable-md.navbar-light
-  button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
+  button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button"
     span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.mr-auto
+    ul.navbar-nav.mr-auto[class="#{'admin' if current_user}"]
       li.nav-item
         = link_to I18n.t('navigation.home'), root_path, class: 'nav-link'
       li.nav-item.active
@@ -31,7 +31,7 @@ nav.navbar.navbar-toggleable-md.navbar-light
             i.flag-icon.flag-icon-us
             span.flag-label en
           span.selected-language
-        .dropdown-menu.flag-min-width aria-labelledby="dropdown-flag" 
+        .dropdown-menu.flag-min-width aria-labelledby="dropdown-flag"
           - if I18n.locale == :ua
             = link_to url_for(locale: 'en'), class: 'dropdown-item' do
               i.flag-icon.flag-icon-us

@@ -33,3 +33,7 @@
 .height_100percent {
 	height: 100%;
 }
+
+.admin .nav-item .nav-link {
+  padding: 17px 15px !important;
+}
