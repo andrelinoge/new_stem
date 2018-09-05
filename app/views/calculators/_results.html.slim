@@ -1,0 +1,12 @@
+p
+  span
+    = "Per year: #{results[:incomes][:per_year]}"
+  span
+    = "Per 10 year: #{results[:incomes][:per_ten_years]}"
+
+table
+  - results[:estimate].each_pair do |key, record|
+    tr
+      td = key
+      td = record[:value]
+      td = record[:price]
