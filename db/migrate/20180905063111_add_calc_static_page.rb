@@ -10,7 +10,7 @@ class AddCalcStaticPage < ActiveRecord::Migration[5.1]
     )
 
     I18n.locale = :ua
-    StaticPage.find_or_create_by(key: :about_us).update(
+    StaticPage.find_or_create_by(key: :calc).update(
       label: 'Калькулятор',
       title: 'Калькулятор',
       content: "UA Калькулятор",
