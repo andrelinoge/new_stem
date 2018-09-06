@@ -9,25 +9,38 @@
   .container
     .row
       .col-md-8
-        .column
-          .contact-form
-            #message
-            = simple_form_for @calc, remote: true, url: calculator_path do |f|
-              .row
-                .col-md-6
-                  = f.input :power, placeholder: 'Power'
-                .col-md-6
-                  = f.input :price_categrory, as: :select, collection: categories_by_price_options
-                .col-md-6
-                  label Roof
-                  input#email name="position" value="roof" type="radio" /
-                .col-md-6
-                  lable Ground
-                  input#email name="position" value="ground" type="radio" /
-                .col-md-12
-                  = f.button :submit, class: 'sitebtn', value: 'Submit'
+        .row
+          .col-12
+            .column
+              = image_tag 'ukraine_if.png'
+              br
+              br
+              br
+              br
+              br
 
-          #results
+        .row
+          .col-12
+            .column
+              .contact-form
+                #message
+                = simple_form_for @calc, remote: true, url: calculator_path do |f|
+                  .row
+                    .col-md-6
+                      = f.input :power, placeholder: 'Power'
+                    .col-md-6
+                      = f.input :price_categrory, as: :select, collection: categories_by_price_options
+                    .col-md-6
+                      label Roof
+                      input#email name="position" value="roof" type="radio" /
+                    .col-md-6
+                      lable Ground
+                      input#email name="position" value="ground" type="radio" /
+                  .row
+                    .col-md-3
+                      = f.button :submit, class: 'sitebtn', value: 'Submit'
+
+              #results
       .col-md-4
         .sidebar
           .widget
