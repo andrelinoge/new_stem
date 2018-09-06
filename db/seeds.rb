@@ -71,7 +71,7 @@ SiteSetting.find_or_create_by(key: :google_plus_url).update({
 
 
 puts "\nSeeding blog...".blue
-11.times do |_i| 
+11.times do |_i|
   FactoryBot.create(:blog).update(
     title: Faker::Lorem.sentence,
     content: Faker::Lorem.paragraph,
@@ -106,7 +106,7 @@ puts "\nContent blocks...".blue
 end
 
 puts "\nSeeding testimonials...".blue
-6.times do |_i| 
+6.times do |_i|
   FactoryBot.create(:testimonial).update(
     author: Faker::Name.name,
     content: Faker::Lorem.paragraph,
@@ -115,7 +115,7 @@ puts "\nSeeding testimonials...".blue
 end
 
 puts "\nSeeding projects...".blue
-8.times do |_i| 
+8.times do |_i|
   FactoryBot.create(:project).update(
     title: Faker::Lorem.sentence,
     content: Faker::Lorem.paragraph,
@@ -162,8 +162,16 @@ StaticPage.find_or_create_by(key: :landing).update(
   meta_keys: Faker::Lorem.words.join(',')
 )
 
+StaticPage.find_or_create_by(key: :calc).update(
+  title: 'Сalculator',
+  label: 'Сalculator',
+  content: 'Сalculator',
+  meta_description: Faker::Lorem.paragraph,
+  meta_keys: Faker::Lorem.words.join(',')
+)
+
 puts "\nSeeding team members...".blue
-4.times do |_i| 
+4.times do |_i|
   FactoryBot.create(:team_member).update(
     name: Faker::Name.name,
     position: Faker::Company.profession
@@ -171,7 +179,7 @@ puts "\nSeeding team members...".blue
 end
 
 puts "\nSeeding service...".blue
-4.times do |_i| 
+4.times do |_i|
   FactoryBot.create(:service).update(
     title: Faker::Lorem.sentence,
     content: Faker::Lorem.paragraph
@@ -179,7 +187,7 @@ puts "\nSeeding service...".blue
 end
 
 puts "\nSeeding slider...".blue
-2.times do |_i| 
+2.times do |_i|
   FactoryBot.create(:slide).update(
     small_title: Faker::Lorem.sentence,
     title: Faker::Lorem.sentence,
@@ -269,6 +277,14 @@ SiteSetting.find_or_create_by(key: :google_plus_url).update({
   label: 'Посилання на Google Plus',
   value: '#'
 })
+
+StaticPage.find_or_create_by(key: :calc).update(
+  label: 'Калькулятор',
+  title: 'Калькулятор',
+  content: "UA Калькулятор",
+  meta_description: "UA Калькулятор",
+  meta_keys: Faker::Lorem.words.join(',')
+)
 
 {
   welcome: 'Наша компанія',

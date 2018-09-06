@@ -14,7 +14,8 @@ class AddCalcStaticPage < ActiveRecord::Migration[5.1]
       label: 'Калькулятор',
       title: 'Калькулятор',
       content: "UA Калькулятор",
-      meta_description: "UA Калькулятор"
+      meta_description: "UA Калькулятор",
+      meta_keys: 'Сalculator'
     )
   end
 end
