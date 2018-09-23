@@ -161,3 +161,37 @@ ua:
   views:
     pagination:
       first: Перший
+  calc:
+    thead:
+      name: Назва
+      model: Модель
+      price: Вартість
+    incomes:
+      income: Дохід
+      per_year: за рік
+      per_10_years: за 10 років
+    generation:
+      label: Генерація
+      per_year: за рік
+      per_10_years: за 10 років
+      kw: "%{value} кВт"
+    form:
+      submit: Розрахувати
+      label:
+        power: Потужність
+        category: Категорія
+        position: Розміщення
+      position:
+        roof: На даху
+        ground: На землі
+    category_options:
+      cheap: Економ
+      standard: Стандарт
+      premium: Преміум
+    names:
+      panels: Панелі
+      inverters: Інвертори
+      fastenings: Кріплення
+      components: Комплектуючі
+      montage: Монтаж
+      total: Всього

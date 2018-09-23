@@ -46,6 +46,7 @@ gem "breadcrumbs_on_rails"
 gem 'rollbar'
 gem 'bootstrap_colorpicker_rails'
 gem 'google-analytics-rails', '1.1.1'
+gem 'active_model_attributes'
 
 group :development, :test do
   gem 'listen', '>= 3.0.5', '< 3.2'

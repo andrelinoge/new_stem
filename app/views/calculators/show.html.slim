@@ -11,7 +11,7 @@
       .col-md-8
         .row
           .col-12
-            .column
+            .column.text-center
               = image_tag 'ukraine_if.png'
               br
               br
@@ -22,23 +22,32 @@
         .row
           .col-12
             .column
-              .contact-form
-                #message
-                = simple_form_for @calc, remote: true, url: calculator_path do |f|
-                  .row
-                    .col-md-6
-                      = f.input :power, placeholder: 'Power'
-                    .col-md-6
-                      = f.input :price_categrory, as: :select, collection: categories_by_price_options
-                    .col-md-6
-                      label Roof
-                      input#email name="position" value="roof" type="radio" /
-                    .col-md-6
-                      lable Ground
-                      input#email name="position" value="ground" type="radio" /
-                  .row
-                    .col-md-3
-                      = f.button :submit, class: 'sitebtn', value: 'Submit'
+              = simple_form_for @calc, remote: true, url: calculator_path, html: { class: 'calc-form' } do |f|
+                .row
+                  .col-md-6
+                    = f.input :power, as: :numeric, input_html: { min: 0, max: 35 }, label: I18n.t('calc.form.label.power')
+                  .col-md-6
+                    = f.input :price_categrory, as: :select, collection: categories_by_price_options, include_blank: false, label: I18n.t('calc.form.label.category')
+                  .col-12
+                    .form-group.radio_buttons.optional.calculator_position
+                      .row
+                        .col-md-2
+                          label.control-label.radio_buttons.optional = I18n.t('calc.form.label.position') + ':'
+                        .col-md-2
+                          span.radio
+                            label for="calculator_position_roof"
+                              input#calculator_position_roof.radio_buttons.optional name="calculator[position]" type="radio" value="roof" checked=true
+                              = I18n.t('calc.form.position.roof')
+                        .col-md-2
+                          span.radio
+                            label for="calculator_position_ground"
+                              input#calculator_position_ground.radio_buttons.optional name="calculator[position]" type="radio" value="ground"
+                              = I18n.t('calc.form.position.ground')
+                .row
+                  .col-12.text-center
+                    br/
+                    br/
+                    = f.button :submit, class: 'sitebtn', value: I18n.t('calc.form.submit')
 
               #results
       .col-md-4

@@ -37,3 +37,54 @@
 .admin .nav-item .nav-link {
   padding: 17px 15px !important;
 }
+
+.calc-form .numeric  {
+  line-height: 1.2 !important;
+}
+
+.calc-form .control-label {
+  line-height: 1.2 !important;
+  font-size: 1rem;
+  color: #464a4c;
+  margin-bottom: 5px;
+}
+
+.calculator_position .row {
+  margin-top: 20px;
+  line-height: 1.2;
+  font-size: 1rem;
+  color: #464a4c;
+  padding-left: 0.5rem;
+}
+
+.calculator_position span.radio input {
+  margin-right: 5px;
+}
+
+.calc-form .sitebtn {
+  padding: 10px 30px !important;
+}
+
+#results {
+  margin-top: 50px;
+}
+
+.packageList li h4 {
+  margin: 0 0 15px 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 3rem;
+}
+
+.table-results {
+  color: #464a4c;
+}
+
+.table-results > tbody > tr:last-child {
+  font-weight: bold !important;
+}
+
+.packageList li .price strong {
+  font-size: 40px;
+}

@@ -17,4 +17,7 @@ class Inverter < ApplicationRecord
 
 	validates_presence_of :name, :category, :price_per_kw
 	validates :price_per_kw, numericality: true
+
+  scope :in_range, -> (value) { where('? > range_min AND ? <= range_max', value, value) }
+  scope :by_category, -> (value) { where(category: value) }
 end

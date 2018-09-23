@@ -163,3 +163,37 @@ en:
       next: Next
       previous: Previous
       truncate: Truncate
+  calc:
+    thead:
+      name: Name
+      model: Model
+      price: Price
+    incomes:
+      income: "Incomes"
+      per_year: "per year"
+      per_10_years: "per ten years"
+    generation:
+      label: Generation
+      per_year: "per year"
+      per_10_years: "per ten years"
+      kw: "%{value} kW"
+    form:
+      submit: Calculate
+      label:
+        power: Power
+        category: Category
+        position: Position
+      position:
+        roof: Roof
+        ground: Ground
+    category_options:
+      cheap: Cheap
+      standard: Standard
+      premium: Premium
+    names:
+      panels: Panels
+      inverters: Inverters
+      fastenings: Fastenings
+      components: Components
+      montage: Montage
+      total: Total

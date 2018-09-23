@@ -1,12 +1,46 @@
-p
-  span
-    = "Per year: #{results[:incomes][:per_year]}"
-  span
-    = "Per 10 year: #{results[:incomes][:per_ten_years]}"
-
-table
-  - results[:estimate].each_pair do |key, record|
-    tr
-      td = key
-      td = record[:value]
-      td = record[:price]
+ul.row.packageList
+  li.col-md-12
+    .packbox
+      .row
+        .col-md-2
+          h4 = I18n.t('calc.incomes.income')
+        .col-md-5
+          .price
+            strong = "€ #{results[:incomes][:per_year]}"
+            span = I18n.t('calc.incomes.per_year')
+        .col-md-5
+          .price
+            strong = "€ #{results[:incomes][:per_ten_years]}"
+            span = I18n.t('calc.incomes.per_10_years')
+      br/
+      br/
+      .row
+        .col-12
+          table.table.text-left.table-results
+            thead
+              tr
+                th
+                  strong = I18n.t('calc.thead.name')
+                th
+                  strong = I18n.t('calc.thead.model')
+                th
+                  strong = I18n.t('calc.thead.price')
+            tbody
+              - results[:estimate].each_pair do |key, record|
+                tr
+                  td = I18n.t("calc.names.#{key}")
+                  td = record[:model]
+                  td = record[:price]
+      br/
+      br/
+      .row
+        .col-md-2
+          h4 = I18n.t('calc.generation.label')
+        .col-md-5
+          .price
+            strong = I18n.t('calc.generation.kw', value: results[:generation][:per_year])
+            span = I18n.t('calc.generation.per_year')
+        .col-md-5
+          .price
+            strong = I18n.t('calc.generation.kw', value: results[:generation][:per_ten_years])
+            span = I18n.t('calc.generation.per_10_years')

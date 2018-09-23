@@ -1,6 +1,6 @@
 class CalculatorsController < ApplicationController
   def show
-    @calc = Calculator.new
+    @calc = Calculator.new(power: 0)
   end
 
   def create
