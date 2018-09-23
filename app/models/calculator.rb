@@ -31,7 +31,10 @@ class Calculator
       }
     }
 
-    result[:estimate][:total] = result[:estimate].values.inject(0) {|sum, n| sum + n[:price] }
+    result[:estimate][:total] = {
+      model: nil,
+      price: formatted_number(result[:estimate].values.inject(0) {|sum, n| sum + n[:price].to_f })
+    }
 
     result
   end

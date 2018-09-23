@@ -77,12 +77,24 @@
   line-height: 3rem;
 }
 
+.packageList li .packbox {
+  border-color: #ddd;
+}
+
 .table-results {
   color: #464a4c;
 }
 
+.table  thead  th {
+  border: none !important;
+}
+
 .table-results > tbody > tr:last-child {
   font-weight: bold !important;
+}
+
+.table-results > tbody > tr > td {
+  border-top-color: #ddd;
 }
 
 .packageList li .price strong {
