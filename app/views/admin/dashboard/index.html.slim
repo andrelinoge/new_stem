@@ -63,3 +63,41 @@
       .card-content
         .card-body
           h1.text-center[style="font-size: 56px"] = ContentBlock.count
+
+.row
+  .col-3
+    .card
+      .card-header
+        h2.card-title = I18n.t('admin.label.panels')
+      .card-content
+        .card-body
+          h1.text-center[style="font-size: 56px"]
+            = link_to Panel.count, [:admin, :panels]
+
+  .col-3
+    .card
+      .card-header
+        h2.card-title = I18n.t('admin.label.inverters')
+      .card-content
+        .card-body
+          h1.text-center[style="font-size: 56px"]
+            = link_to Inverter.count, [:admin, :inverters]
+
+  .col-3
+    .card
+      .card-header
+        h2.card-title = I18n.t('admin.label.montages')
+      .card-content
+        .card-body
+          h1.text-center[style="font-size: 56px"]
+            = link_to Montage.count, [:admin, :montages]
+
+  .col-3
+    .card
+      .card-header
+        h2.card-title = I18n.t('admin.label.components')
+      .card-content
+        .card-body
+          h1.text-center[style="font-size: 56px"]
+            = link_to Component.count, [:admin, :components]
+

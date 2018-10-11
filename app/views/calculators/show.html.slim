@@ -1,0 +1,59 @@
+= render 'shared/navigation/breadcrumbs', main_title: I18n.t('breadcrumbs.calc'), current_page: I18n.t('breadcrumbs.calc')
+
+- page = StaticPage[:calc]
+- title page.title
+- description page.meta_description
+- keywords(page.meta_keys&.split(',') || [])
+
+.innercms
+  .container
+    .row
+      .col-md-8
+        .row
+          .col-12
+            .column.text-center
+              = image_tag 'ukraine_if.png'
+              br
+              br
+              br
+              br
+              br
+
+        .row
+          .col-12
+            .column
+              = simple_form_for @calc, remote: true, url: calculator_path, html: { class: 'calc-form' } do |f|
+                .row
+                  .col-md-6
+                    = f.input :power, as: :numeric, input_html: { min: 0, max: 35 }, label: I18n.t('calc.form.label.power')
+                  .col-md-6
+                    = f.input :price_categrory, as: :select, collection: categories_by_price_options, include_blank: false, label: I18n.t('calc.form.label.category')
+                  .col-12
+                    .form-group.radio_buttons.optional.calculator_position
+                      .row
+                        .col-md-2
+                          label.control-label.radio_buttons.optional = I18n.t('calc.form.label.position') + ':'
+                        .col-md-2
+                          span.radio
+                            label for="calculator_position_roof"
+                              input#calculator_position_roof.radio_buttons.optional name="calculator[position]" type="radio" value="roof" checked=true
+                              = I18n.t('calc.form.position.roof')
+                        .col-md-2
+                          span.radio
+                            label for="calculator_position_ground"
+                              input#calculator_position_ground.radio_buttons.optional name="calculator[position]" type="radio" value="ground"
+                              = I18n.t('calc.form.position.ground')
+                .row
+                  .col-12.text-center
+                    br/
+                    br/
+                    = f.button :submit, class: 'sitebtn', value: I18n.t('calc.form.submit')
+
+              #results
+      .col-md-4
+        .sidebar
+          .widget
+            h5.widget-title = I18n.t('text.recent_projects')
+            = render '/shared/recent_projects'
+
+

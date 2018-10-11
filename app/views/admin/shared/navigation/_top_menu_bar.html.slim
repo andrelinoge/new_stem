@@ -37,6 +37,17 @@
         = link_to admin_team_members_path, class: 'nav-link' do
           = fa_icon 'users'
           span = I18n.t('admin.navigation.team_members')
+      li.nav-item.dropdown
+        a.dropdown-toggle[href="#" data-toggle="dropdown" class=" nav-link" aria-expanded="false"]
+          = fa_icon 'calculator'
+          span = I18n.t('admin.navigation.calc')
+        .dropdown-menu
+          = link_to I18n.t('admin.navigation.panels'), admin_panels_path, class: 'dropdown-item'
+          = link_to I18n.t('admin.navigation.montage'), admin_montages_path, class: 'dropdown-item'
+          = link_to I18n.t('admin.navigation.components'), admin_components_path, class: 'dropdown-item'
+          = link_to I18n.t('admin.navigation.fastenings'), admin_fastenings_path, class: 'dropdown-item'
+          = link_to I18n.t('admin.navigation.inverters'), admin_inverters_path, class: 'dropdown-item'
+
       li.nav-item
         = link_to admin_site_settings_path, class: 'nav-link' do
           = fa_icon 'gears'

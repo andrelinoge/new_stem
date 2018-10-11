@@ -26,12 +26,19 @@ Rails.application.routes.draw do
       resources :team_members
       resources :services
       resources :slides
+
+      resources :panels, except: [:show]
+      resources :inverters, except: [:show]
+      resources :fastenings, except: [:show]
+      resources :components, except: [:show]
+      resources :montages, except: [:show]
     end
 
     get '/about', to: 'pages#about', as: :about_page
     get '/contacts', to: 'pages#contact_us', as: :contacts_page
     resources :blogs, only: [:index, :show]
     resources :projects, only: [:index, :show]
+    resource :calculator, only: [:show, :create]
 
     match '*path', via: :all, to: 'welcome#not_found'
   end

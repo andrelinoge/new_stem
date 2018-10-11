@@ -2,7 +2,7 @@
 #
 # Table name: content_blocks
 #
-#  id         :integer          not null, primary key
+#  id         :bigint(8)        not null, primary key
 #  key        :string
 #  visible    :boolean          default(TRUE)
 #  image      :string

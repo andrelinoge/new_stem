@@ -1,0 +1,13 @@
+= simple_form_for [:admin, @fastening] do |f|
+  .row
+    .col-12
+      = f.error_notification
+
+  .row
+    .col-6
+      = f.input :name
+      = f.input :category, as: :select, collection: roof_ground_options, include_blank: I18n.t('admin.prompt.select_category')
+      = f.input :price_per_kw
+  .row
+    .col-12
+      = f.button :submit, class: 'btn btn-primary', data: { disable_with: submitting_message(f) }

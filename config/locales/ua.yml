@@ -9,6 +9,11 @@ ua:
       new_service: Новий сервіс
       new_slide: Новий слайд
       new_testimonial: Новий відгук
+      new_panel: Нова панель
+      new_montage: Додати монтаж
+      new_component: Нові комплектуючі
+      new_fastening: Нове кріплення
+      new_inverter: Новий інвертор
     label:
       project_page_cover_image: Обкладинка на сторінці проекту
       text_color: Колір тексту
@@ -35,6 +40,16 @@ ua:
       edit_service: Редагувати сервіс
       edit_team_member: Редагувати член команди
       edit_testimonial: Редагувати відгук
+      new_panel: Нова панель
+      new_montage: Додати монтаж
+      new_component: Нові комплектуючі
+      new_fastening: Нове кріплення
+      new_inverter: Новий інвертор
+      edit_panel: Редагувати панель
+      edit_montage: Редагувати монтаж
+      edit_component: Редагувати комплектуючі
+      edit_fastening: Редагувати кріплення
+      edit_inverter: Редагувати інвертор
       full_name: Повне ім'я
       image: Зображення
       key: Ключ(тех. дані)
@@ -74,6 +89,14 @@ ua:
       title: Назва
       value: Значення
       visible: Видимий?
+      panels: Панелі
+      inverters: Інвертори
+      montages: Монтаж
+      components: Комплектуючі
+      category: Тип
+      price_per_kw: Ціна за кВт
+      range_min: Діапазон Початок
+      range_max: Діапазон Кінець
     link:
       change_password: Змінити пароль
       delete: Видалити
@@ -94,16 +117,25 @@ ua:
       static_pages: Статичні сторінки
       team_members: Команда
       testimonials: Відгуки
-      users: Users
+      users: Юзери
+      calc: Калькулятор
+      montage: Монтаж
+      components: Комплектуючі
+      fastenings: Кріплення
+      inverters: Інвертори
+      panels: Панелі
     text:
       control_panel: Панель управління
       no_data: Немає даних
+    prompt:
+      select_category: Виберіть тип
   breadcrumbs:
     about_us: Про нас
     blog: Блог
     contact_us: Наші контакти
     our_recent_projects: Останні проекти
     projects: Наші роботи
+    calc: Калькулятор
   btn:
     more_about_us: Більше про нас
     read_more: Дізнатися більше
@@ -112,10 +144,11 @@ ua:
     about_us: Про нас
     admin_panel: Панель керування
     blog: Блог
-    contact_us: Наші контакти
+    contact_us: Контакти
     home: Головна
     our_projects: Наші роботи
     shop: Наш магазин
+    calc: Калькулятор
   text:
     address: 'Адреса:'
     email_address: 'Email:'
@@ -128,4 +161,37 @@ ua:
   views:
     pagination:
       first: Перший
-  
+  calc:
+    thead:
+      name: Назва
+      model: Модель
+      price: Вартість
+    incomes:
+      income: Дохід
+      per_year: за рік
+      per_10_years: за 10 років
+    generation:
+      label: Генерація
+      per_year: за рік
+      per_10_years: за 10 років
+      kw: "%{value} кВт"
+    form:
+      submit: Розрахувати
+      label:
+        power: Потужність
+        category: Категорія
+        position: Розміщення
+      position:
+        roof: На даху
+        ground: На землі
+    category_options:
+      cheap: Економ
+      standard: Стандарт
+      premium: Преміум
+    names:
+      panels: Панелі
+      inverters: Інвертори
+      fastenings: Кріплення
+      components: Комплектуючі
+      montage: Монтаж
+      total: Всього
