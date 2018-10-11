@@ -1,6 +1,6 @@
 class Admin::InvertersController < Admin::ApplicationController
   before_action :set_breadcrumbs
-  
+
   def index
     @inverters = collection.page(params[:page]).per(10)
   end
@@ -60,7 +60,7 @@ class Admin::InvertersController < Admin::ApplicationController
   def resource_params
     params
       .require(:inverter)
-      .permit(:name, :category, :price_per_kw, :range_min, :range_max)
+      .permit(:name, :category, :price, :range_min, :range_max)
   end
 
   def set_breadcrumbs

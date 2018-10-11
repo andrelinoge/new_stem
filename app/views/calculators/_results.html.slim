@@ -30,7 +30,7 @@ ul.row.packageList
                 tr
                   td = I18n.t("calc.names.#{key}")
                   td = record[:model]
-                  td = record[:price]
+                  td = "#{record[:price]} $"
       br/
       br/
       .row

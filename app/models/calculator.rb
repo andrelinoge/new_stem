@@ -46,7 +46,7 @@ class Calculator
   protected
 
   def income_per_year
-    generation_per_year * INCOME_COEFF
+    formatted_number(generation_per_year * INCOME_COEFF)
   end
 
   def income_per_ten_years
@@ -65,11 +65,10 @@ class Calculator
 
   def estimate_inverters
     inverter     = Inverter.by_category(price_categrory).in_range(power).last
-    price_per_kw = inverter&.price_per_kw || 0
 
     {
       model: inverter&.name,
-      price: formatted_number(price_per_kw * power)
+      price: formatted_number(inverter&.price || 0)
     }
   end
 

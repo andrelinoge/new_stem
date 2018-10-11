@@ -3,7 +3,7 @@ class CreateInverters < ActiveRecord::Migration[5.1]
     create_table :inverters do |t|
       t.string :name
       t.integer :category, default: 0
-      t.float :price_per_kw
+      t.float :price
       t.integer :range_min
       t.integer :range_max
 

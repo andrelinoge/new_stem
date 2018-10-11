@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 20180905063111) do
   create_table "inverters", force: :cascade do |t|
     t.string "name"
     t.integer "category", default: 0
-    t.float "price_per_kw"
+    t.float "price"
     t.integer "range_min"
     t.integer "range_max"
     t.datetime "created_at", null: false
