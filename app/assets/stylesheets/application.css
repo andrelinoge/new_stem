@@ -100,3 +100,7 @@
 .packageList li .price strong {
   font-size: 40px;
 }
+
+.recent-projects > a {
+  width: 100% !important;
+}
