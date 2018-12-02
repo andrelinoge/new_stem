@@ -1,10 +1,11 @@
 - if Project.any?
+  - limit = local_assigns[:limit] || 5
   ul.papu-post
-    - Project.recent.last(5).each do |project|
+    - Project.recent.last(limit).each do |project|
       li
-        .media-left
+        .media-left.recent-projects
           = link_to project_path(project) do
-            = image_tag project.cover_url(:medium)
+            = image_tag project.cover_url(:tall)
         .media-body
           = link_to project.description, project_path(project), class: 'media-heading'
           span = l project.created_at, format: "%d %B, %Y"

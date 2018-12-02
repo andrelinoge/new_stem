@@ -12,8 +12,8 @@
         .sidebar
           .widget
             h5.widget-title = I18n.t('text.recent_projects')
-            = render '/shared/recent_projects'
-         
+            = render '/shared/recent_projects', limit: 3
+
       .col-md-8
         .blogWraper
           ul.blogList
@@ -29,12 +29,12 @@
                         = link_to blog_post.title, blog_path(blog_post)
                       br/
                       .date
-                        i.fa.fa-calendar aria-hidden="true" 
+                        i.fa.fa-calendar aria-hidden="true"
                         =<> l blog_post.created_at, format: "%d %B, %Y"
                     p = blog_post.description
                     = link_to blog_path(blog_post), class: 'readmore' do
                       => I18n.t('btn.read_more')
-                      i.fa.fa-caret-right aria-hidden="true" 
-            
+                      i.fa.fa-caret-right aria-hidden="true"
+
         .pagiWrap
             = paginate @blog_posts

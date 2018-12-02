@@ -54,6 +54,6 @@
         .sidebar
           .widget
             h5.widget-title = I18n.t('text.recent_projects')
-            = render '/shared/recent_projects_tall'
+            = render '/shared/recent_projects', limit: 3
 
 
