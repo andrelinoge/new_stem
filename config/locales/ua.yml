@@ -61,7 +61,7 @@ ua:
       new_project: Додати проект
       new_project_image: Нове фото з проекту
       new_service: Додати сервіс
-      new_team_member: Додати член команди
+      new_team_mFember: Додати член команди
       new_testimonial: Додати відгук
       our_services: Наші сервіси
       photo: Фотографія
@@ -97,6 +97,7 @@ ua:
       price_per_kw: Ціна за кВт
       range_min: Діапазон Початок
       range_max: Діапазон Кінець
+      price: Ціна
     link:
       change_password: Змінити пароль
       delete: Видалити
