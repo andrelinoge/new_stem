@@ -9,25 +9,23 @@
 
   .card-content
     - if @project_images.any?
-      table.table
-        thead.bg-teal.bg-lighten-4
-          tr
-            th.width-50 ID
-            th.text-left = I18n.t('admin.label.title')
-            th.width-300 = I18n.t('admin.label.actions')
-        tbody
-          - @project_images.find_each do |image|
-            tr
-              td= image.id
-              td= link_to image.title, [:admin, @project, image], class: 'card-link'
-              td
-                =<> link_to [:edit, :admin, @project, image], class: 'card-link' do
-                  = fa_icon 'pencil', text: I18n.t('admin.link.edit')
-                =< link_to [:admin, @project, image], class: 'card-link', method: :delete, data: { confirm: 'Are you sure?' } do
-                  = fa_icon 'trash', text: I18n.t('admin.link.delete')
+      .card-body.my-gallery
+        - @project.project_images.all.each_slice(4) do |images_slice|
+          .card-deck-wrapper
+            .card-deck
+              - images_slice.each do |image|
+                figure.card.card-img-top.border-grey.border-lighten-2.col-3
+                  .card-header
+                    .heading-elements.heading-top-elements
+                      = link_to [:edit, :admin, @project, image], class: 'card-link' do
+                        = fa_icon 'pencil', text: I18n.t('admin.link.edit')
+                      = link_to [:admin, @project, image], class: 'card-link', method: :delete, data: { confirm: 'Are you sure?' } do
+                        = fa_icon 'trash', text: I18n.t('admin.link.delete')
+                  = link_to [:admin, @project, image], title: image.title do
+                    = image_tag image.image_url(:thumb), class: 'gallery-thumbnail card-img-top'
+                  .card-body.px-0
+                    h4.card-title = image.title
+                    p.card-text = image.description
     - else
       .card-body
         h4 = I18n.t('admin.text.no_data')
-
-    .card-body
-      = paginate @project_images

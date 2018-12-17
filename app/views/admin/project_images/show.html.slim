@@ -2,6 +2,13 @@
 - add_breadcrumb I18n.t('admin.label.details')
 
 .row
+  .col-4
+    .card
+      .card-header
+        h4.card-title = I18n.t('admin.label.image')
+      .card-content
+        .card-body
+          = image_tag @project_image.image_url, class: 'img-thumbnail img-fluid'
   .col-8
     .card
       .card-header
@@ -21,10 +28,3 @@
             tr
               td = I18n.t('admin.label.description')
               td = @project_image.description
-  .col-4
-    .card
-      .card-header
-        h4.card-title = I18n.t('admin.label.image')
-      .card-content
-        .card-body
-          = image_tag @project_image.image_url, class: 'img-thumbnail img-fluid'

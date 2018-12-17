@@ -6,9 +6,11 @@
       .card-header
         h4.card-title = I18n.t('admin.label.project_details')
         .heading-elements
+          = link_to admin_project_project_images_path(@project), class: 'card-link' do
+            = fa_icon 'object-ungroup', text: I18n.t('admin.link.gallery')
           = link_to [:edit, :admin, @project], class: 'card-link' do
             = fa_icon 'pencil', text: I18n.t('admin.link.edit')
-          = link_to [:admin, @project], method: :delete, data: { confirm: 'Are you sure?' } do
+          = link_to [:admin, @project], method: :delete, class: 'card-link', data: { confirm: 'Are you sure?' } do
             = fa_icon 'trash', text: I18n.t('admin.link.delete')
 
       .card-content
@@ -45,7 +47,7 @@
       .card-content
         .card-body
           = image_tag @project.page_cover_url(:preview), class: 'img-thumbnail img-fluid'
-.row              
+.row
   .col-12
     .card
       .card-header
@@ -53,3 +55,22 @@
       .card-content
         .card-body
           == @project.content
+
+- if @project.project_images.any?
+  .row
+    .col-12
+      .card
+        .card-header
+          h4.card-title = I18n.t('admin.link.gallery')
+        .card-content
+          .card-body.my-gallery
+              - @project.project_images.all.each_slice(4) do |images_slice|
+                .card-deck-wrapper
+                  .card-deck
+                    - images_slice.each do |image|
+                      figure.card.card-img-top.border-grey.border-lighten-2.col-3
+                        = link_to [:admin, @project, image], title: image.title do
+                          = image_tag image.image_url(:thumb), class: 'gallery-thumbnail card-img-top'
+                        .card-body.px-0
+                          h4.card-title = image.title
+                          p.card-text = image.description

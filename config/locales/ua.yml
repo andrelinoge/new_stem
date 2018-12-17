@@ -72,7 +72,7 @@ ua:
       project_details: Деталі
       project_image: Зображення проекту
       project_image_details: Деталі
-      project_images: Зображення проекту
+      project_images: Фотогалерея проекту
       projects: Проекти
       service_details: Опис сервісу
       services: Сервіси
@@ -103,7 +103,7 @@ ua:
       delete: Видалити
       edit: Редагувати
       edit_slide: Редагувати слайд
-      gallery: фотографії
+      gallery: фотогалерея
       logout: Вийти
       new_slide: Новий слайд
     navigation:
