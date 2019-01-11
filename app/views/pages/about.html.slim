@@ -3,7 +3,7 @@
 - page = StaticPage[:about_us]
 - title page.title
 - description page.meta_description
-- keywords page.meta_keys.split(',')
+- keywords page.meta_keys&.split(',')
 
 section.innercms
   .container

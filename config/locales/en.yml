@@ -135,6 +135,7 @@ en:
     our_recent_projects: Our Recent Projects
     projects: Projects
     calc: Сalculator
+    not_found: Page not found
   btn:
     more_about_us: More About Us
     read_more: Read More
@@ -148,6 +149,7 @@ en:
     our_projects: Our projects
     shop: Shop
     calc: Сalculator
+    go_home: Go to Home Page
   text:
     address: 'Address:'
     email_address: 'Email address:'
@@ -157,6 +159,7 @@ en:
     quick_links: Quick links
     recent_projects: Recent projects
     services: Services
+    not_found: The page you are looking is not available or has been removed. Try going to Home Page by using the button below.
   views:
     pagination:
       first: First

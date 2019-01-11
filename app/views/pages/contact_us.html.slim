@@ -2,7 +2,7 @@
 - page = StaticPage[:contact_us]
 - title page.title
 - description page.meta_description
-- keywords page.meta_keys.split(',')
+- keywords page.meta_keys&.split(',')
 
 section.section.innercms
   .container
@@ -15,7 +15,7 @@ section.section.innercms
             .information
               strong = I18n.t('text.address')
               p = SiteSetting[:address]
-                
+
         .col-md-4.column
           .contact
             span
@@ -23,7 +23,7 @@ section.section.innercms
             .information
               strong = I18n.t('text.email_address')
               p = SiteSetting[:email]
-        
+
         .col-md-4.column
           .contact
             span
@@ -32,6 +32,6 @@ section.section.innercms
               strong = I18n.t('text.phone_no')
               - SiteSetting[:all_phones].split(',').each do |phone|
                 p = phone
-        
+
       .column
         == SiteSetting[:google_map]

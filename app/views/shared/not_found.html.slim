@@ -1,0 +1,10 @@
+= render 'shared/navigation/breadcrumbs', main_title: I18n.t('breadcrumbs.not_found'), current_page: I18n.t('breadcrumbs.not_found')
+
+.error-page-wrap
+  .container
+    .errormain
+      h2 404
+      h3 = I18n.t('breadcrumbs.not_found')
+      .error-msg
+        p = I18n.t('text.not_found')
+        = link_to I18n.t('navigation.go_home'), root_url, class: 'btn'

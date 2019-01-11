@@ -137,6 +137,7 @@ ua:
     our_recent_projects: Останні проекти
     projects: Наші роботи
     calc: Калькулятор
+    not_found: Сторінку не знайдено
   btn:
     more_about_us: Більше про нас
     read_more: Дізнатися більше
@@ -150,6 +151,7 @@ ua:
     our_projects: Наші роботи
     shop: Наш магазин
     calc: Калькулятор
+    go_home: Перейти на Головну
   text:
     address: 'Адреса:'
     email_address: 'Email:'
@@ -159,6 +161,7 @@ ua:
     quick_links: Швидкі посилання
     recent_projects: Останні проекти
     services: Наші послуги
+    not_found: Сторінка, яку ви шукаєте, недоступна або видалена. Спробуйте зайти на домашню сторінку за допомогою кнопки нижче.
   views:
     pagination:
       first: Перший
