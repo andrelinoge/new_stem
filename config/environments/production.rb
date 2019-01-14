@@ -19,6 +19,7 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.i18n.fallbacks = true
+  config.i18n.fallbacks         = {en: [:en, :ua], ua: [:ua, :en]}
 
   config.active_support.deprecation = :notify
 

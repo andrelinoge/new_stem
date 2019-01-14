@@ -5,7 +5,7 @@ nav.navbar.navbar-toggleable-md.navbar-light
     ul.navbar-nav.mr-auto[class="#{'admin' if current_user}"]
       li.nav-item
         = link_to I18n.t('navigation.home'), root_path, class: 'nav-link'
-      li.nav-item.active
+      li.nav-item
         = link_to I18n.t('navigation.our_projects'), projects_path, class: 'nav-link'
       / li.nav-item
       /   = link_to I18n.t('navigation.calc'), calculator_path, class: 'nav-link'

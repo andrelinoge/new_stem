@@ -1,1 +1,1 @@
-Globalize.fallbacks = {:en => [:en, :ua], :ua => [:ua, :en]}
+Globalize.fallbacks = {en: [:en, :ua], ua: [:ua, :en]}
