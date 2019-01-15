@@ -2,6 +2,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
 
+  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+
+  def record_not_found(error)
+    @error = error
+    render 'shared/not_found', status: :not_found
+  end
+
   protected
 
   def set_locale

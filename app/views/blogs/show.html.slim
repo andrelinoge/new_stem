@@ -2,7 +2,7 @@
 
 - title @blog_post.title
 - description @blog_post.meta_description
-- keywords @blog_post.meta_keys.split(',')
+- keywords @blog_post.meta_keys&.split(',')
 
 .innercms
   .container
@@ -13,7 +13,7 @@
             .postimg
               = image_tag @blog_post.cover_url, alt: @blog_post.title
             .post-header.margin-top30
-              h4 
+              h4
                 a href="#." = @blog_post.title
               br /
               .date = l @blog_post.created_at, format: "%d %B, %Y"
