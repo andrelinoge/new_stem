@@ -15,14 +15,9 @@ html
     = render 'shared/layout_sections/header'
     = yield
     = render 'shared/layout_sections/footer'
-      
-    = yield :after_js_load
+    = render 'shared/banners'
+    = yield(:after_js_load)
+    
   = render 'shared/flash_messages'
   = analytics_init if GoogleAnalytics.valid_tracker?
 
-  = link_to '#', image_path('action_2019.jpg'), class: 'image-popup', style: 'top: -10; left: 0; position: absolute;', id: 'autopopup'
-
-  javascript:
-   $(function() {
-    $('#autopopup').click();
-   });
