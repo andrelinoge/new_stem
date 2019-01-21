@@ -14,6 +14,7 @@ en:
       new_component: New component
       new_fastening: New fastening
       new_inverter: New inverter
+      mark_as_read: Mark as read
     label:
       text_color: Color of text
       Label: Label
@@ -96,6 +97,11 @@ en:
       price: Price
       range_min: Range MIN
       range_max: Range MAX
+      consult_requests: Consult requests
+      created_at: Created at
+      read_at: Read at
+      is_new: Is new
+      phone: Phone
     link:
       change_password: Change password
       delete: Delete
@@ -123,6 +129,7 @@ en:
       fastenings: Fastenings
       inverters: Inverters
       panels: Panels
+      consult_requests: Consult requests
     text:
       control_panel: Control panel
       no_data: No data
@@ -138,6 +145,7 @@ en:
   btn:
     more_about_us: More About Us
     read_more: Read More
+    submit: Submit
   navigation:
     about_company: About company
     about_us: About us
@@ -157,6 +165,9 @@ en:
     quick_links: Quick links
     recent_projects: Recent projects
     services: Services
+    user_name: Your name
+    phone: Your phone
+    consult_request_received: Your request has been submitted! We will contact You soon.
   views:
     pagination:
       first: First

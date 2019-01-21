@@ -47,6 +47,10 @@
           = link_to I18n.t('admin.navigation.components'), admin_components_path, class: 'dropdown-item'
           = link_to I18n.t('admin.navigation.fastenings'), admin_fastenings_path, class: 'dropdown-item'
           = link_to I18n.t('admin.navigation.inverters'), admin_inverters_path, class: 'dropdown-item'
+      li.nav-item
+        = link_to admin_consult_requests_path, class: 'nav-link' do
+          = fa_icon 'envelope'
+          span = I18n.t('admin.navigation.consult_requests')
 
       li.nav-item
         = link_to admin_site_settings_path, class: 'nav-link' do

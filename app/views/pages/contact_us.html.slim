@@ -7,6 +7,22 @@
 section.section.innercms
   .container
     .contact-wrap
+      .column
+        .consult-form.contact-form.row
+          .col-md-6
+            == StaticPage[:consult_requests].content
+          .col-md-6
+            #consult_form_block
+              = simple_form_for @consult_request, remote: true do |f|
+                .row
+                  .col-md-12
+                    = f.input :user_name, label: false, placeholder: t('text.user_name')
+                  .col-md-12
+                    = f.input :phone, label: false, placeholder: t('text.phone')
+                  .col-md-12
+                    button.sitebtn type="submit"
+                      = t('btn.submit')
+      
       .contact-now.row
         .col-md-4.column
           .contact

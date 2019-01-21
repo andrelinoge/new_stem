@@ -32,6 +32,9 @@ Rails.application.routes.draw do
       resources :fastenings, except: [:show]
       resources :components, except: [:show]
       resources :montages, except: [:show]
+      resources :consult_requests, only: [:index, :destroy] do
+        member { get :mark_as_read }
+      end
     end
 
     get '/about', to: 'pages#about', as: :about_page
@@ -39,6 +42,7 @@ Rails.application.routes.draw do
     resources :blogs, only: [:index, :show]
     resources :projects, only: [:index, :show]
     resource :calculator, only: [:show, :create]
+    resources :consult_requests, only: [:create]
 
     match '*path', via: :all, to: 'welcome#not_found'
   end

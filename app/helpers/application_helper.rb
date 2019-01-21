@@ -14,4 +14,12 @@ module ApplicationHelper
   		project.cover_url
   	end
   end
+
+  def yes_no(value)
+    if value
+      'Yes'
+    else
+      'No'
+    end
+  end
 end

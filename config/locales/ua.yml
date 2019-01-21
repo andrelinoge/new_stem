@@ -14,6 +14,7 @@ ua:
       new_component: Нові комплектуючі
       new_fastening: Нове кріплення
       new_inverter: Новий інвертор
+      mark_as_read: Помітити як прочитане
     label:
       project_page_cover_image: Обкладинка на сторінці проекту
       text_color: Колір тексту
@@ -98,6 +99,11 @@ ua:
       range_min: Діапазон Початок
       range_max: Діапазон Кінець
       price: Ціна
+      consult_requests: Замовлення консультації
+      created_at: Надіслано
+      read_at: Прочитано
+      is_new: Чи прочитано
+      phone: Телефон
     link:
       change_password: Змінити пароль
       delete: Видалити
@@ -125,6 +131,7 @@ ua:
       fastenings: Кріплення
       inverters: Інвертори
       panels: Панелі
+      consult_requests: Замовлення консультації
     text:
       control_panel: Панель управління
       no_data: Немає даних
@@ -140,6 +147,7 @@ ua:
   btn:
     more_about_us: Більше про нас
     read_more: Дізнатися більше
+    submit: Надіслати
   navigation:
     about_company: Про компанію
     about_us: Про нас
@@ -159,6 +167,9 @@ ua:
     quick_links: Швидкі посилання
     recent_projects: Останні проекти
     services: Наші послуги
+    user_name: Ваше Ім'я
+    phone: Ваш номер
+    consult_request_received: Ваш запит надіслано! Незабаром ми зв`яжемося з Вами.
   views:
     pagination:
       first: Перший

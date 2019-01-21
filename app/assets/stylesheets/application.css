@@ -104,3 +104,21 @@
 .recent-projects > a {
   width: 100% !important;
 }
+
+.consult-form {
+  margin-bottom: 50px;
+  padding-bottom: 25px;
+  border-bottom: solid 1px #ddd;
+}
+
+.consult-btn {
+  border: 0 none;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 18px 40px;
+  margin-top: 20px;
+  cursor: pointer;
+}

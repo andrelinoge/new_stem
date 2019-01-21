@@ -8,6 +8,15 @@
 #  updated_at :datetime         not null
 #
 
+# Available pages: 
+#   :about_us
+#   :contact_us
+#   :blog_list
+#   :project_list
+#   :landing
+#   :calc
+#   :consult_request
+
 class StaticPage < ApplicationRecord
   translates :content, :meta_keys, :meta_description, :label, :title
 
