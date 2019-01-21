@@ -1,0 +1,9 @@
+ = simple_form_for @consult_request, remote: true do |f|
+  .row
+    .col-md-12
+      = f.input :user_name, label: false, placeholder: t('text.user_name')
+    .col-md-12
+      = f.input :phone, label: false, placeholder: t('text.phone')
+    .col-md-12
+      button.sitebtn type="submit"
+        = t('btn.submit')

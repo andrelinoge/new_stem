@@ -170,6 +170,14 @@ StaticPage.find_or_create_by(key: :calc).update(
   meta_keys: Faker::Lorem.words.join(',')
 )
 
+StaticPage.find_or_create_by(key: :consult_request).update(
+  title: 'Consult request',
+  label: 'Consult request',
+  content: 'Consult request',
+  meta_description: '',
+  meta_keys: ''
+)
+
 puts "\nSeeding team members...".blue
 4.times do |_i|
   FactoryBot.create(:team_member).update(
@@ -261,6 +269,14 @@ StaticPage.find_or_create_by(key: :landing).update(
   title: 'Landing page',
   meta_description: Faker::Lorem.paragraph,
   meta_keys: Faker::Lorem.words.join(',')
+)
+
+StaticPage.find_or_create_by(key: :consult_request).update(
+  title: 'Замовлення консультації',
+  label: 'Замовлення консультації',
+  content: 'Замовлення консультації',
+  meta_description: '',
+  meta_keys: ''
 )
 
 SiteSetting.find_or_create_by(key: :facebook_url).update({

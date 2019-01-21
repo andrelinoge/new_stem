@@ -1,0 +1,6 @@
+<% if @consult_request.persisted? %>
+  alert("<%= t('text.consult_request_received') %>");
+  window.location = "<%== contacts_page_url %>";
+<% else %>
+  $('#consult_form_block').html("<%= escape_javascript(render('form')) %>");
+<% end %>
