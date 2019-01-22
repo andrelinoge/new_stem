@@ -11,6 +11,8 @@
 #
 
 class ConsultRequest < ApplicationRecord
+  acts_as_paranoid
+  
   validates_presence_of :user_name, :phone 
 
   scope :ordered, -> { order(created_at: :asc) }
