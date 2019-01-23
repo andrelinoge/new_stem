@@ -3,7 +3,7 @@ class ConsultRequestsController < ApplicationController
     @consult_request = ConsultRequest.create(resource_params)
 
     respond_to do |format|
-      format.html { redirect_to contacts_page_path }
+      format.html { redirect_back(fallback_location: root_path) }
       format.js 
     end
   end
