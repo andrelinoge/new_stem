@@ -10,8 +10,19 @@ html
     = stylesheet_link_tag    'application'
     link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" rel="stylesheet" /
 
+    /! Google Tag Manager
+    javascript:
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KHPJ9H9');
+    /! End Google Tag Manager
+
     = javascript_include_tag 'application'
   body
+    == '<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHPJ9H9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>'
+
     = render 'shared/layout_sections/header'
     = yield
     = render 'shared/layout_sections/footer'
